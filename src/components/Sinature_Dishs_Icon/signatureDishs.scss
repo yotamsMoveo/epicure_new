@@ -1,0 +1,32 @@
+.signatureDishs_body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  // width: 378px;
+  // height: 584px;
+  // left: -1px;
+  // top: 1270px;
+
+  background: #fafafa;
+}
+
+.signatureDishs_title {
+  // width: 190px;
+  height: 35px;
+  left: 96px;
+  top: 1294px;
+
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 200;
+  font-size: 18px;
+  line-height: 35px;
+  /* identical to box height, or 194% */
+
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+
+  color: #000000;
+}

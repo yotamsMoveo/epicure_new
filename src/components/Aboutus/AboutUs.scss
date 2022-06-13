@@ -1,0 +1,61 @@
+.AboutUsComp_body {
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+  // padding: 39px 476px;
+  gap: 32px;
+  // width: 378px;
+  // height: 867px;
+  // left: -1px;
+  // top: 2896px;
+
+  background: #fafafa;
+}
+.AboutUsComp_aboutLogo {
+  width: 102px;
+  height: 95px;
+  left: 19px;
+  top: 2920px;
+  padding-left: 2%;
+  padding-top: 4%;
+}
+
+.AboutUsComp_title {
+  // width: 101px;
+  // height: 35px;
+  // left: 20px;
+  // top: 3215px;
+
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 200;
+  font-size: 18px;
+  line-height: 35px;
+  text-align: justify;
+  /* identical to box height, or 194% */
+  padding-left: 2%;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+
+  color: #000000;
+}
+
+.AboutUsComp_parograph {
+  // width: 80%;
+  // height: 280px;
+  // left: 19px;
+  // top: 3266px;
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 200;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: justify;
+  /* or 156% */
+  padding-left: 2%;
+  padding-right: 13%;
+  letter-spacing: 2.14px;
+
+  color: #000000;
+}

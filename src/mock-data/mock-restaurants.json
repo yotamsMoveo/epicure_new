@@ -1,0 +1,21 @@
+[
+  {
+    "image": "https://i.ibb.co/4KnhHC9/claro.png",
+    "name": "Claro",
+    "chef": "Ran Shmueli",
+    "stars": "https://svgshare.com/i/hyN.svg"
+  },
+  {
+    "image": "https://i.ibb.co/qmRTQqQ/Lumina.png",
+    "name": "Lumina",
+    "chef": "Meir Adoni",
+    "stars": "https://svgshare.com/i/hz_.svg"
+  },
+
+  {
+    "image": "https://i.ibb.co/MRCbFkm/tiger-lily.png",
+    "name": "Tiger Lily",
+    "chef": "Yanir Green",
+    "stars": "https://svgshare.com/i/hyN.svg"
+  }
+]
