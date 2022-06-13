@@ -1,15 +1,8 @@
 .AboutUsComp_body {
   display: flex;
   flex-direction: column;
-  // justify-content: center;
-  // align-items: center;
-  // padding: 39px 476px;
+  justify-items: flex-start;
   gap: 32px;
-  // width: 378px;
-  // height: 867px;
-  // left: -1px;
-  // top: 2896px;
-
   background: #fafafa;
 }
 .AboutUsComp_aboutLogo {
@@ -22,19 +15,13 @@
 }
 
 .AboutUsComp_title {
-  // width: 101px;
-  // height: 35px;
-  // left: 20px;
-  // top: 3215px;
-
   font-family: "Helvetica Neue";
   font-style: normal;
   font-weight: 200;
   font-size: 18px;
   line-height: 35px;
   text-align: justify;
-  /* identical to box height, or 194% */
-  padding-left: 2%;
+  padding-left: 2vh;
   letter-spacing: 1.25px;
   text-transform: uppercase;
 
@@ -42,20 +29,42 @@
 }
 
 .AboutUsComp_parograph {
-  // width: 80%;
-  // height: 280px;
-  // left: 19px;
-  // top: 3266px;
   font-family: "Helvetica Neue";
   font-style: normal;
   font-weight: 200;
   font-size: 18px;
   line-height: 28px;
-  text-align: justify;
-  /* or 156% */
-  padding-left: 2%;
-  padding-right: 13%;
   letter-spacing: 2.14px;
-
+  padding-bottom: 2vh;
+  padding-left: 2vh;
   color: #000000;
+}
+
+.store-media-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 2vh;
+  gap: 15px;
+  flex-direction: column;
+  width: 290px;
+  .store-buttons {
+    width: 135px;
+    height: 37px;
+    border-radius: 6.7px;
+    border: solid 0.5px black;
+    display: flex;
+    align-items: center;
+    img {
+      height: 20px;
+      width: 17px;
+      margin-right: 10px;
+    }
+    .store-buttons-upper-text {
+      font-size: 10px;
+    }
+    .store-buttons-lower-text {
+      font-size: 12px;
+    }
+  }
 }

@@ -1,17 +1,17 @@
 .FooterPage_footer {
-  position: absolute;
   width: 377px;
   height: 202px;
   left: 0px;
   top: 3763px;
-
+  display: flex;
+  flex-direction: column;
   background: #ffffff;
 }
 
-.FooterPage_footer_href{
+.FooterPage_footer_href {
   // width: 103px;
   height: 22px;
-
+  padding-left: 2vh;
   font-family: "Helvetica Neue";
   font-style: normal;
   font-weight: 200;
@@ -25,7 +25,7 @@
 
   /* Inside auto layout */
 
-  flex: none;
+  flex: 1;
   order: 0;
   flex-grow: 0;
 }

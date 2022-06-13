@@ -1,5 +1,5 @@
 import "../WelcomeCard/welcomeCard.scss";
-// import TextFieldComp from "../TextField/TextFieldComp";
+import searchLogo from '../../assets/images/search.png';
 
 function WelcomeCardComp() {
   return (
@@ -10,7 +10,7 @@ function WelcomeCardComp() {
         </h1>
         <div className="WelcomeCardComp_searchField">
           <form>
-            <input placeholder="Search for restaurant cuisine, chef" className="WelcomeCardComp_searchInput"></input>
+            <input placeholder={<img src={searchLogo}/>+"  Search for restaurant cuisine, chef"} className="WelcomeCardComp_searchInput"></input>
           </form>
         </div>
       </div>

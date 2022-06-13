@@ -3,7 +3,8 @@
   height: 24px;
   left: 20px;
   top: 367px;
-
+  align-self: flex-start;
+  padding-left: 2vh;
   font-family: "Helvetica Neue";
   font-style: normal;
   font-weight: 200;
@@ -22,10 +23,10 @@
   width: 100%;
 }
 
-.BestRestaurantsComp_button {
-//   width: 136px;
+.BestRestaurantsComp_button_desc {
+  //   width: 136px;
   height: 35px;
-
+  padding-left: 2vh;
   font-family: "Helvetica Neue";
   font-style: normal;
   font-weight: 400;
@@ -40,4 +41,12 @@
   color: #000000;
 }
 
+.BestRestaurantsComp_button {
+  display: flex;
+  flex-direction: row;
+}
 
+.BestRestaurantsComp_button_img {
+  width: 20px;
+  height: 20px;
+}

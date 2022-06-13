@@ -13,7 +13,7 @@ function CardComp(props:any) {
             <p className="CardComp_title">{props.title}</p>
             <p className="CardComp_description">{props.description}</p>
             <img className="CardComp_type" src={props.type}></img>
-            <p className="CardComp_type">{props.price}</p>
+            <p className="CardComp_price">{props.price}</p>
           </CardContent>
         </Card>
       </div>

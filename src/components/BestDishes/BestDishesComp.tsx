@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { settings } from "../../assets/settings/slider_settings";
 import { dishes } from "../../assets/interfaces/dishes";
+import { Link } from "react-router-dom";
 
 function BestdishesComp() {
   function navigateToDishes() {
@@ -29,11 +30,11 @@ function BestdishesComp() {
             />
           ))}
         </Slider>
-        </div>
-        <br/>
-      <p className="BestRestaurantsComp_button" onClick={navigateToDishes}>
-        All Restaurants
-      </p>
+      </div>
+      <br />
+      <Link to="/restaurants" className="BestdishesComp_button" onClick={navigateToDishes}>
+        {"All Restaurants >>"}
+      </Link>
     </div>
   );
 }

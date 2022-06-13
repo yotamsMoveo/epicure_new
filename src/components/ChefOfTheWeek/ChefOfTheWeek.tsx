@@ -19,8 +19,10 @@ function ChefOfTheWeek() {
           className="half-fade-image"
         ></img>
         <div className="opacity_div">Yossi Shitrit</div>
+       
       </div>
       <p className="ChefOfTheWeek_description">{mockChef.description}</p>
+      <h1 className="ChefOfTheWeek_tilte">Chef of the week:</h1>
       <div className="ChefOfTheWeek_slider">
         <Slider {...settings}>
           {restaurantNames.map((resturant) => (

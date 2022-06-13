@@ -1,6 +1,7 @@
 import { jsx } from "@emotion/react";
 import React from "react";
 import PopUpComp from "../PopUp/PopUpComp";
+import '../Footer/Footer.scss';
 
 const FooterPage = () => {
   function openPopUp(selectedPopUp: string) {
@@ -13,7 +14,7 @@ const FooterPage = () => {
 
   return (
     <div className="FooterPage_footer">
-      <p onClick={() => openPopUp("conact")} className="FooterPage_footer_href">
+      <p className="FooterPage_footer_href" onClick={() => openPopUp("conact")} >
         Contact Us
       </p>
       <br />

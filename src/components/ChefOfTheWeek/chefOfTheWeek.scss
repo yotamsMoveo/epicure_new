@@ -1,18 +1,17 @@
 @import "../../style/base.scss";
 
 .ChefOfTheWeek_tilte {
-  // width: 186px;
   height: 35px;
   left: 20px;
   top: 1902px;
-
+  padding-left: 4vh;
   font-family: "Helvetica Neue";
   font-style: normal;
   font-weight: 200;
   font-size: 18px;
   line-height: 35px;
   /* identical to box height, or 194% */
-
+  padding-top: 2vh;
   letter-spacing: 1.25px;
   text-transform: uppercase;
 
@@ -82,10 +81,10 @@
   // top: calc(50% - 338px / 2);
 }
 
-.ChefOfTheWeek_slider{
+.ChefOfTheWeek_slider {
   padding-left: 2%;
 }
-.ChefOfTheWeek_imgConteiner{
+.ChefOfTheWeek_imgConteiner {
   display: flex;
   justify-content: center;
   flex-direction: row;

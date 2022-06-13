@@ -1,8 +1,7 @@
 import { IconButton } from "@material-ui/core";
 import "../PopUp/popUp.scss";
-import CloseIcon from "@material-ui/core/";
-import Navbar from "../Navbar/Navbar";
 import { CloseButton } from "react-bootstrap";
+import bagLogo from "../../assets/images/bagLogo.png";
 
 function PopUpComp(props: any) {
   function handlePopUpOpen() {
@@ -14,78 +13,74 @@ function PopUpComp(props: any) {
     selected = 2;
   } else if ("search".localeCompare(props.selectedPopUp) == 0) {
     selected = 3;
-  } else if ("conact".localeCompare(props.selectedPopUp) == 0) {
-    selected = 4;
   } else if ("bag".localeCompare(props.selectedPopUp) == 0) {
-    selected = 5;
+    selected = 4;
   }
 
   switch (selected) {
     case 2:
       return (
-        <div className="popUp_body">
+        <div className="popUp_menu_body">
           <IconButton className="Navbar_icon" onClick={props.onClick}>
-            <CloseButton />
+            <CloseButton>X</CloseButton>
           </IconButton>
           <ul className="popUp_ul">
             <li className="popUp_li">
-              <a href="#home">Restaurants</a>
+              <a href="#home" className="popup_a">
+                Restaurants
+              </a>
             </li>
             <li className="popUp_li">
-              <a href="#news">Chefs</a>
+              <a href="#news" className="popup_a">
+                Chefs
+              </a>
             </li>
-            <hr />
+          </ul>
+          <hr />
+          <ul className="popUp_ul">
             <li className="popUp_li">
-              <a href="#contact">Contact Us</a>
+              <a href="#contact" className="popup_a">
+                Contact Us
+              </a>
             </li>
             <li className="popUp_li">
-              <a href="#about">Term of Use</a>
+              <a href="#about" className="popup_a">
+                Term of Use
+              </a>
             </li>
             <li className="popUp_li">
-              <a href="#about">Privacy Policy</a>
+              <a href="#about" className="popup_a">
+                Privacy Policy
+              </a>
             </li>
           </ul>
         </div>
       );
     case 3:
       return (
-        <div className="popUp_body">
+        <div className="popUp_menu_body">
           <IconButton className="Navbar_icon" onClick={props.onClick}>
-            <CloseButton />
+            <CloseButton>X</CloseButton>
           </IconButton>
-          <ul className="popUp_ul">
-            <div className="WelcomeCardComp_searchField">
-              <form>
-                <input
-                  placeholder="Search for restaurant cuisine, chef"
-                  className="WelcomeCardComp_searchInput"
-                ></input>
-              </form>
-            </div>
-          </ul>
+          <div className="popUp_searchField">
+            <form>
+              <input
+                placeholder="Search for restaurant cuisine, chef"
+                className="popUp_searchInput"
+              ></input>
+            </form>
+          </div>
         </div>
       );
-
     case 4:
       return (
-        <div className="popUp_body">
+        <div className="popup_bag_body">
           <IconButton className="Navbar_icon" onClick={props.onClick}>
-            <CloseButton />
+            <CloseButton>X</CloseButton>
           </IconButton>
-          <ul className="popUp_ul">
-            <li className="popUp_li">
-              <a href="#home">Contact</a>
-            </li>
-          </ul>
-        </div>
-      );
-    case 5:
-      return (
-        <div className="popUp_body">
-          <IconButton className="Navbar_icon" onClick={props.onClick}>
-            <CloseButton />
-          </IconButton>
-          <div>
+
+          <div className="popup_bag_contant">
+            <img src={bagLogo} className="popup_bag_img" />
             <p className="bag_description">your bag is empty</p>
           </div>
         </div>

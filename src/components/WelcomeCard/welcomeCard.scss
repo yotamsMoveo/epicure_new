@@ -23,7 +23,7 @@
   width: 100%;
   justify-content: center;
   align-items: center;
-  height: 320px;
+  height: 290px;
   left: -140px;
   top: 46px;
 }
@@ -37,9 +37,9 @@
   font-size: 24px;
   line-height: 32px;
   /* or 133% */
-
+  align-self: center;
   letter-spacing: 1.97px;
-
+  text-align: center;
   color: #000000;
 
   /* Inside auto layout */
@@ -72,9 +72,11 @@
   flex-grow: 1;
 }
 
-.WelcomeCardComp_searchInput{
-    background:transparent;
-    width: 100%;
-    flex: 1;
-    flex-grow: 1;
+.WelcomeCardComp_searchInput {
+  background: transparent;
+  width: 100%;
+  flex: 1;
+  flex-grow: 1;
+  border: 1px solid;
+    border-radius: 4px;
 }

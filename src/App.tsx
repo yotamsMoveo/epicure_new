@@ -8,13 +8,13 @@ import FooterPage from './components/Footer/FoterComp';
 import HomePage from './pages/HomePage/HomePageComp';
 import Layout from './pages/layout';
 import Orders from './pages/Orders/OrdersComp';
-import Restaurants from './pages/Resraurans/RestaurantsComp';
+import Restaurants from './pages/Restaurants/RestaurantsComp';
 
 function App() {
-  // const home_page_data = useSelector((state:any) => state.homePageData);
-  // const chef_of_the_week = useSelector((state:any) => state.chefData);
-  // const restauran_page_data = useSelector((state:any) => state.restaurentsPageData);
-  // const dishes_page_data = useSelector((state:any) => state.dishesPageData);
+  const home_page_data = useSelector((state:any) => state.homePageData);
+  const chef_of_the_week = useSelector((state:any) => state.chefData);
+  const restauran_page_data = useSelector((state:any) => state.restaurentsPageData);
+  const dishes_page_data = useSelector((state:any) => state.dishesPageData);
 
   const [isOpen, setIsOpen] = useState(false);
   const [popup, setPopUp] = useState("");
