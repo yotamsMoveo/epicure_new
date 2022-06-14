@@ -1,32 +1,27 @@
-.icon_dish_img {
-    // left: 0%;
-    // right: 10.13%;
-    // top: 22.69%;
-    // bottom: 4.26%;
-    background: transparent;
-    align-self: center;
-    padding-left: 6vh;
-    
+.icon-dish-comp-body {
+  display: flex;
+  flex-direction: column;
+  height: 69px;
+  padding-bottom: 58px;
 }
 
-.icon_dish_description {
+.icon-dish-img {
+  background: transparent;
+  align-self: center;
+  margin: auto;
+}
+
+.icon-dish-description {
   width: 136px;
   height: 35px;
-
   font-family: "Helvetica Neue";
   font-style: normal;
   font-weight: 200;
   font-size: 18px;
   line-height: 30px;
-  /* or 167% */
-
   text-align: center;
   letter-spacing: 1.97px;
-
   color: #000000;
-
-  /* Inside auto layout */
-
   flex: none;
   order: 1;
   flex-grow: 0;

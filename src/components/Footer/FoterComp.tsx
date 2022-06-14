@@ -1,30 +1,33 @@
 import { jsx } from "@emotion/react";
 import React from "react";
 import PopUpComp from "../PopUp/PopUpComp";
-import '../Footer/Footer.scss';
+import "../Footer/Footer.scss";
 
 const FooterPage = () => {
-  function openPopUp(selectedPopUp: string) {
+  const openPopUp = (selectedPopUp: string) => {
     return (
       <React.Fragment>
         {<PopUpComp selectedPopUp={selectedPopUp} />}
       </React.Fragment>
     );
-  }
+  };
 
   return (
-    <div className="FooterPage_footer">
-      <p className="FooterPage_footer_href" onClick={() => openPopUp("conact")} >
+    <div className="footer-page-footer">
+      <p
+        className="footer-page-footer-href"
+        onClick={() => openPopUp("conact")}
+      >
         Contact Us
       </p>
       <br />
-      <p onClick={() => openPopUp("terms")} className="FooterPage_footer_href">
+      <p onClick={() => openPopUp("terms")} className="footer-page-footer-href">
         Term of Use
       </p>
       <br />
       <p
         onClick={() => openPopUp("privacy")}
-        className="FooterPage_footer_href"
+        className="footer-page-footer-href"
       >
         Privacy Policy
       </p>

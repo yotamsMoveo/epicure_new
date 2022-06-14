@@ -13,30 +13,31 @@ import {
 } from "../../services/api_service";
 import { restaurants } from "../../assets/interfaces/restaurants";
 
-
-function HomePage() {
+const HomePage=()=> {
   const [chefOfTheWeekData, setChefOfTheWeekData] = useState({});
   const [bestDishesData, setBestDishesData] = useState({});
   const [bestResturantsData, setBestResturantsData] = useState({});
 
   useEffect(() => {
-    const data = getChefOfTheWeekData().then((response)=>
-       setChefOfTheWeekData(response)
-    );
-  }, []);
-  useEffect(() => {
-    const data = getBestResturantsData().then((response)=>
-    setBestResturantsData(response)
+    const data = getChefOfTheWeekData().then((response) =>
+      setChefOfTheWeekData(response)
     );
   }, []);
 
   useEffect(() => {
-    const data = getBestDishesData().then((response)=>
-    setBestDishesData(response))
-  }, [])
+    const data = getBestResturantsData().then((response) =>
+      setBestResturantsData(response)
+    );
+  }, []);
+
+  useEffect(() => {
+    const data = getBestDishesData().then((response) =>
+      setBestDishesData(response)
+    );
+  }, []);
 
   return (
-    <div className="HomePage_body">
+    <div className="home-page-body">
       <WelcomeCardComp />
       <BestRestaurantsComp />
       <BestdishesComp />

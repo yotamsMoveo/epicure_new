@@ -18,11 +18,11 @@ import { signature_dish_icons } from "../../assets/interfaces/signature_dish_ico
 //   );
 // }
 
-function SignatureDishsIconComp() {
+const SignatureDishsIconComp=()=> {
   return (
-    <div className="signatureDishs_body">
-      <div className="signatureDishs_title">Signature Dish Of:</div>
-      <div>
+    <div className="signature-dishs-body">
+      <div className="signature-dishs-title">Signature Dish Of:</div>
+      <div className="signature-dishs-icon-list">
         {
           IconDishes.map((item)=>{
             return <IconDishComp iconImg={item.img} icondescription={item.title} key={item.title}/>

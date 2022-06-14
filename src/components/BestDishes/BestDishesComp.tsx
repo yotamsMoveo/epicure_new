@@ -9,15 +9,14 @@ import { settings } from "../../assets/settings/slider_settings";
 import { dishes } from "../../assets/interfaces/dishes";
 import { Link } from "react-router-dom";
 
-function BestdishesComp() {
-  function navigateToDishes() {
+const BestdishesComp=()=> {
+  const navigateToDishes=()=> {
     console.log("navigate");
   }
   return (
-    <div className="BestdishesComp_body">
-      <p className="BestdishesComp_title">Signature Dish Of:</p>
-      <div className="BestdishesComp_slider">
-        <Slider {...settings}>
+    <div className="best-dishes-comp-body">
+      <p className="best-dishes-comp-title">Signature Dish Of:</p>
+        <Slider {...settings} >
           {bestDishesMock.map((dish) => (
             <CardComp
               img={dish.image}
@@ -30,9 +29,8 @@ function BestdishesComp() {
             />
           ))}
         </Slider>
-      </div>
       <br />
-      <Link to="/restaurants" className="BestdishesComp_button" onClick={navigateToDishes}>
+      <Link to="/restaurants" className="best-dishes-comp-button" onClick={navigateToDishes}>
         {"All Restaurants >>"}
       </Link>
     </div>

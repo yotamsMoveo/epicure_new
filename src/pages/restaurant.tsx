@@ -1,4 +1,4 @@
-function Restaurant(props:any){
+const Restaurant=(props:any)=>{
     return(<div>
         <h1>{props.title}</h1>
         <image>{props.image}</image>

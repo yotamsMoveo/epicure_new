@@ -1,22 +1,27 @@
-.Navbar_conteiner {
+.navbar-conteiner {
   display: flex;
   flex-direction: row;
 }
-.Navbar_leftside {
+.navbar-leftside {
   flex: 1;
   margin: auto;
   text-align: left;
 }
 
-.Navbar_center {
+.navbar-center {
   flex: 1;
   margin: auto;
   text-align: center;
 }
 
-.Navbar_rightSide {
+.navbar-rightSide {
   flex: 1;
   margin: auto;
   margin-right: 2vw;
   text-align: right;
+  
+}
+
+.img{
+  padding-right:3vh;
 }

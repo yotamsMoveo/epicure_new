@@ -1,0 +1,43 @@
+.restaurant_page_body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+  
+}
+
+.restaurant_page_title {
+  height: 24px;
+  left: 20px;
+  top: 367px;
+  align-self: flex-start;
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 200;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  color: #000000;
+  padding-left: 3vh;
+}
+.restaurant_page_restaurants{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    gap:13px;
+    
+}
+
+.restaurant_page_menu_list{
+    display: flex;
+    gap:3vh;
+    list-style: none;
+}
+
+.restaurant_page_menu_item{
+    text-decoration: none;
+    color:black;
+}

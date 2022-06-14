@@ -11,14 +11,13 @@ import { restaurants } from "../../assets/interfaces/restaurants";
 import shift from "../../assets/images/shift.png";
 import { Link } from "react-router-dom";
 
-function BestRestaurantsComp() {
-  function navigateToRestaurants() {
+const BestRestaurantsComp=()=> {
+  const navigateToRestaurants=()=> {
     console.log("navigate");
   }
   return (
-    <div className="BestResturantsComp">
-      <p className="BestResturantsComp_title">popular restaurant in epicure:</p>
-      <div className="BestResturantsComp_slider">
+    <div className="best-resturants-comp-body">
+      <p className="best-resturants-comp-title">popular restaurant in epicure:</p>
         <Slider {...settings}>
           {bestResturantsMock.map((resturant) => (
             <CardComp
@@ -30,11 +29,10 @@ function BestRestaurantsComp() {
             />
           ))}
         </Slider>
-      </div>
       <br />
       <Link
         to="restaurants"
-        className="BestRestaurantsComp_button_desc"
+        className="best-restaurants-comp-button"
         onClick={navigateToRestaurants}
       >
         {"All Restaurants >>"}

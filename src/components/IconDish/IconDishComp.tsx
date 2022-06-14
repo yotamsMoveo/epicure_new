@@ -10,12 +10,10 @@ import "../../components/IconDish/IconDish.scss";
 //   </div>
 // );
 
-const IconDishComp = (props:any) => (
-  <div>
-    <div >
-      <img className="icon_dish_img" src={props.iconImg}/>
-      <p className="icon_dish_description">{props.icondescription}</p>
-    </div>
+const IconDishComp = (props: any) => (
+  <div className="icon-dish-comp-body">
+    <img className="icon-dish-img" src={props.iconImg} />
+    <p className="icon-dish-description">{props.icondescription}</p>
   </div>
 );
 export default IconDishComp;

@@ -1,109 +1,85 @@
 @import "../../style/base.scss";
 
-.ChefOfTheWeek_tilte {
+.chef-of-the-week-body {
+  align-items: center;
+}
+
+.chef-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 61px 20px 0;
+  .parent {
+    display: flex;
+    position: relative;
+    text-align: center;
+    flex-direction: row;
+    height: 269px;
+    .half-fade-image {
+      height: 240px;
+      width: 100%;
+      margin: auto;
+      flex: 1;
+    }
+    .opacity-div {
+      width: 100%;
+      height: 55px;
+      background-color: rgba(255, 255, 255, 0.8);
+      position: absolute;
+      font-size: 30px;
+      padding-top: 10px;
+      bottom: 0;
+    }
+  }
+}
+
+.chef-of-the-week-tilte {
   height: 35px;
-  left: 20px;
-  top: 1902px;
-  padding-left: 4vh;
   font-family: "Helvetica Neue";
   font-style: normal;
   font-weight: 200;
   font-size: 18px;
   line-height: 35px;
-  /* identical to box height, or 194% */
-  padding-top: 2vh;
   letter-spacing: 1.25px;
   text-transform: uppercase;
 
   color: #000000;
 }
 
-.ChefOfTheWeek_body {
-  padding-bottom: 20px;
-  align-items: center;
-}
 
-.ChefOfTheWeek_layout {
-  // width: 335px;
-  height: 47px;
 
-  font-family: "Helvetica Neue";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 47px;
-  /* identical to box height, or 261% */
 
-  text-align: center;
-  letter-spacing: 2.67px;
-  vertical-align: bottom;
-  color: #000000;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 0;
-  align-self: stretch;
-  flex-grow: 0;
-  background: rgba(255, 255, 255, 0.8);
-}
-
-.ChefOfTheWeek_description {
-  // width: 335px;
+.chef-of-the-week-description {
+  width: 100%;
   height: 252px;
-  left: 20px;
-  top: 2239px;
   text-align: left;
   font-family: "Helvetica Neue";
   font-style: normal;
   font-weight: 200;
   font-size: 18px;
   line-height: 28px;
-  /* or 156% */
   letter-spacing: 1.25px;
-  padding-left: 9%;
-  padding-right: 9%;
   padding-bottom: 3%;
-
   color: #000000;
 }
 
-.ChefOfTheWeek_img {
-  width: 100%;
-}
 
-.ChefOfTheWeek {
-  margin: auto;
-  align-items: center;
-  height: 338px;
-  width: 100%;
-  // left: calc(50% - 360px / 2 + 0.5px);
-  // top: calc(50% - 338px / 2);
-}
 
-.ChefOfTheWeek_slider {
-  padding-left: 2%;
-}
-.ChefOfTheWeek_imgConteiner {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-}
-.parent {
-  position: relative;
-  text-align: center;
-  height: 269px;
-  .half-fade-image {
-    height: 240px;
-    width: 334px;
-  }
-  .opacity_div {
-    width: 100%;
-    height: 55px;
-    top: 185px;
-    background-color: rgba(255, 255, 255, 0.8);
-    position: absolute;
-    font-size: 30px;
-    padding-top: 10px;
+
+
+.chef-slider-wrapper {
+  margin-left: 16px;
+  .chef-of-the-week-tilte-wrapper{
+    padding-bottom: 16px;
+    height: 35px;
+    font-family: "Helvetica Neue";
+    font-style: normal;
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 35px;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+  
+    color: #000000;
   }
 }
+

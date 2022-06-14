@@ -1,30 +1,22 @@
-.FooterPage_footer {
+.footer-page-footer {
   width: 377px;
   height: 202px;
-  left: 0px;
-  top: 3763px;
   display: flex;
   flex-direction: column;
   background: #ffffff;
+  // padding-left: 3vh;
+  margin: 28px 19px 20px;
 }
 
-.FooterPage_footer_href {
-  // width: 103px;
+.footer-page-footer-href {
   height: 22px;
-  padding-left: 2vh;
   font-family: "Helvetica Neue";
   font-style: normal;
   font-weight: 200;
   font-size: 18px;
   line-height: 22px;
-  /* identical to box height */
-
   letter-spacing: 1.92px;
-
   color: #000000;
-
-  /* Inside auto layout */
-
   flex: 1;
   order: 0;
   flex-grow: 0;

@@ -1,16 +1,42 @@
 import "../WelcomeCard/welcomeCard.scss";
-import searchLogo from '../../assets/images/search.png';
+import searchLogo from "../../assets/images/search.png";
+import { useState } from "react";
+import {getDataBySearchItem} from '../../services/api_service'
 
-function WelcomeCardComp() {
+
+const WelcomeCardComp=()=> {
+  const [searchByItem, setSearchByItem] = useState("");
+  const handleChanges=(event: any)=> {
+    const value = event.target.value;
+    setSearchByItem(value);
+  }
+  const searchObject=()=> {
+    let data= getDataBySearchItem(searchByItem);
+    console.log(data);
+    setSearchByItem("");
+  }
+
   return (
-    <div className="WelcomeCardComp_welcom">
-      <div className="WelcomeCardComp_card">
-        <h1 className="WelcomeCardComp_card_title">
+    <div className="welcome-comp-body">
+      <div className="welcome-comp-card">
+        <h1 className="welcome-comp-title">
           Epicure works with the top chef restaurants in Tel Aviv
         </h1>
-        <div className="WelcomeCardComp_searchField">
+        <div className="welcome-comp-search-field">
           <form>
-            <input placeholder={<img src={searchLogo}/>+"  Search for restaurant cuisine, chef"} className="WelcomeCardComp_searchInput"></input>
+            <div className="welcome-comp-search-input">
+              <img
+                src={searchLogo}
+                className="welcome-comp-img"
+                onClick={searchObject}
+              />
+              <input
+                value={searchByItem}
+                placeholder=" Search for restaurant cuisine, chef"
+                className="welcome-comp-input "
+                onChange={handleChanges}
+              ></input>
+            </div>
           </form>
         </div>
       </div>

@@ -5,8 +5,8 @@ export const settings = {
   slidesToShow: 3,
   slidesToScroll: 3,
   initialSlide: 0,
-  // variableWidth: true,
-  // adaptiveHeight: true,
+  variableWidth: true,
+  adaptiveHeight: true,
   responsive: [
     {
       breakpoint: 1024,

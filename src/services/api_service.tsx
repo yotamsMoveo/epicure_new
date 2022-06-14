@@ -31,3 +31,8 @@ export async function getHomePageData():Promise<home_page_data> {
   const data = await response.json();
   return data as home_page_data;
 }
+
+export async function getDataBySearchItem(item:string):Promise<string>{
+  console.log(item);
+  return "data";
+}

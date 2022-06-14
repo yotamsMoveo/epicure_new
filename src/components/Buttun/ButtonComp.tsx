@@ -3,8 +3,8 @@ import Button from '@mui/material/Button';
 import Restaurant from '../../pages/restaurant';
 import * as React from "react";
 
-function ButtonComp(props:any){
-    function DoSomething(){
+const ButtonComp=(props:any)=>{
+    const DoSomething=()=>{
         console.log(props.buttonName);
         switch(props.buttonName){
             case 'search':

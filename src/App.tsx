@@ -8,7 +8,7 @@ import FooterPage from './components/Footer/FoterComp';
 import HomePage from './pages/HomePage/HomePageComp';
 import Layout from './pages/layout';
 import Orders from './pages/Orders/OrdersComp';
-import Restaurants from './pages/Restaurants/RestaurantsComp';
+import Restaurants from './pages/Resraurans/RestaurantsComp';
 
 function App() {
   const home_page_data = useSelector((state:any) => state.homePageData);
@@ -19,7 +19,7 @@ function App() {
   const [isOpen, setIsOpen] = useState(false);
   const [popup, setPopUp] = useState("");
 
-  function handlePopUpOpen(selectedPopUp: string) {
+  const handlePopUpOpen=(selectedPopUp: string)=> {
     setIsOpen(!isOpen);
     if (isOpen || selectedPopUp.localeCompare(popup) != 0) {
       setPopUp(selectedPopUp);
@@ -27,7 +27,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div className='app'>
       <Navbar onClick={handlePopUpOpen} isOpen={isOpen} popup={popup} />
       <Router>
         <Routes>

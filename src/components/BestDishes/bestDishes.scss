@@ -1,4 +1,11 @@
-.BestdishesComp_title {
+.best-dishes-comp-body {
+  // align-items: flex-start;
+  width: 100%;
+  padding-left: 3vh;
+  padding-bottom: 46px;
+}
+
+.best-dishes-comp-title {
   //   width: 190px;
   height: 24px;
   left: 20px;
@@ -9,7 +16,7 @@
   font-weight: 200;
   font-size: 18px;
   line-height: 24px;
-  padding-left: 2vh;
+
   /* identical to box height, or 133% */
 
   letter-spacing: 1.25px;
@@ -24,12 +31,7 @@
   justify-items: center;
 }
 
-.BestdishesComp_body {
-  // align-items: flex-start;
-  width: 100%;
-}
-
-.BestdishesComp_button {
+.best-dishes-comp-button {
   height: 35px;
 
   font-family: "Helvetica Neue";
@@ -38,11 +40,11 @@
   font-size: 16px;
   line-height: 35px;
   /* identical to box height, or 219% */
-  padding-left: 2vh;
+
   text-align: left;
   letter-spacing: 2px;
   text-transform: capitalize;
-
+  padding-top: 22px;
   color: #000000;
 }
 
