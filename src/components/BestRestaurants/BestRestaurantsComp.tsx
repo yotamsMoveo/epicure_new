@@ -23,7 +23,7 @@ const BestRestaurantsComp=()=> {
             <CardComp
               img={resturant.image}
               title={resturant.name}
-              description={resturant.chef}
+              description={resturant.chef_name}
               key={resturant.name}
               classNameProp="CardComp_small"
             />

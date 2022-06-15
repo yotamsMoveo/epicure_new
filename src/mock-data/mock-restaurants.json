@@ -2,39 +2,239 @@
   {
     "image": "https://i.ibb.co/4KnhHC9/claro.png",
     "name": "Claro",
-    "chef": "Ran Shmueli",
-    "stars": "https://svgshare.com/i/hyN.svg"
+    "chef_name": "Ran Shmueli",
+    "chef_id":"1",
+    "restaurant_id":"1",
+    "open_date":"06/15/2022",
+    "rating":5,
+    "open_hour":19,
+    "dishes":[{
+      "image": "https://i.ibb.co/0t8L634/rectangle-3x-1.png",
+      "name": "Pad Ki Mao",
+      "description":
+        "Shrimps, Glass Noodles, Kemiri Nuts, Shallots, Lemon Grass, MagicChili Brown Coconut",
+      "type": "https://svgshare.com/i/i45.svg",
+      "price":50,
+      "restaurant_id":"4",
+      "dish_time":"b"
+    },
+    {
+      "image": "https://i.ibb.co/jvQVdQL/rectangle-3x.png",
+      "name": "Garbanzo Frito",
+      "description":
+        "Polenta fingers, veal cheek, magic chili cured lemon cream, yellow laksa",
+      "type": "https://svgshare.com/i/i45.svg",
+      "price":98,
+      "restaurant_id":"5",
+      "dish_time":"l"
+    },
+    {
+      "image": "https://i.ibb.co/6YZbmLF/rectangle-3x-2.png",
+      "name": "Smoked Pizza",
+      "description": "Basil dough, cashew butter, demi-glace, bison & radish",
+      "type": "https://svgshare.com/i/i4i.svg",
+      "price":30,
+      "restaurant_id":"6",
+      "dish_time":"d"
+    }]
   },
   {
     "image": "https://i.ibb.co/qmRTQqQ/Lumina.png",
     "name": "Lumina",
-    "chef": "Meir Adoni",
-    "stars": "https://svgshare.com/i/hz_.svg"
+    "chef_name": "Meir Adoni",
+    "chef_id":"2",
+    "restaurant_id":"2",
+    "open_date":"06/15/2021",
+    "rating":4,
+    "open_hour":22,
+    "dishes":[{
+      "image": "https://i.ibb.co/0t8L634/rectangle-3x-1.png",
+      "name": "Pad Ki Mao",
+      "description":
+        "Shrimps, Glass Noodles, Kemiri Nuts, Shallots, Lemon Grass, MagicChili Brown Coconut",
+      "type": "https://svgshare.com/i/i45.svg",
+      "price":50,
+      "restaurant_id":"4",
+      "dish_time":"b"
+    },
+    {
+      "image": "https://i.ibb.co/jvQVdQL/rectangle-3x.png",
+      "name": "Garbanzo Frito",
+      "description":
+        "Polenta fingers, veal cheek, magic chili cured lemon cream, yellow laksa",
+      "type": "https://svgshare.com/i/i45.svg",
+      "price":98,
+      "restaurant_id":"5",
+      "dish_time":"l"
+    },
+    {
+      "image": "https://i.ibb.co/6YZbmLF/rectangle-3x-2.png",
+      "name": "Smoked Pizza",
+      "description": "Basil dough, cashew butter, demi-glace, bison & radish",
+      "type": "https://svgshare.com/i/i4i.svg",
+      "price":30,
+      "restaurant_id":"6",
+      "dish_time":"d"
+    }]
   },
 
   {
     "image": "https://i.ibb.co/MRCbFkm/tiger-lily.png",
     "name": "Tiger Lily",
-    "chef": "Yanir Green",
-    "stars": "https://svgshare.com/i/hyN.svg"
+    "chef_name": "Yanir Green",
+    "chef_id":"3",
+    "restaurant_id":"3",
+    "open_date":"06/15/2000",
+    "rating":9,
+    "open_hour":20,
+    "dishes":[{
+      "image": "https://i.ibb.co/0t8L634/rectangle-3x-1.png",
+      "name": "Pad Ki Mao",
+      "description":
+        "Shrimps, Glass Noodles, Kemiri Nuts, Shallots, Lemon Grass, MagicChili Brown Coconut",
+      "type": "https://svgshare.com/i/i45.svg",
+      "price":50,
+      "restaurant_id":"4",
+      "dish_time":"b"
+    },
+    {
+      "image": "https://i.ibb.co/jvQVdQL/rectangle-3x.png",
+      "name": "Garbanzo Frito",
+      "description":
+        "Polenta fingers, veal cheek, magic chili cured lemon cream, yellow laksa",
+      "type": "https://svgshare.com/i/i45.svg",
+      "price":98,
+      "restaurant_id":"5",
+      "dish_time":"l"
+    },
+    {
+      "image": "https://i.ibb.co/6YZbmLF/rectangle-3x-2.png",
+      "name": "Smoked Pizza",
+      "description": "Basil dough, cashew butter, demi-glace, bison & radish",
+      "type": "https://svgshare.com/i/i4i.svg",
+      "price":30,
+      "restaurant_id":"6",
+      "dish_time":"d"
+    }]
   },
   {
     "image": "https://i.ibb.co/4KnhHC9/claro.png",
     "name": "Claro",
-    "chef": "Ran Shmueli",
-    "stars": "https://svgshare.com/i/hyN.svg"
+    "chef_name": "Ran Shmueli",
+    "chef_id":"1",
+    "restaurant_id":"1",
+    "open_date":"06/15/2022",
+    "rating":7,
+    "open_hour":20,
+    "dishes":[{
+      "image": "https://i.ibb.co/0t8L634/rectangle-3x-1.png",
+      "name": "Pad Ki Mao",
+      "description":
+        "Shrimps, Glass Noodles, Kemiri Nuts, Shallots, Lemon Grass, MagicChili Brown Coconut",
+      "type": "https://svgshare.com/i/i45.svg",
+      "price":50,
+      "restaurant_id":"4",
+      "dish_time":"b"
+    },
+    {
+      "image": "https://i.ibb.co/jvQVdQL/rectangle-3x.png",
+      "name": "Garbanzo Frito",
+      "description":
+        "Polenta fingers, veal cheek, magic chili cured lemon cream, yellow laksa",
+      "type": "https://svgshare.com/i/i45.svg",
+      "price":98,
+      "restaurant_id":"5",
+      "dish_time":"l"
+    },
+    {
+      "image": "https://i.ibb.co/6YZbmLF/rectangle-3x-2.png",
+      "name": "Smoked Pizza",
+      "description": "Basil dough, cashew butter, demi-glace, bison & radish",
+      "type": "https://svgshare.com/i/i4i.svg",
+      "price":30,
+      "restaurant_id":"6",
+      "dish_time":"d"
+    }]
   },
   {
     "image": "https://i.ibb.co/qmRTQqQ/Lumina.png",
     "name": "Lumina",
-    "chef": "Meir Adoni",
-    "stars": "https://svgshare.com/i/hz_.svg"
+    "chef_name": "Meir Adoni",
+    "chef_id":"2",
+    "restaurant_id":"2",
+    "open_date":"06/15/2021",
+    "rating":8,
+    "open_hour":21,
+    "dishes":[{
+      "image": "https://i.ibb.co/0t8L634/rectangle-3x-1.png",
+      "name": "Pad Ki Mao",
+      "description":
+        "Shrimps, Glass Noodles, Kemiri Nuts, Shallots, Lemon Grass, MagicChili Brown Coconut",
+      "type": "https://svgshare.com/i/i45.svg",
+      "price":50,
+      "restaurant_id":"4",
+      "dish_time":"b"
+    },
+    {
+      "image": "https://i.ibb.co/jvQVdQL/rectangle-3x.png",
+      "name": "Garbanzo Frito",
+      "description":
+        "Polenta fingers, veal cheek, magic chili cured lemon cream, yellow laksa",
+      "type": "https://svgshare.com/i/i45.svg",
+      "price":98,
+      "restaurant_id":"5",
+      "dish_time":"l"
+    },
+    {
+      "image": "https://i.ibb.co/6YZbmLF/rectangle-3x-2.png",
+      "name": "Smoked Pizza",
+      "description": "Basil dough, cashew butter, demi-glace, bison & radish",
+      "type": "https://svgshare.com/i/i4i.svg",
+      "price":30,
+      "restaurant_id":"6",
+      "dish_time":"d"
+    }]
+
   },
 
   {
     "image": "https://i.ibb.co/MRCbFkm/tiger-lily.png",
     "name": "Tiger Lily",
-    "chef": "Yanir Green",
-    "stars": "https://svgshare.com/i/hyN.svg"
+    "chef_name": "Yanir Green",
+    "chef_id":"3",
+    "restaurant_id":"3",
+    "open_date":"06/15/2000",
+    "rating":5,
+    "open_hour":11,
+    "dishes":[{
+      "image": "https://i.ibb.co/0t8L634/rectangle-3x-1.png",
+      "name": "Pad Ki Mao",
+      "description":
+        "Shrimps, Glass Noodles, Kemiri Nuts, Shallots, Lemon Grass, MagicChili Brown Coconut",
+      "type": "https://svgshare.com/i/i45.svg",
+      "price":50,
+      "restaurant_id":"4",
+      "dish_time":"b"
+    },
+    {
+      "image": "https://i.ibb.co/jvQVdQL/rectangle-3x.png",
+      "name": "Garbanzo Frito",
+      "description":
+        "Polenta fingers, veal cheek, magic chili cured lemon cream, yellow laksa",
+      "type": "https://svgshare.com/i/i45.svg",
+      "price":98,
+      "restaurant_id":"5",
+      "dish_time":"l"
+    },
+    {
+      "image": "https://i.ibb.co/6YZbmLF/rectangle-3x-2.png",
+      "name": "Smoked Pizza",
+      "description": "Basil dough, cashew butter, demi-glace, bison & radish",
+      "type": "https://svgshare.com/i/i4i.svg",
+      "price":30,
+      "restaurant_id":"6",
+      "dish_time":"d"
+    }]
+
   }
 ]

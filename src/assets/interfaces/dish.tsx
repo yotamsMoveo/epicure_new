@@ -4,4 +4,5 @@ export interface dish{
     description:string;
     type: string;
     price:number;
+    restaurant_id:string;
 }

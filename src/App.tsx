@@ -9,6 +9,7 @@ import HomePage from './pages/HomePage/HomePageComp';
 import Layout from './pages/layout';
 import Orders from './pages/Orders/OrdersComp';
 import Restaurants from './pages/Resraurans/RestaurantsComp';
+import RestaurantComp from './pages/Restaurant/RestaurantComp';
 
 function App() {
   const home_page_data = useSelector((state:any) => state.homePageData);
@@ -34,7 +35,8 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<HomePage />} />
             <Route path="orders" element={<Orders />} />
-            <Route path="restaurants" element={<Restaurants />} />
+            <Route path="restaurants" element={<Restaurants/>} />
+            <Route path="restaurants/:id"  element={<RestaurantComp />}/>
           </Route>
         </Routes>
       </Router>

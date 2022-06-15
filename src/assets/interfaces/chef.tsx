@@ -6,4 +6,5 @@ export interface chef {
   description: string;
   title: string;
   restaurants: restaurants;
+  chef_id:string;
 }

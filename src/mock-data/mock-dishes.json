@@ -5,7 +5,9 @@
     "description":
       "Shrimps, Glass Noodles, Kemiri Nuts, Shallots, Lemon Grass, MagicChili Brown Coconut",
     "type": "https://svgshare.com/i/i45.svg",
-    "price":50
+    "price":50,
+    "restaurant_id":"1",
+    "dish_time":"b"
   },
   {
     "image": "https://i.ibb.co/jvQVdQL/rectangle-3x.png",
@@ -13,14 +15,18 @@
     "description":
       "Polenta fingers, veal cheek, magic chili cured lemon cream, yellow laksa",
     "type": "https://svgshare.com/i/i45.svg",
-    "price":98
+    "price":98,
+    "restaurant_id":"2",
+    "dish_time":"l"
   },
   {
     "image": "https://i.ibb.co/6YZbmLF/rectangle-3x-2.png",
     "name": "Smoked Pizza",
     "description": "Basil dough, cashew butter, demi-glace, bison & radish",
     "type": "https://svgshare.com/i/i4i.svg",
-    "price":30
+    "price":30,
+    "restaurant_id":"3",
+    "dish_time":"d"
   },
   {
     "image": "https://i.ibb.co/0t8L634/rectangle-3x-1.png",
@@ -28,7 +34,9 @@
     "description":
       "Shrimps, Glass Noodles, Kemiri Nuts, Shallots, Lemon Grass, MagicChili Brown Coconut",
     "type": "https://svgshare.com/i/i45.svg",
-    "price":50
+    "price":50,
+    "restaurant_id":"4",
+    "dish_time":"b"
   },
   {
     "image": "https://i.ibb.co/jvQVdQL/rectangle-3x.png",
@@ -36,14 +44,18 @@
     "description":
       "Polenta fingers, veal cheek, magic chili cured lemon cream, yellow laksa",
     "type": "https://svgshare.com/i/i45.svg",
-    "price":98
+    "price":98,
+    "restaurant_id":"5",
+    "dish_time":"l"
   },
   {
     "image": "https://i.ibb.co/6YZbmLF/rectangle-3x-2.png",
     "name": "Smoked Pizza",
     "description": "Basil dough, cashew butter, demi-glace, bison & radish",
     "type": "https://svgshare.com/i/i4i.svg",
-    "price":30
+    "price":30,
+    "restaurant_id":"6",
+    "dish_time":"d"
   }
  
 ]
