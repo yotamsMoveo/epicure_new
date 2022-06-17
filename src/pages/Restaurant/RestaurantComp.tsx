@@ -8,7 +8,7 @@ const RestaurantComp = (restaurant: any) => {
   const allrRestaurants = ResturantsMock;
   const currentUrl = window.location.pathname;
   const temp = currentUrl.split("/");
-  let currentRestaurantId = temp[2];
+  let currentRestaurantId = temp[temp.length-1];
   let currentRestaurant: any;
   allrRestaurants.forEach((restaurant) => {
     if (restaurant.restaurant_id.localeCompare(currentRestaurantId) == 0) {
@@ -20,6 +20,13 @@ const RestaurantComp = (restaurant: any) => {
   );
   const baseDishes = currentRestaurant.dishes;
   let newDishesToShow: any[] = [];
+
+  const openOrderPage=(dish:any)=>{
+    debugger;
+    const newUrl = dish.dish_id;
+    const url=window.location.pathname +"/"+newUrl.toString();
+    window.location.href =url;
+  }
 
   const handleChanges = (showByItem: string) => {
     if (showByItem.localeCompare("b") == 0) {
@@ -103,7 +110,7 @@ const RestaurantComp = (restaurant: any) => {
       </nav>
 
       {restaurantDishes.map((dish: any, index: any) => (
-        <div className="restaurant-restaurant-item">
+        <div className="restaurant-restaurant-item" onClick={()=>openOrderPage(dish)}>
           <CardComp
             img={dish.image}
             title={dish.name}

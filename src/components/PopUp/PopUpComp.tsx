@@ -37,7 +37,7 @@ const PopUpComp=(props: any)=> {
           </IconButton>
           <ul className="popup-ul">
             <li className="popup-li">
-              <a href="#home" className="popup-a">
+              <a href="/restaurants" className="popup-a">
                 Restaurants
               </a>
             </li>

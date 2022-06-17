@@ -37,6 +37,7 @@ function App() {
             <Route path="orders" element={<Orders />} />
             <Route path="restaurants" element={<Restaurants/>} />
             <Route path="restaurants/:id"  element={<RestaurantComp />}/>
+            <Route path="restaurants/:id/:id"  element={<Orders />}/>
           </Route>
         </Routes>
       </Router>

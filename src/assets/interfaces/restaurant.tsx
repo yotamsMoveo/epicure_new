@@ -1,3 +1,5 @@
+import { dishes } from "./dishes";
+
 export interface restaurant{
     image: string;
     name: string;
@@ -5,4 +7,6 @@ export interface restaurant{
     chef_id: string;
     restaurant_id:string;
     open_date:Date;
+    dishes:dishes;
+
 }

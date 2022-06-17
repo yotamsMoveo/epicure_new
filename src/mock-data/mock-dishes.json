@@ -7,7 +7,8 @@
     "type": "https://svgshare.com/i/i45.svg",
     "price":50,
     "restaurant_id":"1",
-    "dish_time":"b"
+    "dish_time":"b",
+    "dish_id":1
   },
   {
     "image": "https://i.ibb.co/jvQVdQL/rectangle-3x.png",
@@ -17,7 +18,8 @@
     "type": "https://svgshare.com/i/i45.svg",
     "price":98,
     "restaurant_id":"2",
-    "dish_time":"l"
+    "dish_time":"l",
+    "dish_id":2
   },
   {
     "image": "https://i.ibb.co/6YZbmLF/rectangle-3x-2.png",
@@ -26,7 +28,8 @@
     "type": "https://svgshare.com/i/i4i.svg",
     "price":30,
     "restaurant_id":"3",
-    "dish_time":"d"
+    "dish_time":"d",
+    "dish_id":3
   },
   {
     "image": "https://i.ibb.co/0t8L634/rectangle-3x-1.png",
@@ -36,7 +39,8 @@
     "type": "https://svgshare.com/i/i45.svg",
     "price":50,
     "restaurant_id":"4",
-    "dish_time":"b"
+    "dish_time":"b",
+    "dish_id":4
   },
   {
     "image": "https://i.ibb.co/jvQVdQL/rectangle-3x.png",
@@ -46,6 +50,7 @@
     "type": "https://svgshare.com/i/i45.svg",
     "price":98,
     "restaurant_id":"5",
+    "dish_id":5,
     "dish_time":"l"
   },
   {
@@ -55,6 +60,7 @@
     "type": "https://svgshare.com/i/i4i.svg",
     "price":30,
     "restaurant_id":"6",
+    "dish_id":6,
     "dish_time":"d"
   }
  
