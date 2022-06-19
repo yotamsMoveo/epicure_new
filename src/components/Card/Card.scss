@@ -1,85 +1,123 @@
 .CardComp_small {
-  width: 245px;
+  width: 100%;
   flex-direction: column;
   align-items: flex-start;
-  max-height: 245px;
+  height: 100%;
   left: 20px;
   top: 20px;
   background: #f9f4ea;
+  .img {
+    width: 100%;
+    height: 151.8px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+  .title {
+    height: 21px;
+    text-align: left;
+    font-family: "Helvetica Neue";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 15px;
+    letter-spacing: 2.67px;
+    color: #000000;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+  .description {
+    font-family: "Helvetica Neue";
+    font-style: normal;
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: left;
+    letter-spacing: 1.97px;
+    color: #000000;
+    flex: none;
+    flex-grow: 0;
+  }
+  .type {
+    height: 30px;
+    text-align: left;
+  }
+  .price {
+    position: absolute;
+    bottom: 0;
+  }
+  .contant {
+    // display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 16px 16px;
+  }
   // position: relative;
-  
 }
 
 .CardComp_big {
   flex-direction: column;
-  width: 245px;
-  height: 400px;
+  width: 100%;
+  height: 100%;
   background: #f9f4ea;
-  flex: none;
   position: relative;
   flex-grow: 0;
+  .img {
+    width: 100%;
+    height: 151.8px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+  .title {
+    height: 21px;
+    text-align: left;
+    font-family: "Helvetica Neue";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 15px;
+    letter-spacing: 2.67px;
+    color: #000000;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+  .description {
+    font-family: "Helvetica Neue";
+    font-style: normal;
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: left;
+    letter-spacing: 1.97px;
+    color: #000000;
+    flex: none;
+    flex-grow: 0;
+  }
+
+  .type {
+    height: 30px;
+    text-align: left;
+  }
+  .price {
+    bottom: 0;
+  }
+  .contant {
+    // display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 16px 16px;
+  }
 }
 
-.CardComp_img {
-  width: 100%;
-  height: 151.8px;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-}
 
-.CardComp_title {
-  height: 21px;
-  text-align: left;
-  font-family: "Helvetica Neue";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 15px;
-  letter-spacing: 2.67px;
-  color: #000000;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-}
-
-.CardComp_description {
-  font-family: "Helvetica Neue";
-  font-style: normal;
-  font-weight: 200;
-  font-size: 16px;
-  line-height: 20px;
-  text-align: left;
-  letter-spacing: 1.97px;
-  color: #000000;
-  flex: none;
-  flex-grow: 0;
-}
-
-.CardComp_body {
-  padding-left: 5%;
-}
-
-.CardComp_type {
-  height: 30px;
-  text-align: left;
-}
-.CardComp_price{
-  position:absolute;
-  bottom: 0;
-}
-.CardComp_contant{
-  // display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 0 16px 16px;
-}
-
-.slick-slider .slick-slide{
-  // padding: 0 16px 0 0 ;
+.slick-slider .slick-slide {
+  padding: 0 16px 0 0 ;
   padding-right: 16px;
-  // div{
-  //   width: 285px;
+  div{
+    width: 285px;
 
-  // }
+  }
 }

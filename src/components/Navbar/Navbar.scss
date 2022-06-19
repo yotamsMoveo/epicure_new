@@ -1,27 +1,25 @@
 .navbar-conteiner {
   display: flex;
   flex-direction: row;
-}
-.navbar-leftside {
-  flex: 1;
-  margin: auto;
-  text-align: left;
+  .leftside {
+    flex: 1;
+    margin: auto;
+    text-align: left;
+  }
+  .center {
+    flex: 1;
+    margin: auto;
+    text-align: center;
+  }
+  .rightSide {
+    flex: 1;
+    margin: auto;
+    margin-right: 2vw;
+    text-align: right;
+    .img {
+      padding-right: 3vh;
+    }
+  }
 }
 
-.navbar-center {
-  flex: 1;
-  margin: auto;
-  text-align: center;
-}
 
-.navbar-rightSide {
-  flex: 1;
-  margin: auto;
-  margin-right: 2vw;
-  text-align: right;
-  
-}
-
-.img{
-  padding-right:3vh;
-}

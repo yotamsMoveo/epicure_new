@@ -6,18 +6,19 @@
   background: #ffffff;
   // padding-left: 3vh;
   margin: 28px 19px 20px;
+  .href {
+    height: 22px;
+    font-family: "Helvetica Neue";
+    font-style: normal;
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 1.92px;
+    color: #000000;
+    flex: 1;
+    order: 0;
+    flex-grow: 0;
+  }
 }
 
-.footer-page-footer-href {
-  height: 22px;
-  font-family: "Helvetica Neue";
-  font-style: normal;
-  font-weight: 200;
-  font-size: 18px;
-  line-height: 22px;
-  letter-spacing: 1.92px;
-  color: #000000;
-  flex: 1;
-  order: 0;
-  flex-grow: 0;
-}
+

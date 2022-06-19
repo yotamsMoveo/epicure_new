@@ -1,7 +1,7 @@
-const chefDataReducer = (state = "", action:any) => {
+const chefDataReducer = (state = "", action: any) => {
   switch (action.type) {
     case "GET_CHEF_DATA":
-      return state="chef data";
+      return (state = "chef data");
     default:
       return "";
   }

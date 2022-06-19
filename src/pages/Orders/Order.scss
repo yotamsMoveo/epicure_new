@@ -1,39 +1,44 @@
 .orders-body {
   display: flex;
   flex-direction: column;
-}
-.order-dish-content {
-  display: flex;
-  flex-direction: column;
-  text-align: start;
-  margin: 13px 16px;
-}
-.order-dish-adding {
-  //   display: flex;
-  flex-direction: column;
-  text-align: start;
-  margin: 13px 0 0 16px;
-}
+  .content {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    margin: 13px 16px;
+    .content-title{
 
-.order-dish-quantity {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin: 13px 0 0 16px;
-}
-.order-dish-quantity-content {
-  display: flex;
-  gap: 10px;
-}
-.order-dish-quantity-content{
-    padding-left: 1vh;
-}
-
-.add-to-bag{
+    }
+    .content-contentidescription{
+      
+    }
+  }
+  .adding {
+    //   display: flex;
+    flex-direction: column;
+    text-align: start;
+    margin: 13px 0 0 16px;
+  }
+  .quantity {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 13px 0 0 16px;
+    .quantity-content {
+      display: flex;
+      gap: 10px;
+    }
+  }
+  .add-to-bag {
     color: white;
     background-color: black;
     width: 260px;
     height: 48px;
     margin: 0 16px;
     text-transform: uppercase;
+  }
+  
 }
+
+
+

@@ -1,37 +1,36 @@
-
-import IconButton from '@material-ui/core/IconButton'
+import IconButton from "@material-ui/core/IconButton";
 import "../../components/Navbar/Navbar.scss";
 import mainlogo from "../../assets/images/mainlogo.png";
 import searchlogo from "../../assets/images/search.png";
 import bagLogo from "../../assets/images/bagLogo.png";
 import conactUsLogo from "../../assets/images/conactUsLogo.png";
-import { HamburgerIcon } from 'react-hamburger-icon';
-import PopUpComp from "../PopUp/PopUpComp";
+import { HamburgerIcon } from "react-hamburger-icon";
+import PopUpComp, { PopupProps, PopupType } from "../PopUp/PopUp";
 
-export const Navbar = (props: any) => {
+export const Navbar:React.FC<PopupProps> = ({popupType,onClickAction,isOpen,popup}) => {
 
-  let isOpen = props.isOpen;
-  let popup = props.popup;
   return (
     <div>
       <div className="navbar-conteiner">
-        <div className="navbar-leftside">
-          <IconButton
-            onClick={() => props.onClick("menu")}
-          >
+        <div className="leftside">
+          <IconButton onClick={() => onClickAction("menu")}>
             <HamburgerIcon open={false} />
           </IconButton>
         </div>
-        <div className="navbar-center">
+        <div className="center">
           <img src={mainlogo} />
         </div>
-        <div className="navbar-rightSide">
-          <img src={searchlogo} onClick={() => props.onClick("search")} className="img"/>
-          <img src={conactUsLogo}  className="img"/>
-          <img src={bagLogo} onClick={() => props.onClick("bag")} />
+        <div className="rightSide">
+          <img
+            src={searchlogo}
+            onClick={() => onClickAction("search")}
+            className="img"
+          />
+          <img src={conactUsLogo} className="img" />
+          <img src={bagLogo} onClick={() => onClickAction("bag")} />
         </div>
         {{ isOpen } && (
-          <PopUpComp selectedPopUp={props.popup} onClick={props.onClick} />
+          <PopUpComp popup={popup} onClickAction={onClickAction} />
         )}
       </div>
     </div>

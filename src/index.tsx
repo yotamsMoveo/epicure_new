@@ -1,14 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { createStore } from 'redux';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { createStore } from "redux";
 import allReducers from "./reducers/index";
 import { Provider } from "react-redux";
-import {composeWithDevTools} from '@redux-devtools/extension'
-
-
+import { composeWithDevTools } from "@redux-devtools/extension";
 
 const store = createStore(
   allReducers,
@@ -16,7 +14,7 @@ const store = createStore(
 );
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
 root.render(
   <Provider store={store}>

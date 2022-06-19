@@ -1,0 +1,43 @@
+.best-dishes-comp-body {
+  width: 100%;
+  padding-left: 3vh;
+  padding-bottom: 46px;
+  .title {
+    height: 24px;
+    left: 20px;
+    top: 367px;
+    align-self: flex-start;
+    font-family: "Helvetica Neue";
+    font-style: normal;
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    color: #000000;
+  }
+  .button {
+    height: 35px;
+    font-family: "Helvetica Neue";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 35px;
+    text-align: left;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    padding-top: 22px;
+    color: #000000;
+  }
+  .dishes-list{
+    // width: fit-content;
+    // max-height: 400px;
+  }
+}
+
+
+
+
+
+
+

@@ -1,0 +1,70 @@
+.restaurant-page-body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+  .title {
+    height: 24px;
+    left: 20px;
+    top: 367px;
+    align-self: flex-start;
+    font-family: "Helvetica Neue";
+    font-style: normal;
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    color: #000000;
+    padding-left: 3vh;
+  }
+  .go-back {
+    height: 35px;
+    text-decoration: none;
+    font-family: "Helvetica Neue";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    margin: 5px 16px 16px 0;
+    text-align: left;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    color: #000000;
+  }
+  .menu {
+    .list {
+      display: flex;
+      gap: 3vh;
+      list-style: none;
+      .item {
+        text-decoration: none;
+        color: black;
+        width: 39px;
+        height: 22px;
+        font-family: "Helvetica Neue";
+        font-style: normal;
+        font-weight: 200;
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 1.92px;
+        color: #000000;
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+      }
+    }
+  }
+  .restaurants {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    gap: 13px;
+    .restauarant-item {
+      max-height: 245px;
+      width: 100%;
+    }
+  }
+}
