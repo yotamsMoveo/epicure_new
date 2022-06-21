@@ -1,0 +1,48 @@
+//@import "../setup/functions";
+
+// LAYOUT BREAKPOINTS
+
+$break-desktop: 900px;
+$break-tablet: 700px;
+$break-mobile: 375px;
+
+//COLORS
+
+//base
+$app-color-black: #000000;
+$app-color-white: #ffffff;
+
+//main-colors
+$app-color-blue: #565672;
+$app-color-grey: #abaab8;
+$app-color-light-grey: #f7f9fb;
+$app-color-aqua: #b2f4dc;
+$app-color-light-aqua: #e6fcf4;
+
+//text-color
+$app-color-text: $app-color-blue;
+$app-color-text1: $app-color-grey;
+
+//border-color
+$app-color-border-grey: #c8ccd0;
+
+//bg-color
+$app-color-bg: $app-color-white;
+$app-color-bg-grey: #fafafa;
+$app-color-card-bg: #f9f4ea;
+
+//SPACING
+$app-letter-spacing-nurmal:1.97px;
+$app-letter-spacing-small:1.25px;
+
+
+//SIZES
+$app-header-height: 73px;
+$app-side-nav-width: 220px;
+
+
+//SHADOWS
+$app-container-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.05);
+$app-card-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.08);
+$app-popup-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.08);
+$app-edit-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16);

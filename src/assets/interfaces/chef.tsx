@@ -1,10 +1,8 @@
-import { restaurants } from "./restaurants";
 
-export interface chef {
+
+export interface Chef {
   image: string;
   name: string;
   description: string;
-  title: string;
-  restaurants: restaurants;
   chef_id: string;
 }

@@ -1,35 +1,29 @@
-import { chef } from "../assets/interfaces/chef";
-import { dishes } from "../assets/interfaces/dishes";
-import { restaurants } from "../assets/interfaces/restaurants";
-import { home_page_data } from "../assets/interfaces/home_page_data";
+import { Chef } from "../assets/interfaces/Chef";
+import { Dishes } from "../assets/interfaces/Dishes";
+import { Restaurants } from "../assets/interfaces/Restaurants";
 
-export async function getBestDishesData(): Promise<dishes> {
+
+export async function getBestDishesData(): Promise<Dishes> {
   const url = "https://reqres.in/api/products/3";
   const response = await fetch(url);
   const data = await response.json();
-  return data as dishes;
+  return data as Dishes;
 }
 
-export async function getBestResturantsData(): Promise<restaurants> {
+export async function getBestResturantsData(): Promise<Restaurants> {
   const url = "https://reqres.in/api/products/3";
   const response = await fetch(url);
   const data = await response.json();
-  return data as restaurants;
+  return data as Restaurants;
 }
 
-export async function getChefOfTheWeekData(): Promise<chef> {
+export async function getChefOfTheWeekData(): Promise<Chef> {
   const url = "https://reqres.in/api/products/3";
   const response = await fetch(url);
   const data = await response.json();
-  return data as chef;
+  return data as Chef;
 }
 
-export async function getHomePageData(): Promise<home_page_data> {
-  const url = "https://reqres.in/api/products/3";
-  const response = await fetch(url);
-  const data = await response.json();
-  return data as home_page_data;
-}
 
 export async function getDataBySearchItem(item: string): Promise<string> {
   console.log(item);

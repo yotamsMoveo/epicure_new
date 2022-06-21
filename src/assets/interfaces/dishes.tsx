@@ -1,6 +1,6 @@
-import { dish } from "./dish";
+import { SingleDish } from "./SingleDish";
 
-export interface dishes {
-  dishes: Array<dish>;
+export interface Dishes {
+  dishes: SingleDish[];
   restaurant_id: string;
 }

@@ -1,3 +1,4 @@
+@import '../../assets/styles/setup/variables';
 .icon-dish-comp-body {
   display: flex;
   flex-direction: column;
@@ -12,8 +13,8 @@
     font-size: 18px;
     line-height: 30px;
     text-align: center;
-    letter-spacing: 1.97px;
-    color: #000000;
+    letter-spacing: $app-letter-spacing-nurmal;
+    color: $app-color-black;
     flex: none;
     order: 1;
     flex-grow: 0;

@@ -28,9 +28,9 @@ const CardComp: React.FC<CardCompProps> = ({
       <img className="img" src={img}></img>
       <div className="contant">
         <p className="title">{title}</p>
+        <p className="description">{description}</p>
         {cardType === CardType.Big && (
           <>
-            <p className="description">{description}</p>
             <img className="type" src={type}></img>
             <p className="price">{price}</p>
           </>

@@ -7,21 +7,23 @@ import { useState } from "react";
 import { getDataBySearchItem } from "../../services/api_service";
 import CardComp from "../Card/Card";
 
-
 export interface PopupProps {
   popupType?: PopupType;
-  onClickAction:Function;
-  isOpen?:boolean;
-  popup?:string;
+  onClickAction: Function;
+  isOpen?: boolean;
+  popup?: string;
 }
 
 export enum PopupType {
-  Menu = 'menu',
-  Search='search',
-  Bag='bag',
-  NewOrder='new_order'
+  Menu = "menu",
+  Search = "search",
+  Bag = "bag",
+  NewOrder = "new_order",
 }
-const PopUpComp:React.FC<PopupProps>= ({popupType,onClickAction,isOpen,popup},{orders_to_show}) => {
+const PopUpComp: React.FC<PopupProps> = (
+  { popupType, onClickAction, isOpen, popup },
+  { orders_to_show }
+) => {
   const [searchByItem, setSearchByItem] = useState("");
 
   const handleChanges = (event: any) => {
@@ -35,13 +37,13 @@ const PopUpComp:React.FC<PopupProps>= ({popupType,onClickAction,isOpen,popup},{o
   };
 
   let selected = 0;
-  if (popup=='menu') {
+  if (popup == "menu") {
     selected = 2;
-  } else if (popup=="search") {
+  } else if (popup == "search") {
     selected = 3;
-  } else if (popup=="bag") {
+  } else if (popup == "bag") {
     selected = 4;
-  } else if (popup=="new_order") {
+  } else if (popup == "new_order") {
     selected = 5;
   }
 
@@ -49,9 +51,12 @@ const PopUpComp:React.FC<PopupProps>= ({popupType,onClickAction,isOpen,popup},{o
     case 2:
       return (
         <div className="popup-menu-body">
-          <IconButton onClick={()=>onClickAction("")}>
+          {/* <IconButton onClick={()=>onClickAction("")}>
             <CloseButton>X</CloseButton>
-          </IconButton>
+          </IconButton> */}
+          <div className="close-button" onClick={() => onClickAction("")}>
+            X
+          </div>
           <ul className="ul">
             <li className="li">
               <a href="/restaurants" className="a">
@@ -87,17 +92,13 @@ const PopUpComp:React.FC<PopupProps>= ({popupType,onClickAction,isOpen,popup},{o
     case 3:
       return (
         <div className="popup-search-body">
-          <IconButton onClick={()=>onClickAction("")}>
-            <CloseButton>X</CloseButton>
-          </IconButton>
+          <div className="close-button" onClick={() => onClickAction("")}>
+            X
+          </div>
           <div className="search-field">
             <form onSubmit={searchObject}>
               <div className="search-input">
-                <img
-                  src={searchLogo}
-                  className="img"
-                  onClick={searchObject}
-                />
+                <img src={searchLogo} className="img" onClick={searchObject} />
                 <input
                   value={searchByItem}
                   placeholder=" Search for restaurant cuisine, chef"
@@ -112,9 +113,9 @@ const PopUpComp:React.FC<PopupProps>= ({popupType,onClickAction,isOpen,popup},{o
     case 4:
       return (
         <div className="popup-bag-body">
-          <IconButton onClick={()=>onClickAction("")}>
-            <CloseButton>X</CloseButton>
-          </IconButton>
+          <div className="close-button" onClick={() => onClickAction("")}>
+            X
+          </div>
 
           <div className="contant">
             <img src={bagLogo} className="img" />

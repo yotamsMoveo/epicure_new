@@ -1,7 +1,7 @@
 import IconDishComp from "../../../../components/IconDish/IconDish";
 import "./signatureDishs.scss";
-import IconDishes from "../../../../mock-data/mock-icon-dish.json";
-import { signature_dish_icons } from "../../../../assets/interfaces/signature_dish_icons";
+import IconDishes from "../../../../assets/mock-data/mock-icon-dish.json";
+import { signature_dish_icons } from "../../../../assets/interfaces/SignatureDishIcons";
 import IconDish from "../../../../components/IconDish/IconDish";
 
 const SignatureDishsIconComp = () => {

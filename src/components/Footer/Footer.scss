@@ -1,3 +1,5 @@
+@import '../../assets/styles/setup/variables';
+
 .footer-page-footer {
   width: 377px;
   height: 202px;
@@ -14,7 +16,7 @@
     font-size: 18px;
     line-height: 22px;
     letter-spacing: 1.92px;
-    color: #000000;
+    color: $app-color-black;
     flex: 1;
     order: 0;
     flex-grow: 0;

@@ -1,5 +1,5 @@
 import "./bestrestaurants.scss";
-import bestResturantsMock from "../../../../mock-data/mock-restaurants.json";
+import bestResturantsMock from "../../../../assets/mock-data/mock-restaurants.json";
 import CardComp, { CardType } from "../../../../components/Card/Card";
 import * as React from "react";
 // import "../../pages/HomePage/components/BestDishes/bestDishes.scss";
@@ -7,7 +7,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { settings } from "../../../../assets/settings/slider_settings";
-import { restaurants } from "../../../../assets/interfaces/restaurants";
 import { Link } from "react-router-dom";
 import Card from "../../../../components/Card/Card";
 
@@ -17,7 +16,7 @@ const BestRestaurantsComp = () => {
   };
   return (
     <div className="best-resturants-comp-body">
-      <p className="title">
+      <p className="body-title">
         popular restaurant in epicure:
       </p>
       <Slider {...settings}>

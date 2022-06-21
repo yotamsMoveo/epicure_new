@@ -1,6 +1,6 @@
-import { restaurant } from "./restaurant";
+import { SingleRestaurant } from "./SingleRestaurant";
 
-export interface restaurants {
-  resturants: Array<restaurant>;
+export interface Restaurants {
+  resturants: SingleRestaurant[];
   chef_id: string;
 }

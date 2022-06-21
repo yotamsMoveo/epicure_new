@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+  outline: none;
+  direction: rtl;
+}
+
+html {
+  font-family: "Almoni", "English", sans-serif;
+  color: $app-color-text;
+  font-size: rem(16px);
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  height: calc(100vh - 73px);
+  width: calc(1440px - 220px);
+}
+
+p,
+h1,
+h2,
+h3,
+h3,
+h5,
+h6 {
+  margin: 0;
+  display: inline-block;
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+button {
+  cursor: pointer;
+  font-family: inherit;
+  color: inherit;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}

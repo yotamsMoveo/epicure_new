@@ -1,5 +1,5 @@
 
-
+@import '../../../../assets/styles/setup/variables';
 .chef-of-the-week-body {
   align-items: center;
   .chef-wrapper {
@@ -13,10 +13,10 @@
       font-weight: 200;
       font-size: 18px;
       line-height: 35px;
-      letter-spacing: 1.25px;
+      letter-spacing: $app-letter-spacing-small;
       text-transform: uppercase;
     
-      color: #000000;
+      color: $app-color-black;
     }
     .parent {
       display: flex;
@@ -49,9 +49,9 @@
       font-weight: 200;
       font-size: 18px;
       line-height: 28px;
-      letter-spacing: 1.25px;
+      letter-spacing: $app-letter-spacing-small;
       padding-bottom: 3%;
-      color: #000000;
+      color: $app-color-black;
     }
   }
   .chef-slider-wrapper {
@@ -64,10 +64,9 @@
       font-weight: 200;
       font-size: 18px;
       line-height: 35px;
-      letter-spacing: 1.25px;
+      letter-spacing: $app-letter-spacing-small;
       text-transform: uppercase;
-  
-      color: #000000;
+      color: $app-color-black;
     }
   }
 }

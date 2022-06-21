@@ -1,12 +1,12 @@
 
-
+@import '../../../../assets/styles/setup/variables';
 .best-resturants-comp-body {
   align-items: center;
   width: 100%;
   padding-left: 3vh;
   padding-top: 18px;
   padding-bottom: 48px;
-  .title {
+  .body-title {
     height: 24px;
     left: 20px;
     top: 367px;
@@ -16,10 +16,10 @@
     font-weight: 200;
     font-size: 18px;
     line-height: 24px;
-    letter-spacing: 1.25px;
+    letter-spacing: $app-letter-spacing-small;
     text-transform: uppercase;
   
-    color: #000000;
+    color: $app-color-black;;
   }
   .button {
     height: 35px;
@@ -34,7 +34,7 @@
     letter-spacing: 2px;
     text-transform: capitalize;
   
-    color: #000000;
+    color: $app-color-black;
   }
 }
 

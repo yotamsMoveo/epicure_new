@@ -1,63 +1,78 @@
 import "./Restaurants.scss";
-import ResturantsMock from "../../mock-data/mock-restaurants.json";
 import CardComp, { CardType } from "../../components/Card/Card";
-import { restaurants } from "../../assets/interfaces/restaurants";
+import { Restaurants } from "../../assets/interfaces/Restaurants";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
-import RestaurantComp from "../Restaurant/Restaurant";
+import RestaurantComp from "../RestaurantPage/RestaurantPage";
 import Card from "../../components/Card/Card";
+import { useSelector } from "react-redux";
+import { SingleRestaurant } from "../../assets/interfaces/SingleRestaurant";
 
-const Restaurants = () => {
-  const [dataToShow, setDataToShow] = useState(ResturantsMock);
-  const [isOpenNowClicked, setIsOpenNowClicked] = useState(true);
-  const [currantRestaurant, setCurrantRestaurant] = useState({});
+const RestaurantsPage = () => {
+  ////////////data
+  const restauran_page_data = useSelector(
+    (state: any) => state.restaurentsPageData
+  );
+  const [dataToShow, setDataToShow] = useState(restauran_page_data);
+  let popularRestaurants: Restaurants = {
+    resturants: [],
+    chef_id: ''
+  };
+  let openRestaurants: Restaurants = {
+    resturants: [],
+    chef_id: ''
+  };
+  let newRestaurants: Restaurants = {
+    resturants: [],
+    chef_id: ''
+  };
   const oldDate = new Date("01/01/2021");
   const localDate = new Date();
-  let newRestaurants: any[] = [];
-  let popularRestaurants: any[] = [];
 
-  function goToRestaurantPage(restaurant: any) {
+///////////////functions
+  const goToRestaurantPage=(restaurant: SingleRestaurant)=> {
     const newUrl = restaurant.restaurant_id;
     window.location.href = `/restaurants/${newUrl}`;
   }
 
   const handleChanges = (showByItem: string) => {
     if (showByItem.localeCompare("new") == 0) {
-      ResturantsMock.forEach((restaurantItem) => {
+    
+      restauran_page_data.forEach((restaurantItem:SingleRestaurant) => {
         const restaurantDateString = restaurantItem.open_date;
         const restaurantDate = new Date(restaurantDateString);
         if (oldDate.getFullYear() < restaurantDate.getFullYear()) {
-          newRestaurants.push(restaurantItem);
+          newRestaurants.resturants.push(restaurantItem);
         }
       });
-      setDataToShow(newRestaurants);
+      setDataToShow(newRestaurants.resturants);
     } else if (showByItem.localeCompare("popular") == 0) {
-      ResturantsMock.forEach((restaurantItem) => {
+      restauran_page_data.forEach((restaurantItem:SingleRestaurant) => {
         if (restaurantItem.rating > 5) {
-          popularRestaurants.push(restaurantItem);
+          popularRestaurants.resturants.push(restaurantItem);
         }
       });
-      setDataToShow(popularRestaurants);
+      setDataToShow(popularRestaurants.resturants);
     } else if (showByItem.localeCompare("open") == 0) {
       const localHour = localDate.getHours();
-      ResturantsMock.forEach((restaurantItem) => {
+      restauran_page_data.forEach((restaurantItem:SingleRestaurant) => {
         if (restaurantItem.open_hour <= localHour) {
-          popularRestaurants.push(restaurantItem);
+          openRestaurants.resturants.push(restaurantItem);
         }
       });
-      setDataToShow(popularRestaurants);
+      setDataToShow(openRestaurants.resturants);
     } else if (showByItem.localeCompare("all") == 0) {
-      setDataToShow(ResturantsMock);
+      setDataToShow(restauran_page_data);
     }
   };
 
   const goBack = () => {
     window.location.href = "/";
   };
-
+/////////////////component
   return (
     <div className="restaurant-page-body">
-      <div className="title">restaurants</div>
+      <div className="page-title">restaurants</div>
 
       <nav className="menu">
         <ul className="list">
@@ -103,7 +118,7 @@ const Restaurants = () => {
         {"<Back"}
       </NavLink>
       <div className="restaurants">
-        {dataToShow.map((resturant, index) => (
+        {dataToShow.map((resturant:SingleRestaurant) => (
           <div
             className="restauarant-item"
             onClick={() => goToRestaurantPage(resturant)}
@@ -112,7 +127,7 @@ const Restaurants = () => {
               img={resturant.image}
               title={resturant.name}
               description={resturant.chef_name}
-              key={index}
+              key={resturant.restaurant_id}
               cardType={CardType.Small}
             />
           </div>
@@ -122,4 +137,4 @@ const Restaurants = () => {
   );
 };
 
-export default Restaurants;
+export default RestaurantsPage;

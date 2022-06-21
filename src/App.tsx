@@ -7,19 +7,12 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import FooterPage from "./components/Footer/Foter";
 import HomePage from "./pages/HomePage/HomePage";
 import Layout from "./pages/layout";
-import Orders from "./pages/Orders/Orders";
-import Restaurants from "./pages/Restaurants/Restaurants";
-import Restaurant from "./pages/Restaurant/Restaurant";
+import Orders from "./pages/OrdersPage/OrdersPage";
+import Restaurants from "./pages/RestaurantsPage/RestaurantsPage";
+import Restaurant from "./pages/RestaurantPage/RestaurantPage";
 import { PopupType } from "./components/PopUp/PopUp";
 
 function App() {
-  const home_page_data = useSelector((state: any) => state.homePageData);
-  const chef_of_the_week = useSelector((state: any) => state.chefData);
-  const restauran_page_data = useSelector(
-    (state: any) => state.restaurentsPageData
-  );
-  const dishes_page_data = useSelector((state: any) => state.dishesPageData);
-
   const [isOpen, setIsOpen] = useState(false);
   const [popup, setPopUp] = useState("");
 
@@ -62,7 +55,7 @@ function App() {
           </Route>
         </Routes>
       </Router>
-      <FooterPage />
+      {/* <FooterPage /> */}
     </div>
   );
 }

@@ -1,3 +1,4 @@
+@import '../../assets/styles/setup/variables';
 .restaurant-body {
   display: flex;
   flex-direction: column;
@@ -13,7 +14,7 @@
     letter-spacing: 2px;
     text-transform: capitalize;
     padding-top: 22px;
-    color: #000000;
+    color: $app-color-black;
     margin: 0 12px 12px;
     text-decoration: none;
   }
@@ -27,7 +28,7 @@
       list-style: none;
       .list-item {
         text-decoration: none;
-        color: black;
+        color: $app-color-black;
         width: 39px;
         height: 22px;
         font-family: "Helvetica Neue";
@@ -36,7 +37,6 @@
         font-size: 18px;
         line-height: 22px;
         letter-spacing: 1.92px;
-        color: #000000;
         flex: none;
         order: 1;
         flex-grow: 0;

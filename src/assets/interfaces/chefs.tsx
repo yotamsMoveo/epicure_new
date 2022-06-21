@@ -1,5 +1,5 @@
-import { chef } from "./chef";
+import { Chef } from "./Chef";
 
-export interface chefs {
-  chefs: Array<chef>;
+export interface Chefs {
+  chefs: Chef[];
 }
