@@ -1,7 +1,6 @@
-@import '../../assets/styles/setup/variables';
+@import "../../assets/styles/setup/variables";
 
 .restaurant-page-body {
-  width: 100%;
   display: flex;
   flex-direction: column;
   padding-bottom: 3vh;
@@ -39,20 +38,24 @@
       list-style: none;
       .item {
         text-decoration: none;
-        width: 39px;
-        height: 22px;
         font-family: "Helvetica Neue";
         font-style: normal;
         font-weight: 200;
         font-size: 18px;
         line-height: 22px;
         letter-spacing: 1.92px;
-        color:$app-color-black;
+        color: $app-color-black;
         flex: none;
         order: 1;
         flex-grow: 0;
       }
+      .map{
+        display: none;
+      }
     }
+  }
+  .menu-desktop{
+    display: none;
   }
   .restaurants {
     display: flex;
@@ -61,6 +64,79 @@
     gap: 13px;
     .restauarant-item {
       width: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .restaurant-page-body {
+    padding: 0;
+    margin: 40px 127px 40px;
+    .page-title {
+      display: none;
+    }
+    .go-back {
+      display: none;
+    }
+    .menu {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .list {
+        .item {
+          font-weight: 200;
+          font-size: 18px;
+        }
+        .map{
+          display: flex;
+          text-decoration: none;
+          font-family: "Helvetica Neue";
+          font-style: normal;
+          font-weight: 200;
+          font-size: 18px;
+          line-height: 22px;
+          letter-spacing: 1.92px;
+          color: $app-color-black;
+          flex: none;
+          order: 1;
+          flex-grow: 0;
+        }
+      }
+    }
+    .menu-desktop{
+      display: flex;
+      justify-content: center;
+      background-color: $app-color-bg-grey;
+      .list-desktop {
+        display: flex;
+        gap: 3vh;
+        list-style: none;
+        .item-desktop {
+          text-decoration: none;
+          width: 39px;
+          height: 22px;
+          font-family: "Helvetica Neue";
+          font-style: normal;
+          font-weight: 200;
+          font-size: 18px;
+          line-height: 22px;
+          letter-spacing: 1.92px;
+          color: $app-color-black;
+          flex: none;
+          order: 1;
+          flex-grow: 0;
+        }
+      }
+    }
+    .restaurants {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      row-gap:40px; 
+      margin: 20px;
+      column-gap:24px; ; 
+      .restauarant-item {
+        width: 100%;
+      }
     }
   }
 }

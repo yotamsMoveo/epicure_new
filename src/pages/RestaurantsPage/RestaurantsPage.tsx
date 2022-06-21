@@ -112,6 +112,43 @@ const RestaurantsPage = () => {
               Open Now
             </NavLink>
           </li>
+          <li >
+            <NavLink
+              to="/restaurants"
+              className="map"
+              onClick={() => handleChanges("open")}
+            >
+              Map View
+            </NavLink>
+          </li>
+        </ul>
+      </nav>
+      <nav className="menu-desktop">
+        <ul className="list-desktop">
+          <li>
+            <NavLink
+              to="/restaurants"
+              className="item-desktop"
+            >
+              Price Range V
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/restaurants"
+              className="item-desktop"
+            >
+              Distance V
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/restaurants"
+              className="item-desktop"
+            >
+              Rating V
+            </NavLink>
+          </li>
         </ul>
       </nav>
       <NavLink to="/" className="go-back" onClick={goBack}>

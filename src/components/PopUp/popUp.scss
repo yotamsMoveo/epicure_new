@@ -34,7 +34,6 @@
       line-height: 22px;
       letter-spacing: 1.92px;
       color: $app-color-black;
-
       flex: none;
       order: 0;
       flex-grow: 0;
@@ -49,6 +48,8 @@
   position: absolute;
   width: 100%;
   min-height: 200px;
+  max-width: 497px;
+  max-height: 586px;
   background: #ffffff;
   box-shadow: 2px 4px 10px rgba(175, 175, 175, 0.25);
   .search-field {
@@ -103,7 +104,8 @@
   min-height: 200px;
   background: #ffffff;
   box-shadow: 2px 4px 10px rgba(175, 175, 175, 0.25);
-  height: 218px;
+  max-width: 497px;
+  max-height: 586px;
   .contant {
     display: flex;
     flex-direction: column;

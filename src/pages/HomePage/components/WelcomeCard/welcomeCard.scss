@@ -1,5 +1,4 @@
-
-@import '../../../../assets/styles/setup/variables';
+@import "../../../../assets/styles/setup/variables";
 .welcome-comp-body {
   background-image: url(../../../../assets/images/backgroundPic.png);
   background-repeat: no-repeat;
@@ -9,76 +8,99 @@
   height: 273px;
   justify-content: center;
   .card {
-    height: 60%;
+    max-height: 144px;
+    width: 335px;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 25px;
     align-self: center;
-    max-width: 90%;
-    max-height: fit-content;
     background: rgba(255, 255, 255, 0.88);
     background-size: 100%;
-    .title {
-      width: 100%;
-      height: 50px;
-      font-family: "Helvetica Neue";
-      font-style: normal;
-      font-weight: 200;
-      font-size: 24px;
-      line-height: 32px;
-      align-self: center;
-      letter-spacing:$app-letter-spacing-nurmal;
-      text-align: center;
-      color: $app-color-black;
-      flex: none;
-      order: 0;
-      flex-grow: 0;
-    }
-    
-    .search-field {
-      width: 80%;
-      font-family: "Helvetica Neue";
-      font-style: normal;
-      font-weight: 200;
-      font-size: 12px;
-      line-height: 15px;
-      padding: 20px 20px;
-      letter-spacing: 1.29px;
-      color: $app-color-black;
-      flex: none;
-      order: 1;
-      flex-grow: 1;
-      .search-input {
-        background: transparent;
-        display: flex;
+    .contant {
+      margin: auto;
+
+      .title {
         width: 100%;
-        height: 30px;
-        flex: 1;
+        height: 50px;
+        font-family: "Helvetica Neue";
+        font-style: normal;
+        font-weight: 200;
+        font-size: 24px;
+        line-height: 32px;
+        align-self: center;
+        letter-spacing: $app-letter-spacing-nurmal;
+        text-align: center;
+        color: $app-color-black;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+      }
+
+      .search-field {
+        width: 80%;
+        font-family: "Helvetica Neue";
+        font-style: normal;
+        font-weight: 200;
+        font-size: 12px;
+        line-height: 15px;
+        padding: 20px 20px;
+        letter-spacing: 1.29px;
+        color: $app-color-black;
+        flex: none;
+        order: 1;
         flex-grow: 1;
-        border: 1px solid;
-        border-radius: 4px;
-        .input {
-          border: 0px;
+
+        .search-input {
           background: transparent;
+          display: flex;
           width: 100%;
-        }
-        .img {
-          height: 20px;
-          margin: auto;
-          margin-left: 1vh;
-          margin-right: 2vh;
+          height: 30px;
+          flex: 1;
+          flex-grow: 1;
+          border: 1px solid;
+          border-radius: 4px;
+          .input {
+            border: 0px;
+            background: transparent;
+            width: 100%;
+          }
+          .img {
+            height: 20px;
+            margin: auto;
+            margin-left: 1vh;
+            margin-right: 2vh;
+          }
         }
       }
     }
   }
 }
 
-
-
-
-
-
-
-
+@media screen and (min-width: 1024px) {
+  .welcome-comp-body {
+    height: 696px;
+    justify-content: center;
+    .card {
+      height: 221px;
+      width: 776px;
+      .contant {
+        gap:27.5px;
+        .title { 
+          margin: auto;
+          width: 50%;
+        }
+        .search-field {
+          width: 60%;
+          margin: auto;
+          .search-input {
+            border-radius: 2px;
+           
+          }
+        }
+      }
+    }
+  }
+}

@@ -30,10 +30,10 @@ const CardComp: React.FC<CardCompProps> = ({
         <p className="title">{title}</p>
         <p className="description">{description}</p>
         {cardType === CardType.Big && (
-          <>
+          <div className="icon-wrapper">
             <img className="type" src={type}></img>
             <p className="price">{price}</p>
-          </>
+          </div>
         )}
       </div>
     </div>

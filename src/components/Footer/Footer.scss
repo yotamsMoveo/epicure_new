@@ -1,8 +1,8 @@
-@import '../../assets/styles/setup/variables';
+@import "../../assets/styles/setup/variables";
 
 .footer-page-footer {
-  width: 377px;
-  height: 202px;
+  width: fit-content;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   background: #ffffff;
@@ -23,4 +23,16 @@
   }
 }
 
-
+@media screen and (min-width: 1024px) {
+  .footer-page-footer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    width: inherit;
+    margin: 31px 510.5px;
+    .href {
+      flex: none;
+    }
+  }
+}

@@ -16,28 +16,30 @@ const BestRestaurantsComp = () => {
   };
   return (
     <div className="best-resturants-comp-body">
-      <p className="body-title">
-        popular restaurant in epicure:
-      </p>
-      <Slider {...settings}>
-        {bestResturantsMock.map((resturant) => (
-          <Card
-            img={resturant.image}
-            title={resturant.name}
-            description={resturant.chef_name}
-            key={resturant.name}
-            cardType={CardType.Small}
-          />
-        ))}
-      </Slider>
+      <p className="body-title">popular restaurant in epicure:</p>
+      <div className="slider-wrapper">
+        <Slider {...settings}>
+          {bestResturantsMock.map((resturant) => (
+            <Card
+              img={resturant.image}
+              title={resturant.name}
+              description={resturant.chef_name}
+              key={resturant.name}
+              cardType={CardType.Small}
+            />
+          ))}
+        </Slider>
+      </div>
       <br />
-      <Link
-        to="restaurants"
-        className="button"
-        onClick={navigateToRestaurants}
-      >
-        {"All Restaurants >>"}
-      </Link>
+      <div className="button-wrapper">
+        <Link
+          to="restaurants"
+          className="button"
+          onClick={navigateToRestaurants}
+        >
+          {"All Restaurants >>"}
+        </Link>
+      </div>
     </div>
   );
 };

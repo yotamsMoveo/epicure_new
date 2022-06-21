@@ -11,12 +11,12 @@ import { useSelector } from "react-redux";
 const HomePage = () => {
   return (
     <div className="home-page-body">
-      {/* <WelcomeCardComp />
-      <BestRestaurantsComp />
-      <BestdishesComp />
+      <WelcomeCardComp />
+     <BestRestaurantsComp />
+       <BestdishesComp />
       <SignatureDishsIconComp />
       <ChefOfTheWeek />
-      <AboutUsComp /> */}
+      <AboutUsComp />
     </div>
   );
 };

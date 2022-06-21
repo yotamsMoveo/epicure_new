@@ -1,4 +1,4 @@
-@import '../../../../assets/styles/setup/variables';
+@import "../../../../assets/styles/setup/variables";
 // @import '../../../../style.scss';
 .about-us {
   background: $app-color-bg-grey;
@@ -9,67 +9,140 @@
     align-items: flex-start;
     gap: 32px;
     margin: 48px 20px;
+    .aboutLogo-desktop {
+      display: none;
+    }
     .aboutLogo {
       width: 102px;
       height: 95px;
       padding-top: 24px;
     }
-    .store-media-buttons {
+    .wrapper {
       display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      gap: 15px;
       flex-direction: column;
-      width: 290px;
-      .store-buttons {
-        width: 135px;
-        height: 37px;
-        border-radius: 6.7px;
-        border: solid 0.5px black;
+      justify-items: flex-start;
+      align-items: flex-start;
+      .store-media-buttons-desktop {
+        display: none;
+      }
+      .store-media-buttons-mobile {
         display: flex;
-        align-items: center;
         justify-content: center;
-        img {
-          height: 20px;
-          width: 17px;
-          margin-right: 10px;
-        }
-        .store-buttons-upper-text {
-          font-size: 10px;
-        }
-        .store-buttons-lower-text {
-          font-size: 12px;
+        align-items: flex-start;
+        gap: 15px;
+        flex-direction: column;
+        width: 290px;
+        .store-buttons {
+          width: 135px;
+          height: 37px;
+          border-radius: 6.7px;
+          border: solid 0.5px black;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          img {
+            height: 20px;
+            width: 17px;
+            margin-right: 10px;
+          }
+          .store-buttons-upper-text {
+            font-size: 10px;
+          }
+          .store-buttons-lower-text {
+            font-size: 12px;
+          }
         }
       }
-    }
-    .title {
-      font-family: "Helvetica Neue";
-      font-style: normal;
-      font-weight: 200;
-      font-size: 18px;
-      line-height: 35px;
-      text-align: justify;
-      letter-spacing: $app-letter-spacing-small;
-      text-transform: uppercase;
-      color: $app-color-black;;
-      padding-bottom: 16px;
-    }
-    
-    .parograph {
-      font-family: "Helvetica Neue";
-      font-style: normal;
-      font-weight: 200;
-      font-size: 18px;
-      line-height: 28px;
-      letter-spacing: 2.14px;
-      padding-bottom: 2vh;
-      color: $app-color-black;;
+      .title {
+        font-family: "Helvetica Neue";
+        font-style: normal;
+        font-weight: 200;
+        font-size: 18px;
+        line-height: 35px;
+        text-align: justify;
+        letter-spacing: $app-letter-spacing-small;
+        text-transform: uppercase;
+        color: $app-color-black;
+        padding-bottom: 16px;
+      }
+
+      .parograph {
+        font-family: "Helvetica Neue";
+        font-style: normal;
+        font-weight: 200;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 2.14px;
+        padding-bottom: 2vh;
+        color: $app-color-black;
+      }
     }
   }
 }
 
-
-
-
-
-
+@media screen and (min-width: 1024px) {
+  .about-us {
+    .body {
+      flex-direction: row;
+      flex: 1;
+      margin: 40px 132px;
+      .aboutLogo {
+        display: none;
+      }
+      .aboutLogo-desktop {
+        display: flex;
+        width: 178.22px;
+        height: 166px;
+        margin: auto;
+      }
+      .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-items: flex-start;
+        align-items: flex-start;
+        .title {
+          font-weight: 200;
+          font-size: 30px;
+          padding: 0;
+        }
+        .store-media-buttons-desktop {
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          gap: 15px;
+          flex-direction: row;
+          width: 290px;
+          .store-buttons-desktop {
+            width: 135px;
+            height: 37px;
+            border-radius: 6.7px;
+            border: solid 0.5px black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+              height: 20px;
+              width: 17px;
+              margin-right: 10px;
+            }
+            .store-buttons-upper-text-desktop {
+              font-size: 10px;
+            }
+            .store-buttons-lower-text-desktop {
+              font-size: 12px;
+            }
+          }
+        }
+        .store-media-buttons-mobile {
+          display: none;
+        }
+        .parograph {
+          max-width: 569px;
+          font-weight: 200;
+          font-size: 20px;
+          padding: 0;
+        }
+      }
+    }
+  }
+}

@@ -4,6 +4,7 @@
   width: 100%;
   padding-left: 3vh;
   padding-bottom: 46px;
+ 
   .body-title {
     height: 24px;
     left: 20px;
@@ -30,11 +31,46 @@
     text-transform: capitalize;
     padding-top: 22px;
     color: $app-color-black;
+    text-decoration: none;
   }
   // .dishes-list{
   //   // width: fit-content;
   //   // max-height: 400px;
   // }
+}
+
+
+
+@media screen and (min-width: 1024px) {
+  .best-dishes-comp-body {
+    margin: 80px auto;
+    padding: 0;
+    max-width: 1450px;
+    display: flex;
+    flex-direction: column;
+    .body-title {
+      height: 35px;
+      display: flex;
+      justify-content: center;
+      align-self: center;
+      font-size: 30px;
+      line-height: 35px;
+    }
+    .slider-wrapper {
+      margin: 0 127px;
+    }
+    .button-wrapper {
+      display: flex;
+      text-align: right;
+      align-items: flex-end;
+      justify-content: end;
+      .button {
+        align-self: flex-end;
+        justify-self: end;
+        padding-right: 127.5px;
+      }
+    }
+  }
 }
 
 

@@ -1,23 +1,23 @@
-
-@import '../../../../assets/styles/setup/variables';
+@import "../../../../assets/styles/setup/variables";
 .chef-of-the-week-body {
   align-items: center;
+  margin: 61px 20px 0;
+  .tilte {
+    height: 35px;
+    font-family: "Helvetica Neue";
+    font-style: normal;
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 35px;
+    letter-spacing: $app-letter-spacing-small;
+    text-transform: uppercase;
+    justify-self: start;
+    color: $app-color-black;
+  }
   .chef-wrapper {
     display: flex;
     flex-direction: column;
-    margin: 61px 20px 0;
-    .tilte {
-      height: 35px;
-      font-family: "Helvetica Neue";
-      font-style: normal;
-      font-weight: 200;
-      font-size: 18px;
-      line-height: 35px;
-      letter-spacing: $app-letter-spacing-small;
-      text-transform: uppercase;
-    
-      color: $app-color-black;
-    }
+
     .parent {
       display: flex;
       position: relative;
@@ -71,10 +71,42 @@
   }
 }
 
+@media screen and (min-width: 1024px) {
+  .chef-of-the-week-body {
+    margin: 80px 127px;
+    .tilte {
+      justify-self: center;
+      align-self: center;
+      justify-content: center;
+      display: flex;
+      font-weight: 200;
+      font-size: 30px;
+    }
+    .chef-wrapper {
+      flex-direction: row;
+      gap: 63.5px;
+      .parent {
+        display: flex;
+        position: relative;
+        text-align: center;
+        flex-direction: row;
+        height: 269px;
+        width: 480px;
+        .half-fade-image {
+          height: 100%;
+          width: 100%;
+          margin: auto;
+          flex: 1;
+        }
+      }
+    }
+    .chef-slider-wrapper {
 
-
-
-
-
-
-
+      .tilte-wrapper {
+        font-size: 30px;
+        line-height: 35px;
+        text-transform:none;
+      }
+    }
+  }
+}

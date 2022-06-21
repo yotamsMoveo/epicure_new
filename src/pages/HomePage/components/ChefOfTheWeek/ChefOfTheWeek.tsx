@@ -21,16 +21,17 @@ const ChefOfTheWeek = () => {
   }
   
   restauran_page_data.forEach((restaurant:SingleRestaurant) => {
-    if(restaurant.chef_id==chefOfTheWeek._id){
-      chefRestaurants.resturants.push(restaurant);
-    }
+    // if(restaurant.chef_id==chefOfTheWeek._id){
+    //   chefRestaurants.resturants.push(restaurant);
+    // }
   });
-  const [restaurantChef,setRestaurantNames]=useState(chefRestaurants.resturants);
+  const [restaurantChef,setRestaurantNames]=useState(restauran_page_data);
 
   return (
     <div className="chef-of-the-week-body">
+       <h1 className="tilte">Chef of the week:</h1>
       <div className="chef-wrapper">
-        <h1 className="tilte">Chef of the week:</h1>
+       
         <div className="parent">
           <img
             src={chefOfTheWeek.image}
@@ -42,7 +43,7 @@ const ChefOfTheWeek = () => {
         <p className="description">{chefOfTheWeek.description}</p>
       </div>
       <div className="chef-slider-wrapper">
-        <h1 className="tilte-wrapper">Chef of the week:</h1>
+        <h1 className="tilte-wrapper">Yossi’s Restaurants</h1>
         <Slider {...settings}>
           {restaurantChef.map((resturant:SingleRestaurant) => (
             <Card

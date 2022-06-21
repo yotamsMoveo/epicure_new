@@ -18,25 +18,23 @@ const WelcomeCardComp = () => {
   return (
     <div className="welcome-comp-body">
       <div className="card">
-        <h1 className="title">
-          Epicure works with the top chef restaurants in Tel Aviv
-        </h1>
-        <div className="search-field">
-          <form>
-            <div className="search-input">
-              <img
-                src={searchLogo}
-                className="img"
-                onClick={searchObject}
-              />
-              <input
-                value={searchByItem}
-                placeholder=" Search for restaurant cuisine, chef"
-                className="input "
-                onChange={handleChanges}
-              ></input>
-            </div>
-          </form>
+        <div className="contant">
+          <h1 className="title">
+            Epicure works with the top chef restaurants in Tel Aviv
+          </h1>
+          <div className="search-field">
+            <form>
+              <div className="search-input">
+                <img src={searchLogo} className="img" onClick={searchObject} />
+                <input
+                  value={searchByItem}
+                  placeholder=" Search for restaurant cuisine, chef"
+                  className="input "
+                  onChange={handleChanges}
+                ></input>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>

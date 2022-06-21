@@ -14,7 +14,7 @@
     text-align: center;
   }
 
-  .desktop{
+  .desktop {
     display: none;
   }
   .rightSide {
@@ -29,21 +29,40 @@
   }
 }
 
-@media screen and (min-width:1024px) {
+@media screen and (min-width: 1024px) {
   .navbar-conteiner {
-   margin: 0 127px;
-   padding: 0;
-   height: 64px;
+    padding: 15px 127px;
     .leftside {
-display:none;
-
+      display: none;
     }
     .mobile {
-      display:none;
+      display: none;
     }
-    .desktop{
-      display: block;
-      
+    .desktop {
+      display: flex;
+      .desktop-img {
+        max-width: 114px;
+        max-height: 33px;
+        margin: auto;
+      }
+      .desktop-ul {
+        display: flex;
+        gap: 20px;
+        list-style-type: none;
+        .li a {
+          text-decoration: none;
+          font-family: "Helvetica Neue";
+          font-style: normal;
+          font-weight: 200;
+          font-size: 18px;
+          line-height: 22px;
+          letter-spacing: 1.92px;
+          color: #000000;
+          flex: none;
+          order: 0;
+          flex-grow: 0;
+        }
+      }
     }
     .rightSide {
       flex: 1;
@@ -57,5 +76,3 @@ display:none;
     }
   }
 }
-
-

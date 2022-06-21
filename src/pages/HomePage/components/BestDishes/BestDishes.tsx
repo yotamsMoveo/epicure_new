@@ -12,8 +12,9 @@ const BestdishesComp = () => {
   return (
     <div className="best-dishes-comp-body">
       <p className="body-title ">Signature Dish Of:</p>
+      <div className="slider-wrapper">
       <Slider {...settings}>
-        {bestDishesMock.map((dish,index) => (
+        {bestDishesMock.map((dish, index) => (
           <Card
             img={dish.image}
             title={dish.name}
@@ -25,13 +26,13 @@ const BestdishesComp = () => {
           />
         ))}
       </Slider>
+      </div>
       <br />
-      <Link
-        to="/restaurants"
-        className="button"
-      >
-        {"All Restaurants >>"}
-      </Link>
+      <div className="button-wrapper ">
+        <Link to="/restaurants" className="button">
+          {"All Restaurants >>"}
+        </Link>
+      </div>
     </div>
   );
 };

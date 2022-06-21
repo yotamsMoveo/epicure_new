@@ -1,4 +1,4 @@
-@import '../../../../assets/styles/setup/variables';
+@import "../../../../assets/styles/setup/variables";
 .signature-dishs-body {
   display: flex;
   flex-direction: column;
@@ -25,6 +25,14 @@
   }
 }
 
-
-
-
+@media screen and (min-width: 1024px) {
+  .signature-dishs-body {
+    .title {
+      font-weight: 200;
+      font-size: 30px;
+    }
+    .icon-list {
+      flex-direction: row;
+    }
+  }
+}
