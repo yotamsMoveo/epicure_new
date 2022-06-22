@@ -4,7 +4,6 @@ import { CloseButton } from "react-bootstrap";
 import bagLogo from "../../assets/images/bagLogo.png";
 import searchLogo from "../../assets/images/search.png";
 import { useState } from "react";
-import { getDataBySearchItem } from "../../services/api_service";
 import CardComp from "../Card/Card";
 
 export interface PopupProps {
@@ -30,11 +29,11 @@ const PopUpComp: React.FC<PopupProps> = (
     const value = event.target.value;
     setSearchByItem(value);
   };
-  const searchObject = () => {
-    let data = getDataBySearchItem(searchByItem);
-    console.log(data);
-    setSearchByItem("");
-  };
+  // const searchObject = () => {
+  //   let data = getDataBySearchItem(searchByItem);
+  //   console.log(data);
+  //   setSearchByItem("");
+  // };
 
   let selected = 0;
   if (popup == "menu") {
@@ -96,9 +95,9 @@ const PopUpComp: React.FC<PopupProps> = (
             X
           </div>
           <div className="search-field">
-            <form onSubmit={searchObject}>
+            <form >
               <div className="search-input">
-                <img src={searchLogo} className="img" onClick={searchObject} />
+                <img src={searchLogo} className="img"  />
                 <input
                   value={searchByItem}
                   placeholder=" Search for restaurant cuisine, chef"

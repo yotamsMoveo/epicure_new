@@ -7,7 +7,6 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import FooterPage from "./components/Footer/Foter";
 import HomePage from "./pages/HomePage/HomePage";
 import Layout from "./pages/layout";
-import Orders from "./pages/OrdersPage/OrdersPage";
 import Restaurants from "./pages/RestaurantsPage/RestaurantsPage";
 import Restaurant from "./pages/RestaurantPage/RestaurantPage";
 import { PopupType } from "./components/PopUp/PopUp";
@@ -30,28 +29,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<HomePage />} />
-            <Route
-              path="orders"
-              element={
-                <Orders
-                  onClickAction={handlePopUpOpen}
-                  isOpen={isOpen}
-                  popup={popup}
-                />
-              }
-            />
             <Route path="restaurants" element={<Restaurants />} />
             <Route path="restaurants/:id" element={<Restaurant />} />
-            <Route
-              path="restaurants/:id/:id"
-              element={
-                <Orders
-                  onClickAction={handlePopUpOpen}
-                  isOpen={isOpen}
-                  popup={popup}
-                />
-              }
-            />
           </Route>
         </Routes>
       </Router>

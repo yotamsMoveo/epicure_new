@@ -1,0 +1,17 @@
+.open-body {
+  display: flex;
+  margin: 33px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text {
+    font-family: "Helvetica Neue";
+    font-style: normal;
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 20px;
+    /* identical to box height, or 111% */
+
+    letter-spacing: 1.97px;
+  }
+}

@@ -1,10 +1,9 @@
-@import '../../assets/styles/setup/variables';
+@import "../../assets/styles/setup/variables";
 .restaurant-body {
   display: flex;
   flex-direction: column;
   .go-back {
     height: 35px;
-  
     font-family: "Helvetica Neue";
     font-style: normal;
     font-weight: 400;
@@ -18,10 +17,43 @@
     margin: 0 12px 12px;
     text-decoration: none;
   }
-  .card {
+  .restaurant-card-wrapper {
     margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    .card-img {
+      height: 272px;
+      width: 100%;
+    }
+    .text-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: flex-start;
+      padding-top: 32px;
+      .card-title {
+        font-family: "Helvetica Neue";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        letter-spacing: 2.67px;
+        color: $app-color-black;
+      }
+      .card-description {
+        font-family: "Helvetica Neue";
+        font-style: normal;
+        font-weight: 200;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 1.97px;
+        color: $app-color-black;
+      }
+    }
   }
-  .menu{
+  .menu {
     .menu-list {
       display: flex;
       gap: 3vh;
@@ -42,24 +74,83 @@
         flex-grow: 0;
       }
     }
-  
   }
-  .dish-item {
+  .dishes {
     display: flex;
-    padding-bottom: 13px;
-    margin: 20px;
-    max-height: 370px;
-
+    flex-direction: column;
+    .dish-item {
+      display: flex;
+      padding-bottom: 13px;
+      margin: 20px;
+      // max-height: 370px;
+    }
   }
 }
 
+@media screen and (min-width: 1024px) {
+  .restaurant-body {
+    margin: 0 127px;
+    height: fit-content;
 
+    .go-back {
+      display: none;
+    }
+    .restaurant-card-wrapper {
+      margin: 0;
+      justify-content: center;
+      align-items: center;
+      .card-img {
+        width: 100%;
+        height: 425px;
+      }
+      .text-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 32px;
+        .card-title {
+          font-family: "Helvetica Neue";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 56px;
+          line-height: 64px;
+          /* identical to box height, or 114% */
 
+          letter-spacing: 3.67px;
 
+          color: $app-color-black;
+        }
+        .card-description {
+          font-family: "Helvetica Neue";
+          font-style: normal;
+          font-weight: 200;
+          font-size: 32px;
+          line-height: 36px;
+          /* identical to box height, or 112% */
 
+          letter-spacing: 1.97px;
+          color: $app-color-black;
+        }
+      }
+    }
 
-
-
-
-
-
+    .menu {
+      display: flex;
+      justify-content: center;
+    }
+    .dishes {
+      max-width: 900px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      row-gap: 32px;
+      margin: 0;
+      column-gap: 32px;
+      .dish-item {
+        width: 272px;
+        padding-bottom: 13px;
+        margin: 0;
+      }
+    }
+  }
+}

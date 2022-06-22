@@ -1,20 +1,18 @@
 import "./welcomeCard.scss";
 import searchLogo from "../../../../assets/images/search.png";
 import { useState } from "react";
-import { getDataBySearchItem } from "../../../../services/api_service";
+import { getDataBySearchItem } from "./WelcomeCardSlice";
 
 const WelcomeCardComp = () => {
   const [searchByItem, setSearchByItem] = useState("");
-  const handleChanges = (event: any) => {
+ 
+  const  handleChanges= (event: any)=>  {
     const value = event.target.value;
     setSearchByItem(value);
-  };
-  const searchObject = () => {
-    let data = getDataBySearchItem(searchByItem);
-    console.log(data);
-    setSearchByItem("");
+    
   };
 
+  /////////////////component
   return (
     <div className="welcome-comp-body">
       <div className="card">
@@ -25,7 +23,7 @@ const WelcomeCardComp = () => {
           <div className="search-field">
             <form>
               <div className="search-input">
-                <img src={searchLogo} className="img" onClick={searchObject} />
+                <img src={searchLogo} className="img" onClick={()=>getDataBySearchItem(searchByItem)} />
                 <input
                   value={searchByItem}
                   placeholder=" Search for restaurant cuisine, chef"

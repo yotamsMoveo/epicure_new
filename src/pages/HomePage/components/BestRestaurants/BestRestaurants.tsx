@@ -11,9 +11,6 @@ import { Link } from "react-router-dom";
 import Card from "../../../../components/Card/Card";
 
 const BestRestaurantsComp = () => {
-  const navigateToRestaurants = () => {
-    console.log("navigate");
-  };
   return (
     <div className="best-resturants-comp-body">
       <p className="body-title">popular restaurant in epicure:</p>
@@ -35,7 +32,6 @@ const BestRestaurantsComp = () => {
         <Link
           to="restaurants"
           className="button"
-          onClick={navigateToRestaurants}
         >
           {"All Restaurants >>"}
         </Link>
