@@ -1,4 +1,3 @@
-import { SignatureDishIcon } from "../../assets/interfaces/SignatureDishIcon";
 import "../../components/IconDish/IconDish.scss";
 
 export interface IconDishProps {

@@ -1,52 +1,38 @@
 import "./chefOfTheWeek.scss";
-import { CardType } from "../../../../components/Card/Card";
-import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { settings } from "../../../../assets/settings/slider_settings";
 import { useSelector } from "react-redux";
-import Card from "../../../../components/Card/Card";
 import { SingleRestaurant } from "../../../../assets/interfaces/SingleRestaurant";
-import { Restaurants } from "../../../../assets/interfaces/Restaurants";
-import { useEffect, useState } from "react";
-import {getChefRestaurants} from './ChefSlice'
+import { useState } from "react";
+import SliderRestaurants from "../../../../components/SliderWarpper/SliderRestaurants";
+import { getChefRestaurants } from "../../../../state/reducers/ChefSlice";
+import { useDispatch } from "react-redux";
+
 
 const ChefOfTheWeek = () => {
   ////////////////data
-  const chefOfTheWeek = useSelector((state: any) => state.chefData);
-  const restauran_page_data = useSelector(
-    (state: any) => state.restaurentsPageData
-  );
-  const [restaurantChef, setRestaurantNames] = useState(restauran_page_data);
-  const chefRestaurants=getChefRestaurants(restauran_page_data,chefOfTheWeek);
-
+  const {chefData,chefRest} = useSelector((store:any) => store.chefData);
+  const dispach=useDispatch();
+  dispach(getChefRestaurants());
+  
   ///////////////component
   return (
     <div className="chef-of-the-week-body">
-      <h1 className="tilte">Chef of the week:</h1>
+      <h1 className="tilte" >Chef of the week:</h1>
       <div className="chef-wrapper">
         <div className="parent">
           <img
-            src={chefOfTheWeek.image}
+            src={chefData.image}
             alt="chef of the month"
             className="half-fade-image"
           ></img>
           <div className="opacity-div">Yossi Shitrit</div>
         </div>
-        <p className="description">{chefOfTheWeek.description}</p>
+        <p className="description">{chefData.description}</p>
       </div>
       <div className="chef-slider-wrapper">
         <h1 className="tilte-wrapper">Yossi’s Restaurants</h1>
-        <Slider {...settings}>
-          {restaurantChef.map((resturant: SingleRestaurant) => (
-            <Card
-              img={resturant.image}
-              title={resturant.name}
-              key={resturant.restaurant_id}
-              cardType={CardType.Small}
-            />
-          ))}
-        </Slider>
+        <SliderRestaurants array={chefRest}/>
       </div>
     </div>
   );

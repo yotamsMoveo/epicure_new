@@ -1,115 +1,78 @@
 import "./Restaurants.scss";
-import CardComp, { CardType } from "../../components/Card/Card";
-import { Restaurants } from "../../assets/interfaces/Restaurants";
-import { NavLink } from "react-router-dom";
+import { CardType } from "../../components/Card/Card";
 import { useState } from "react";
-import RestaurantComp from "../RestaurantPage/RestaurantPage";
 import Card from "../../components/Card/Card";
 import { useSelector } from "react-redux";
 import { SingleRestaurant } from "../../assets/interfaces/SingleRestaurant";
+import "../../state/reducers/RestaurantsSlice";
+import {} from "../../state/reducers/RestaurantsSlice";
 import {
-  goBack,
-  openRestaurantPage,
   setNewRestaurants,
   setOpenRestaurants,
   setPopularRestaurants,
-} from "./RestaurantsPageSlice";
+  openRestaurantPage
+} from "../FuncFiles/FuncFlieRSP";
 
 const RestaurantsPage = () => {
   ////////////data
-  const restauran_page_data = useSelector(
-    (state: any) => state.restaurentsPageData
+  const { allRestaurants } = useSelector(
+    (store: any) => store.restauarantsData
   );
-  const [dataToShow, setDataToShow] = useState(restauran_page_data);
-  let newRestaurants:SingleRestaurant[]=[];
-  let popularRestaurants:SingleRestaurant[]=[];
-  let openRestaurants:SingleRestaurant[]=[];
-  newRestaurants = setNewRestaurants(restauran_page_data,newRestaurants);
-  popularRestaurants = setPopularRestaurants(restauran_page_data,popularRestaurants);
-  openRestaurants = setOpenRestaurants(restauran_page_data,openRestaurants);
+  const [dataToShow, setDataToShow] = useState(allRestaurants);
+  let newRestaurants: SingleRestaurant[] = [];
+  let popularRestaurants: SingleRestaurant[] = [];
+  let openRestaurants: SingleRestaurant[] = [];
+  newRestaurants = setNewRestaurants(allRestaurants, newRestaurants);
+  popularRestaurants = setPopularRestaurants(
+    allRestaurants,
+    popularRestaurants
+  );
+  openRestaurants = setOpenRestaurants(allRestaurants, openRestaurants);
 
   /////////////////component
   return (
     <div className="restaurant-page-body">
       <div className="page-title">restaurants</div>
-
       <nav className="menu">
         <ul className="list">
-          <li>
-            <NavLink
-              to="/restaurants"
-              className="item"
-              onClick={() => setDataToShow(restauran_page_data)}
-            >
-              All
-            </NavLink>
+          <li className="item" onClick={() => setDataToShow(allRestaurants)}>
+            All
           </li>
-          <li>
-            <NavLink
-              to="/restaurants"
-              className="item"
-              onClick={() => setDataToShow(newRestaurants)}
-            >
-              New
-            </NavLink>
+          <li
+            className="item"
+            onClick={() => {
+              {
+                setDataToShow(newRestaurants);
+              }
+            }}
+          >
+            New
           </li>
-          <li>
-            <NavLink
-              to="/restaurants"
-              className="item"
-              onClick={() => setDataToShow(popularRestaurants)}
-            >
-              Most Popular
-            </NavLink>
+          <li
+            className="item"
+            onClick={() => setDataToShow(popularRestaurants)}
+          >
+            Most Popular
           </li>
-          <li>
-            <NavLink
-              to="/restaurants"
-              className="item"
-              onClick={() => setDataToShow(openRestaurants)}
-            >
-              Open Now
-            </NavLink>
+          <li className="item" onClick={() => setDataToShow(openRestaurants)}>
+            Open Now
           </li>
-          <li>
-            <NavLink
-              to="/restaurants"
-              className="map"
-              onClick={() => setDataToShow(openRestaurants)}
-            >
-              Map View
-            </NavLink>
+          <li className="map" onClick={() => setDataToShow(openRestaurants)}>
+            Map View
           </li>
         </ul>
       </nav>
+      {/* <GoTo text="<Back" where="/"/> */}
       <nav className="menu-desktop">
         <ul className="list-desktop">
-          <li>
-            <NavLink to="/restaurants" className="item-desktop">
-              Price Range V
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/restaurants" className="item-desktop">
-              Distance V
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/restaurants" className="item-desktop">
-              Rating V
-            </NavLink>
-          </li>
+          <li className="item">Price Range V</li>
+          <li className="item">Distance V</li>
+          <li className="item">Rating V</li>
         </ul>
       </nav>
-      <NavLink to="/" className="go-back" onClick={goBack}>
-        {"<Back"}
-      </NavLink>
       <div className="restaurants">
         {dataToShow.map((resturant: SingleRestaurant) => (
-          <div
-            className="restauarant-item"
-            onClick={()=>openRestaurantPage(resturant)}
-          >
+          <div className="restauarant-item" onClick={()=>openRestaurantPage(resturant)}>
             <Card
               img={resturant.image}
               title={resturant.name}
@@ -123,5 +86,5 @@ const RestaurantsPage = () => {
     </div>
   );
 };
-
+//onClick={() => openRestaurantPage(resturant)}
 export default RestaurantsPage;

@@ -27,8 +27,8 @@ const CardComp: React.FC<CardCompProps> = ({
     <div className={cardType}>
       <img className="img" src={img}></img>
       <div className="contant">
-        <text className="title">{title}</text>
-        <text className="description">{description}</text>
+        <p className="title">{title}</p>
+        <p className="description">{description}</p>
         {cardType === CardType.Big && (
           <div className="icon-wrapper">
             <img className="type" src={type}></img>

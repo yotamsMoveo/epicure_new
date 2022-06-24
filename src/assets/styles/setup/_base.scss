@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
   outline: none;
-  direction: rtl;
+  
 }
 
 html {
@@ -19,19 +19,18 @@ main {
   width: calc(1440px - 220px);
 }
 
-p,
-h1,
-h2,
-h3,
-h3,
-h5,
-h6 {
+p
+{
   margin: 0;
-  display: inline-block;
 }
 ul {
   list-style: none;
-  padding-left: 0;
+  
+}
+li{
+  padding: 0;
+  margin-right: 10px;
+  width: fit-content;
 }
 button {
   cursor: pointer;
@@ -41,4 +40,5 @@ button {
 a {
   text-decoration: none;
   color: inherit;
+  margin-left: 10px;
 }

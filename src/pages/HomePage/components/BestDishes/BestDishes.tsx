@@ -1,37 +1,18 @@
 import "./bestDishes.scss";
 import bestDishesMock from "../../../../assets/mock-data/mock-dishes.json";
-import { CardType } from "../../../../components/Card/Card";
-import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { settings } from "../../../../assets/settings/slider_settings";
-import { Link } from "react-router-dom";
-import Card from "../../../../components/Card/Card";
+import GoTo from "../../../../components/GoTo/GoTo";
+import SliderDishes from "../../../../components/SliderWarpper/SliderWrapper";
 
 const BestdishesComp = () => {
   return (
     <div className="best-dishes-comp-body">
-      <p className="body-title ">Signature Dish Of:</p>
-      <div className="slider-wrapper">
-      <Slider {...settings}>
-        {bestDishesMock.map((dish, index) => (
-          <Card
-            img={dish.image}
-            title={dish.name}
-            description={dish.description}
-            type={dish.type}
-            price={dish.price}
-            key={index}
-            cardType={CardType.Big}
-          />
-        ))}
-      </Slider>
-      </div>
+      <h1 className="body-title ">Signature Dish Of:</h1>
+      <SliderDishes array={bestDishesMock}></SliderDishes>
       <br />
       <div className="button-wrapper ">
-        <Link to="/restaurants" className="button">
-          {"All Restaurants >>"}
-        </Link>
+        <GoTo text="All Restaurants >>" where="/restaurants"/>
       </div>
     </div>
   );

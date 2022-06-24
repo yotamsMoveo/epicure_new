@@ -57,7 +57,6 @@ export function goBack(){
 
 export function openRestaurantPage(restauarant:SingleRestaurant){
     const currentUrl=window.location.pathname;
-    window.location.href=currentUrl+restauarant.restaurant_id;
-
+    window.location.href=currentUrl+"/"+restauarant.restaurant_id;
 
 }

@@ -1,13 +1,16 @@
 import { Dishes } from "../../assets/interfaces/Dishes";
 import { SingleDish } from "../../assets/interfaces/SingleDish";
 import { SingleRestaurant } from "../../assets/interfaces/SingleRestaurant";
+import setRestaurantOpen from '../RestaurantPage/RestaurantPage';
+
+/////////////////////interface
 let currentRestaurant: SingleRestaurant = {
   image: "",
   name: "",
   chef_name: "",
   chef_id: "",
   restaurant_id: "",
-  open_date: new Date(),
+  open_date: "",
   dishes: [],
   rating: 0,
   open_hour: 0,
@@ -17,6 +20,8 @@ let newDishesToShow: Dishes = {
   dishes: [],
   restaurant_id: "",
 };
+
+////////////////////////functions
 export function setCurrentRestaurant(
   allRestaurants: SingleRestaurant[],
   currentRestaurantId: string
@@ -77,3 +82,13 @@ export function setDinnerDishes(
  export const goBack = () => {
     window.location.href = `/restaurants/`;
   };
+export const setIsOpen=(currentRestaurant:SingleRestaurant)=>{
+    const localDate = new Date();
+    const localHour = localDate.getHours();
+    if (currentRestaurant.open_hour <= localHour) {
+      return true;
+    }
+    else{
+        return false;
+    }
+}

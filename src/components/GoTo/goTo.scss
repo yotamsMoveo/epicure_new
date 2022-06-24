@@ -1,0 +1,19 @@
+@import '../../assets/styles/setup/variables';
+
+.go-to {
+    align-self: flex-end;
+    justify-self: end;
+    padding-right: 127.5px;
+    height: 35px;
+    font-family: "Helvetica Neue";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 35px;
+    text-align: left;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    padding-top: 22px;
+    color: $app-color-black;
+    text-decoration: none;
+  }

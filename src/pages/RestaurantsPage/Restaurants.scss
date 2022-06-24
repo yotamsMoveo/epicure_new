@@ -32,9 +32,14 @@
     color: $app-color-black;
   }
   .menu {
+    display: flex;
+
+    
     .list {
       display: flex;
       gap: 3vh;
+      justify-content: flex-start;
+      align-items: flex-start;
       list-style: none;
       .item {
         text-decoration: none;

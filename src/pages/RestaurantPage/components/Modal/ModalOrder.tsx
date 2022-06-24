@@ -8,13 +8,13 @@ import { useSelector } from "react-redux";
 import {setBeforeUrl, setCurrentDish, setOrderDish} from './ModalOrderFunc'
 
 const ModalOrder = (props: any) => {
-  const dishes_page_data = useSelector((state: any) => state.dishesPageData);
+  ////////////////data
+  const {allDishes}=useSelector((store:any)=>store.dishesData);
   const [quantity, setQuantity] = useState(0);
   const [white_bread, setWhite_bread] = useState(false);
   const [sticky_rice, setSticky_rice] = useState(false);
   const [whithout_peanuts, setWhithout_peanuts] = useState(false);
   const [sticky_less_spicy, setSticky_less_spicy] = useState(false);
-  let allDishes = dishes_page_data;
   const currentUrl = window.location.pathname;
   const temp = currentUrl.split("/");
   let currentDishId = temp[temp.length - 1];
@@ -22,6 +22,8 @@ const ModalOrder = (props: any) => {
   const currentDish=setCurrentDish(allDishes,currentDishId);
   const order_dish=setOrderDish();
 
+
+  ///////////////////function to do
   let orders_to_show: Orders = {
     orders_to_show: [],
   };
@@ -71,18 +73,18 @@ const ModalOrder = (props: any) => {
           <div className="orders-body">
           <img src={currentDish.image} />
           <div className="content">
-            <text className="content-title">{currentDish.name}</text>
-            <text className="content-description">{currentDish.description}</text>
+            <p className="content-title">{currentDish.name}</p>
+            <p className="content-description">{currentDish.description}</p>
           </div>
           <div className="adding">
-            <text className="adding-title">Choose a side</text>
+            <p className="adding-title">Choose a side</p>
             <div className="checkbox-warpper">
               <Checkbox
                 checked={white_bread}
                 onChange={() => handleChange(1)}
                 inputProps={{ "aria-label": "controlled" }}
               />
-              <text className="boolean">{"White bread"}</text>
+              <p className="boolean">{"White bread"}</p>
             </div>
             <div className="checkbox-warpper">
               <Checkbox
@@ -90,9 +92,9 @@ const ModalOrder = (props: any) => {
                 onChange={() => handleChange(2)}
                 inputProps={{ "aria-label": "controlled" }}
               />
-              <text className="boolean">{"Sticky rice"}</text>
+              <p className="boolean">{"Sticky rice"}</p>
             </div>
-            <text className="adding-title">Changes</text>
+            <p className="adding-title">Changes</p>
             <div className="checkbox-warpper">
               <Checkbox
                 checked={whithout_peanuts}

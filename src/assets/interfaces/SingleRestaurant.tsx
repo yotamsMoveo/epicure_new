@@ -6,7 +6,7 @@ export interface SingleRestaurant {
   chef_name: string;
   chef_id: string;
   restaurant_id: string;
-  open_date: Date;
+  open_date: string;
   dishes: SingleDish[];
   rating: number;
   open_hour: number;
