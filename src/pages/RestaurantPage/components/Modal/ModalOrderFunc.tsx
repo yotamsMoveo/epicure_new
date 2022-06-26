@@ -23,7 +23,6 @@ let currentDish: SingleDish = {
 
 
 export function setCurrentDish(allDishes:SingleDish[],currentDishId:string){
-  debugger;
     allDishes.forEach((dish: SingleDish) => {
         if (dish.dish_id.toString() == currentDishId.toString()) {
           currentDish = dish;

@@ -1,10 +1,73 @@
 @import "../../assets/styles/responsive/mixins";
+@import "../../assets/styles/setup/variables";
 
 
 
 
+.list-desktop {
+    display: flex;
+    gap: 3vh;
+    list-style: none;
+    flex-direction: row;
+    .item-desktop {
+      text-decoration: none;
+      width: fit-content;
+      height: 22px;
+      font-family: "Helvetica Neue";
+      font-style: normal;
+      font-weight: 200;
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: 1.92px;
+      color: $app-color-black;
+      flex: none;
+      order: 1;
+      flex-grow: 0;
+    }
+  }
 
 
-@include for-desktop-layout{
-    
-}
+  .list {
+    display: flex;
+    gap: 3vh;
+    justify-content: flex-start;
+    align-items: flex-start;
+    list-style: none;
+    .item {
+      text-decoration: none;
+      font-family: "Helvetica Neue";
+      font-style: normal;
+      font-weight: 200;
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: 1.92px;
+      color: $app-color-black;
+      flex: none;
+      order: 1;
+      flex-grow: 0;
+    }
+    .map{
+      display: none;
+    }
+  }
+
+  .menu-list {
+    display: flex;
+    gap: 3vh;
+    list-style: none;
+    .list-item {
+      text-decoration: none;
+      color: $app-color-black;
+      height: 22px;
+      font-family: "Helvetica Neue";
+      font-style: normal;
+      font-weight: 200;
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: 1.92px;
+      flex: none;
+      order: 1;
+      flex-grow: 0;
+    }
+
+  }

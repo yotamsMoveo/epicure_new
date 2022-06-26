@@ -12,6 +12,8 @@ import {
   setPopularRestaurants,
   openRestaurantPage
 } from "../FuncFiles/FuncFlieRSP";
+import FilterNav from "../../components/FilterNav/FilterNav";
+import RenderRestaurants from "./components/RenderRestaurants/RenderRestaurants";
 
 const RestaurantsPage = () => {
   ////////////data
@@ -29,62 +31,58 @@ const RestaurantsPage = () => {
   );
   openRestaurants = setOpenRestaurants(allRestaurants, openRestaurants);
 
+  ////////////////////functions
+  const dodo = () => {
+    console.log("dodo");
+  };
+  const setRestaurantsByFilter = (filter: string) => {
+    switch (filter) {
+      case "All": {
+        setDataToShow(allRestaurants);
+        break;
+      }
+      case "New": {
+        setDataToShow(newRestaurants);
+        break;
+      }
+      case "Most Popular": {
+        setDataToShow(popularRestaurants);
+        break;
+      }
+      case "Open Now": {
+        setDataToShow(openRestaurants);
+        break;
+      }
+      case "Map View": {
+        setDataToShow(openRestaurants);
+        break;
+      }
+    }
+  };
+
+
   /////////////////component
   return (
     <div className="restaurant-page-body">
       <div className="page-title">restaurants</div>
       <nav className="menu">
-        <ul className="list">
-          <li className="item" onClick={() => setDataToShow(allRestaurants)}>
-            All
-          </li>
-          <li
-            className="item"
-            onClick={() => {
-              {
-                setDataToShow(newRestaurants);
-              }
-            }}
-          >
-            New
-          </li>
-          <li
-            className="item"
-            onClick={() => setDataToShow(popularRestaurants)}
-          >
-            Most Popular
-          </li>
-          <li className="item" onClick={() => setDataToShow(openRestaurants)}>
-            Open Now
-          </li>
-          <li className="map" onClick={() => setDataToShow(openRestaurants)}>
-            Map View
-          </li>
-        </ul>
+        <FilterNav
+          labels={["All", "New", "Most Popular", "Open Now", "Map View"]}
+          onClickAction={setRestaurantsByFilter}
+          classNameStyleUL="list"
+          classNameStyleLI="item"
+        />
       </nav>
-      {/* <GoTo text="<Back" where="/"/> */}
       <nav className="menu-desktop">
-        <ul className="list-desktop">
-          <li className="item">Price Range V</li>
-          <li className="item">Distance V</li>
-          <li className="item">Rating V</li>
-        </ul>
+        <FilterNav
+          labels={["Price Range V", "Distance V", "Rating V"]}
+          classNameStyleUL="list-desktop"
+          classNameStyleLI="item-desktop "
+          onClickAction={dodo}
+        />
       </nav>
-      <div className="restaurants">
-        {dataToShow.map((resturant: SingleRestaurant) => (
-          <div className="restauarant-item" onClick={()=>openRestaurantPage(resturant)}>
-            <Card
-              img={resturant.image}
-              title={resturant.name}
-              description={resturant.chef_name}
-              key={resturant.restaurant_id}
-              cardType={CardType.Small}
-            />
-          </div>
-        ))}
-      </div>
+      <RenderRestaurants restaurants={dataToShow} onClickFunc={openRestaurantPage}/>
     </div>
   );
 };
-//onClick={() => openRestaurantPage(resturant)}
 export default RestaurantsPage;

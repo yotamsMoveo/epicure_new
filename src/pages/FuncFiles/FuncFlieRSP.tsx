@@ -1,5 +1,6 @@
 import { Restaurants } from "../../assets/interfaces/Restaurants";
 import { SingleRestaurant } from "../../assets/interfaces/SingleRestaurant";
+
 let newRestaurants: Restaurants = {
     resturants: [],
     chef_id: ''

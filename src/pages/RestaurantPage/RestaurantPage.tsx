@@ -16,13 +16,15 @@ import {
   setLaunchDishes,
 } from "../FuncFiles/FuncFileRPage";
 import GoTo from "../../components/GoTo/GoTo";
+import FilterNav from "../../components/FilterNav/FilterNav";
+import RestaurantsDetails from "./components/RestaurantDetails/RestaurantDetails";
+import RenderDishes from "./components/RenderDishes/RenderDishes";
 
 const RestaurantPage = () => {
   ///////////////////////data
   const { allRestaurants } = useSelector(
     (store: any) => store.restauarantsData
   );
-  
   const currentUrl = window.location.pathname;
   const temp = currentUrl.split("/");
   let currentRlestaurantId = temp[temp.length - 1];
@@ -50,60 +52,43 @@ const RestaurantPage = () => {
     setSelectedDish(dish);
     setOrderModalOpen((prevState) => !prevState);
   };
-
   const closeModal = () => {
     setOrderModalOpen(false);
+  };
+  const setDishesByFilter = (filter: string) => {
+    switch (filter) {
+      case "Breakfast": {
+        setRestaurantDishes(breakfastDishes);
+        break;
+      }
+      case "Lanch": {
+        setRestaurantDishes(launchDishes);
+        break;
+      }
+      case "Dinner": {
+        setRestaurantDishes(dinnerDishes);
+        break;
+      }
+    }
   };
 
   ////////////////////////component
   return (
     <div className="restaurant-body">
       {/* <GoTo text="<Back" where="restaurants/"/> */}
-      <div className="restaurant-card-wrapper">
-        <img src={currentRestaurant.image} className="card-img"></img>
-        <div className="text-wrapper">
-          <p className="card-title">{currentRestaurant.name}</p>
-          <p className="card-description">
-            {currentRestaurant.chef_name}
-          </p>
-          {isOpen && <IsOpen />}
-        </div>
-      </div>
+      <RestaurantsDetails
+        currentRestaurant={currentRestaurant}
+        isOpen={isOpen}
+      />
       <nav className="menu">
-        <ul className="menu-list">
-          <li
-            className="list-item"
-            onClick={() => setRestaurantDishes(breakfastDishes)}
-          >
-            Breakfast
-          </li>
-          <li
-            className="list-item"
-            onClick={() => setRestaurantDishes(launchDishes)}
-          >
-            Lanch
-          </li>
-          <li className="list-item"
-              onClick={() => setRestaurantDishes(dinnerDishes)}>
-              Dinner
-          </li>
-        </ul>
+        <FilterNav
+          labels={["Breakfast", "Lanch", "Dinner"]}
+          onClickAction={setDishesByFilter}
+          classNameStyleUL="menu-list"
+          classNameStyleLI="list-item"
+        />
       </nav>
-      <div className="dishes">
-        {restaurantDishes.map((dish: SingleDish, index:any) => (
-          <div className="dish-item" onClick={() => openOrderPage(dish)}>
-            <Card
-              img={dish.image}
-              title={dish.name}
-              description={dish.description}
-              type={dish.type}
-              price={dish.price}
-              key={index}
-              cardType={CardType.Big}
-            />
-          </div>
-        ))}
-      </div>
+      <RenderDishes dishes={restaurantDishes} onClickFunc={openOrderPage} />
       {orderModalOpen && (
         <ModalOrder
           selectedDish={selectedDish}
