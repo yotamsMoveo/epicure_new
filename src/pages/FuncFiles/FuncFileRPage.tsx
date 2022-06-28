@@ -1,4 +1,4 @@
-import { Dishes } from "../../assets/interfaces/Dishes";
+import { Dishes } from "../../assets/interfaces/dishes";
 import { SingleDish } from "../../assets/interfaces/SingleDish";
 import { SingleRestaurant } from "../../assets/interfaces/SingleRestaurant";
 import setRestaurantOpen from '../RestaurantPage/RestaurantPage';
@@ -9,9 +9,8 @@ let currentRestaurant: SingleRestaurant = {
   name: "",
   chef_name: "",
   chef_id: "",
-  restaurant_id: "",
+  _id: "",
   open_date: "",
-  dishes: [],
   rating: 0,
   open_hour: 0,
 };
@@ -27,7 +26,7 @@ export function setCurrentRestaurant(
   currentRestaurantId: string
 ) {
   allRestaurants.forEach((restaurant: SingleRestaurant) => {
-    if (restaurant.restaurant_id == currentRestaurantId) {
+    if (restaurant._id == currentRestaurantId) {
       currentRestaurant = restaurant;
     }
   });

@@ -1,27 +1,48 @@
+import { get } from "http";
 import { Chef } from "../assets/interfaces/Chef";
-import { Dishes } from "../assets/interfaces/Dishes";
 import { Restaurants } from "../assets/interfaces/Restaurants";
 
 
-export async function getBestDishesData(): Promise<Dishes> {
-  const url = "https://reqres.in/api/products/3";
-  const response = await fetch(url);
+export async function getBestDishesData(): Promise<any> {
+  const url = "http://localhost:8000/api/Dishes";
+  const response = await fetch(url,{method:'GET'});
   const data = await response.json();
-  return data as Dishes;
+  return data;
 }
 
-export async function getBestResturantsData(): Promise<Restaurants> {
-  const url = "https://reqres.in/api/products/3";
+export async function getResturantsData(): Promise<any> {
+  const url = "http://localhost:8000/api/Restaurants";
   const response = await fetch(url);
   const data = await response.json();
-  return data as Restaurants;
+  return data ;
 }
 
-export async function getChefOfTheWeekData(): Promise<Chef> {
-  const url = "https://reqres.in/api/products/3";
+export async function getChefOfTheWeekData(): Promise<any> {
+  const url = "http://localhost:8000/api/Chefs/";
   const response = await fetch(url);
-  const data = await response.json();
-  return data as Chef;
+  const data =await response.json();
+  return data ;
+}
+
+export async function getRestaurantsByChefId(chef_id:string): Promise<any> {
+  const url = "http://localhost:8000/api/Restaurants/"+chef_id;
+  const response = await fetch(url,{method:'GET'});
+  const data =await response.json();
+  return data ;
+}
+
+export async function getDishesByChefId(rest_id:string): Promise<any> {
+  const url = "http://localhost:8000/api/Dishes/"+rest_id;
+  const response = await fetch(url,{method:'GET'});
+  const data =await response.json();
+  return data ;
+}
+
+export async function getRestaurantsById(rest_id:string): Promise<any> {
+  const url = "http://localhost:8000/api/single/"+rest_id;
+  const response = await fetch(url,{method:'GET'});
+  const data =await response.json();
+  return data ;
 }
 
 

@@ -65,16 +65,15 @@ const ModalOrder = (props: any) => {
       orders_to_show.orders_to_show.push(order_dish);
     }
   };
-
   return (
     <div className="modal">
       <section className="modal-main">
-        <button type="button" onClick={(props.closeModal)}>Close</button>
+        <button type="button" onClick={(()=>props.closeModal())}>Close</button>
           <div className="orders-body">
-          <img src={currentDish.image} />
+          <img src={props.selectedDish.image} />
           <div className="content">
-            <p className="content-title">{currentDish.name}</p>
-            <p className="content-description">{currentDish.description}</p>
+            <p className="content-title">{props.selectedDish.name}</p>
+            <p className="content-description">{props.selectedDish.description}</p>
           </div>
           <div className="adding">
             <p className="adding-title">Choose a side</p>

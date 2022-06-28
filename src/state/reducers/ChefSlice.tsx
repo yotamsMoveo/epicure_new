@@ -17,7 +17,7 @@ export const chefSlice = createSlice({
     },
     reducers: {
       getChefRestaurants: (state) => {
-        state.chefRest=restaurantsMock;
+        //state.chefRest=restaurantsMock;
       },
     },
   });

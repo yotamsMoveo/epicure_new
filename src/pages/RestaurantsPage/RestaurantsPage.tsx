@@ -1,6 +1,6 @@
 import "./Restaurants.scss";
 import { CardType } from "../../components/Card/Card";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Card from "../../components/Card/Card";
 import { useSelector } from "react-redux";
 import { SingleRestaurant } from "../../assets/interfaces/SingleRestaurant";
@@ -14,9 +14,11 @@ import {
 } from "../FuncFiles/FuncFlieRSP";
 import FilterNav from "../../components/FilterNav/FilterNav";
 import RenderRestaurants from "./components/RenderRestaurants/RenderRestaurants";
+import {  getResturantsData } from "../../services/api_service";
 
 const RestaurantsPage = () => {
   ////////////data
+  //////////////redux
   const { allRestaurants } = useSelector(
     (store: any) => store.restauarantsData
   );
@@ -31,9 +33,17 @@ const RestaurantsPage = () => {
   );
   openRestaurants = setOpenRestaurants(allRestaurants, openRestaurants);
 
+  ////////////////////api call
+  const data:SingleRestaurant[]=[];
+  const [restaurants,setRestaurants] = useState(data);
+  useEffect(() => {
+    getResturantsData().then((res) => {
+      setRestaurants(res.data);
+    });
+  }, []);
+
   ////////////////////functions
   const dodo = () => {
-    console.log("dodo");
   };
   const setRestaurantsByFilter = (filter: string) => {
     switch (filter) {
@@ -81,7 +91,7 @@ const RestaurantsPage = () => {
           onClickAction={dodo}
         />
       </nav>
-      <RenderRestaurants restaurants={dataToShow} onClickFunc={openRestaurantPage}/>
+      {restaurants.length &&<RenderRestaurants restaurants={restaurants} onClickFunc={openRestaurantPage}/>}
     </div>
   );
 };

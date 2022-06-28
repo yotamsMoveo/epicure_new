@@ -13,7 +13,7 @@ export interface SliderRestaurantsProps {
 const SliderRestaurants:React.FC<SliderRestaurantsProps> = ({onClickAction,array}) => { 
   return (
     <div className="slider-wrapper">
-    <Slider {...settings}>
+    {array.length && <Slider {...settings}>
       {array.map((resturant) => (
         <Card
           img={resturant.image}
@@ -23,7 +23,7 @@ const SliderRestaurants:React.FC<SliderRestaurantsProps> = ({onClickAction,array
           cardType={CardType.Small}
         />
       ))}
-    </Slider>
+    </Slider> }
   </div>
   );
 };

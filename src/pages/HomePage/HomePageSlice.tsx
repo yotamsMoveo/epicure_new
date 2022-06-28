@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import {
   getBestDishesData,
-  getBestResturantsData,
+  getResturantsData,
   getChefOfTheWeekData,
 } from "../../services/api_service";
 
@@ -17,7 +17,7 @@ const HomePageSlice = () => {
   }, []);
 
   useEffect(() => {
-    const data = getBestResturantsData().then((response) =>
+    const data = getResturantsData().then((response) =>
       setBestResturantsData(response)
     );
   }, []);
