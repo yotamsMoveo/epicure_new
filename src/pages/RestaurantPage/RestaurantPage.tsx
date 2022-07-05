@@ -1,26 +1,21 @@
 import { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
-import { CardType } from "../../components/Card/Card";
 import "./restaurant.scss";
-import Card from "../../components/Card/Card";
 import { useSelector } from "react-redux";
 import { SingleDish } from "../../assets/interfaces/SingleDish";
-import IsOpen from "./components/IsOpen/IsOpen";
 import ModalOrder from "./components/Modal/ModalOrder";
 import {
-  goBack,
   setBreakfastDishes,
   setCurrentRestaurant,
   setDinnerDishes,
   setIsOpen,
   setLaunchDishes,
 } from "../FuncFiles/FuncFileRPage";
-import GoTo from "../../components/GoTo/GoTo";
 import FilterNav from "../../components/FilterNav/FilterNav";
 import RestaurantsDetails from "./components/RestaurantDetails/RestaurantDetails";
 import RenderDishes from "./components/RenderDishes/RenderDishes";
 import { getDishesByChefId, getRestaurantsById } from "../../services/api_service";
 import { SingleRestaurant } from "../../assets/interfaces/SingleRestaurant";
+import { useNavigate } from "react-router-dom";
 
 const RestaurantPage = () => {
   ///////////////////////data
@@ -43,6 +38,7 @@ const RestaurantPage = () => {
 
 
   /////////////////////////////////api-call
+  let navigate=useNavigate();
   const data:SingleDish[]=[];
   const restData:SingleRestaurant={
     image: "string",
@@ -87,6 +83,10 @@ const RestaurantPage = () => {
 );
 
   ////////////////////////to do function that happend after events
+  const goBack = () => {
+    navigate("/restaurants")
+    //window.location.href = `/restaurants/`;
+  };
   const openOrderPage = (dish: SingleDish) => {
     setSelectedDish(dish);
     setOrderModalOpen((prevState) => !prevState);

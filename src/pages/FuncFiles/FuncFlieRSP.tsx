@@ -1,6 +1,7 @@
 import { Restaurants } from "../../assets/interfaces/Restaurants";
 import { SingleRestaurant } from "../../assets/interfaces/SingleRestaurant";
 
+
 let newRestaurants: Restaurants = {
     resturants: [],
     chef_id: ''
@@ -51,14 +52,8 @@ export function setOpenRestaurants(allRestaurants:SingleRestaurant[],currentOpen
       return openRestaurants.resturants;
 }
 
-export function goBack(){
+// export function goBack(){
 
-    window.location.href = "/";
-}
+//     window.location.href = "/";
+// }
 
-export function openRestaurantPage(restauarant:SingleRestaurant){
-    const currentUrl=window.location.pathname;
-    window.location.href=currentUrl+"/"+restauarant._id;
-    
-
-}

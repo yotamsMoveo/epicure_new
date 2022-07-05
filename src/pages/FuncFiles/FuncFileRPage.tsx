@@ -78,9 +78,7 @@ export function setDinnerDishes(
     return newDishesToShow.dishes;
   }
 
- export const goBack = () => {
-    window.location.href = `/restaurants/`;
-  };
+
 export const setIsOpen=(currentRestaurant:SingleRestaurant)=>{
     const localDate = new Date();
     const localHour = localDate.getHours();

@@ -38,7 +38,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "scp -r -i epicure-yotam.pem ./build/* ubuntu@3.85.131.215:/home/ubuntu/epicure-front/build"
   },
   "eslintConfig": {
     "extends": [

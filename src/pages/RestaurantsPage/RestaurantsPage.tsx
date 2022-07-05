@@ -9,12 +9,13 @@ import {} from "../../state/reducers/RestaurantsSlice";
 import {
   setNewRestaurants,
   setOpenRestaurants,
-  setPopularRestaurants,
-  openRestaurantPage
+  setPopularRestaurants
 } from "../FuncFiles/FuncFlieRSP";
 import FilterNav from "../../components/FilterNav/FilterNav";
 import RenderRestaurants from "./components/RenderRestaurants/RenderRestaurants";
 import {  getResturantsData } from "../../services/api_service";
+import { useNavigate } from "react-router-dom";
+
 
 const RestaurantsPage = () => {
   ////////////data
@@ -43,6 +44,7 @@ const RestaurantsPage = () => {
   }, []);
 
   ////////////////////functions
+  let navigate=useNavigate();
   const dodo = () => {
   };
   const setRestaurantsByFilter = (filter: string) => {
@@ -69,6 +71,13 @@ const RestaurantsPage = () => {
       }
     }
   };
+ const openRestaurantPage=(restauarant:SingleRestaurant)=>{
+    const currentUrl=window.location.pathname;
+    navigate(currentUrl+"/"+restauarant._id)
+    //window.location.href=currentUrl+"/"+restauarant._id;
+    
+
+}
 
 
   /////////////////component
