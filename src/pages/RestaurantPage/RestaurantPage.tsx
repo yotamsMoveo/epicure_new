@@ -83,9 +83,9 @@ const RestaurantPage = () => {
 );
 
   ////////////////////////to do function that happend after events
-  // const goBack = () => {
-  //   navigate("/restaurants")
-  // };
+  const goBack = () => {
+    navigate("/restaurants")
+  };
   const openOrderPage = (dish: SingleDish) => {
     setSelectedDish(dish);
     setOrderModalOpen((prevState) => !prevState);

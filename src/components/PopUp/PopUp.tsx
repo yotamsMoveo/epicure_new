@@ -3,7 +3,7 @@ import bagLogo from "../../assets/images/bagLogo.png";
 import searchLogo from "../../assets/images/search.png";
 import { useState } from "react";
 import SearchInput from "../SearchInput/SearchInput";
-import { useNavigate } from "react-router-dom";
+//import { useNavigate } from "react-router-dom";
 
 export interface PopupProps {
   popupType?: PopupType;
@@ -22,9 +22,9 @@ const PopUpComp: React.FC<PopupProps> = (
   { popupType, onClickAction, isOpen, popup },
   { orders_to_show }
 ) => {
-  let navigate = useNavigate();
+  //let navigate = useNavigate();
   const goToRestaurantsPage = () => {
-    navigate("/restaurants");
+    //navigate("/restaurants");
   };
   const [searchByItem, setSearchByItem] = useState("");
 

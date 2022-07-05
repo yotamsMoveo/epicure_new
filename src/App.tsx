@@ -6,12 +6,16 @@ import FooterPage from "./components/Footer/Foter";
 import HomePage from "./pages/HomePage/HomePage";
 import Restaurants from "./pages/RestaurantsPage/RestaurantsPage";
 import Restaurant from "./pages/RestaurantPage/RestaurantPage";
+// import { useNavigate } from "react-router-dom";
 
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
   const [popup, setPopUp] = useState("");
-
+  // let navigate = useNavigate();
+  const goToRestaurantsPage = () => {
+    //navigate("/restaurants");
+  };
   const handlePopUpOpen = (selectedPopUp: string) => {
     setIsOpen(!isOpen);
     if (isOpen || selectedPopUp.localeCompare(popup) != 0) {
@@ -21,7 +25,7 @@ function App() {
 
   return (
     <div className="app">
-      <Navbar onClickAction={handlePopUpOpen} isOpen={isOpen} popup={popup} />
+      <Navbar onClickAction={handlePopUpOpen} isOpen={isOpen} popup={popup} navigate={goToRestaurantsPage}/>
       <Router>
         <Routes>
           <Route index element={<HomePage />} />
