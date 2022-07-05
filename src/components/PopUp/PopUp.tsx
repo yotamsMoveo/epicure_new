@@ -3,6 +3,7 @@ import bagLogo from "../../assets/images/bagLogo.png";
 import searchLogo from "../../assets/images/search.png";
 import { useState } from "react";
 import SearchInput from "../SearchInput/SearchInput";
+import { useNavigate } from "react-router-dom";
 
 export interface PopupProps {
   popupType?: PopupType;
@@ -21,6 +22,10 @@ const PopUpComp: React.FC<PopupProps> = (
   { popupType, onClickAction, isOpen, popup },
   { orders_to_show }
 ) => {
+  let navigate = useNavigate();
+  const goToRestaurantsPage = () => {
+    navigate("/restaurants");
+  };
   const [searchByItem, setSearchByItem] = useState("");
 
   const handleChanges = (event: any) => {
@@ -36,12 +41,12 @@ const PopUpComp: React.FC<PopupProps> = (
         </div>
         <ul className="ul">
           <li className="li">
-            <a href="/restaurants" className="a">
+            <a onClick={goToRestaurantsPage} className="a">
               Restaurants
             </a>
           </li>
           <li className="li">
-            <a href="#news" className="a">
+            <a  className="a">
               Chefs
             </a>
           </li>
@@ -49,17 +54,17 @@ const PopUpComp: React.FC<PopupProps> = (
         <hr />
         <ul className="ul">
           <li className="li">
-            <a href="#contact" className="a">
+            <a  className="a">
               Contact Us
             </a>
           </li>
           <li className="li">
-            <a href="#about" className="a">
+            <a  className="a">
               Term of Use
             </a>
           </li>
           <li className="li">
-            <a href="#about" className="a">
+            <a  className="a">
               Privacy Policy
             </a>
           </li>

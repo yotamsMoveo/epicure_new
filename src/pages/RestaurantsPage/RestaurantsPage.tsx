@@ -9,13 +9,12 @@ import {} from "../../state/reducers/RestaurantsSlice";
 import {
   setNewRestaurants,
   setOpenRestaurants,
-  setPopularRestaurants
+  setPopularRestaurants,
 } from "../FuncFiles/FuncFlieRSP";
 import FilterNav from "../../components/FilterNav/FilterNav";
 import RenderRestaurants from "./components/RenderRestaurants/RenderRestaurants";
-import {  getResturantsData } from "../../services/api_service";
+import { getResturantsData } from "../../services/api_service";
 import { useNavigate } from "react-router-dom";
-
 
 const RestaurantsPage = () => {
   ////////////data
@@ -35,8 +34,8 @@ const RestaurantsPage = () => {
   openRestaurants = setOpenRestaurants(allRestaurants, openRestaurants);
 
   ////////////////////api call
-  const data:SingleRestaurant[]=[];
-  const [restaurants,setRestaurants] = useState(data);
+  const data: SingleRestaurant[] = [];
+  const [restaurants, setRestaurants] = useState(data);
   useEffect(() => {
     getResturantsData().then((res) => {
       setRestaurants(res.data);
@@ -44,9 +43,8 @@ const RestaurantsPage = () => {
   }, []);
 
   ////////////////////functions
-  let navigate=useNavigate();
-  const dodo = () => {
-  };
+  let navigate = useNavigate();
+  const dodo = () => {};
   const setRestaurantsByFilter = (filter: string) => {
     switch (filter) {
       case "All": {
@@ -71,14 +69,10 @@ const RestaurantsPage = () => {
       }
     }
   };
- const openRestaurantPage=(restauarant:SingleRestaurant)=>{
-    const currentUrl=window.location.pathname;
-    navigate(currentUrl+"/"+restauarant._id)
-    //window.location.href=currentUrl+"/"+restauarant._id;
-    
-
-}
-
+  const openRestaurantPage = (restauarant: SingleRestaurant) => {
+    const currentUrl = window.location.pathname;
+    navigate(currentUrl + "/" + restauarant._id);
+  };
 
   /////////////////component
   return (
@@ -100,7 +94,12 @@ const RestaurantsPage = () => {
           onClickAction={dodo}
         />
       </nav>
-      {restaurants.length &&<RenderRestaurants restaurants={restaurants} onClickFunc={openRestaurantPage}/>}
+      {restaurants.length && (
+        <RenderRestaurants
+          restaurants={restaurants}
+          onClickFunc={openRestaurantPage}
+        />
+      )}
     </div>
   );
 };

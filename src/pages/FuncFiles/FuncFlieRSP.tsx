@@ -52,8 +52,5 @@ export function setOpenRestaurants(allRestaurants:SingleRestaurant[],currentOpen
       return openRestaurants.resturants;
 }
 
-// export function goBack(){
 
-//     window.location.href = "/";
-// }
 

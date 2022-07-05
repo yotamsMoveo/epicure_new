@@ -8,7 +8,7 @@ import conactUsLogo from "../../assets/images/conactUsLogo.png";
 import { HamburgerIcon } from "react-hamburger-icon";
 import PopUpComp, { PopupProps, PopupType } from "../PopUp/PopUp";
 import hamburg from "../../assets/images/hamburg.png";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Navbar: React.FC<PopupProps> = ({
   popupType,
@@ -16,6 +16,10 @@ const Navbar: React.FC<PopupProps> = ({
   isOpen,
   popup,
 }) => {
+  let navigate = useNavigate();
+  const goToRestaurantsPage = () => {
+    navigate("/restaurants");
+  };
   return (
     <div>
       <div className="navbar-conteiner">
@@ -28,14 +32,12 @@ const Navbar: React.FC<PopupProps> = ({
             <img className="desktop-img" src={desktoplogo} />
             <ul className="desktop-ul">
               <li className="li">
-                <a href="/restaurants" className="a">
+                <a onClick={goToRestaurantsPage} className="a">
                   Restaurants
                 </a>
               </li>
               <li className="li">
-                <a href="#news" className="a">
-                  Chefs
-                </a>
+                <a className="a">Chefs</a>
               </li>
             </ul>
           </div>
