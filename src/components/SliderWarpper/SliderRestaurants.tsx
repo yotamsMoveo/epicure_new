@@ -18,7 +18,7 @@ const SliderRestaurants:React.FC<SliderRestaurantsProps> = ({onClickAction,array
         <Card
           img={resturant.image}
           title={resturant.name}
-          description={resturant.chef?.name}
+          description={resturant.chef.name}
           key={index}
           cardType={CardType.Small}
         />

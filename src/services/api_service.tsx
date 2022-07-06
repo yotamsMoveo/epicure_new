@@ -26,6 +26,7 @@ export async function getChefOfTheWeekData(): Promise<any> {
 
 export async function getRestaurantsByChefId(chef_id:string): Promise<any> {
   const url = "http://3.85.131.215/api/Restaurants/"+chef_id;
+  //const url = "http://localhost:8000/api/Restaurants/"+chef_id;
   const response = await fetch(url,{method:'GET'});
   const data =await response.json();
   return data ;
