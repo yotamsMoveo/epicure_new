@@ -40,7 +40,7 @@ const RestaurantsPage = () => {
   useEffect(() => {
     getResturantsData().then((res) => {
       setRestaurants(res.data);
-      setBase(restaurants);
+      setBase(res.data);
       newRestaurants = setNewRestaurants(restaurants, newRestaurants);
       popularRestaurants = setPopularRestaurants(
         restaurants,
