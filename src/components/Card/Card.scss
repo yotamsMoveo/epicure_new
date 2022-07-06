@@ -1,7 +1,7 @@
 @import "../../assets/styles/setup/variables";
 
 .CardComp_small {
-  width: 100%;
+  width: 245px;
   flex-direction: column;
   align-items: flex-start;
   display: flex;
@@ -10,7 +10,7 @@
   height: 300px;
   
   .img {
-    width: 100%;
+    width: 245px;
     height: 150px;
 
   }
@@ -60,18 +60,20 @@
 }
 
 .CardComp_big {
+  display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: flex-start;
-  width: 100%;
+  // width: 100%;
   background: $app-color-card-bg;
   position: relative;
   height: 350px;
+  width: 245px;
   .img {
-    width: 100%;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
+    width: 245px;
+    // flex: none;
+    // order: 0;
+    // flex-grow: 0;
     height: 150px;
   }
   .contant {
@@ -87,9 +89,9 @@
       line-height: 15px;
       letter-spacing: 2.67px;
       color: $app-color-black;
-      flex: none;
-      order: 0;
-      flex-grow: 0;
+      // flex: none;
+      // order: 0;
+      // flex-grow: 0;
     }
     .description {
       font-family: "Helvetica Neue";
@@ -99,9 +101,9 @@
       line-height: 20px;
       text-align: left;
       letter-spacing: $app-letter-spacing-nurmal;
-      color: $app-color-black;
-      flex: none;
-      flex-grow: 0;
+      // color: $app-color-black;
+      // flex: none;
+      // flex-grow: 0;
     }
     .icon-wrapper {
       display: flex;
@@ -116,15 +118,15 @@
         // position: absolute;
         // bottom: 0%;
         .type {
-          height: 30px;
+          height: 26px;
           // text-align: start;
         }
-      }
+  //     // }
 
-      .price {
-        // margin-left:100px ;
-        // position: absolute;
-        bottom: 0;
+  //     .price {
+  //       // margin-left:100px ;
+  //       // position: absolute;
+  //       // bottom: 0;
       }
     }
   }
@@ -133,9 +135,9 @@
 .slick-slider .slick-slide {
   padding: 0 16px 0 0;
   padding-right: 16px;
-  height: 350px;
+  // height: 350px;
   div {
-    width: 200px;
+    // width: 200px;
   }
 }
 
@@ -145,12 +147,15 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    height: 420px;
+    // height: 420px;
+    width: 380px;
+    
     .img {
       height: 240px;
+      width: 380px;
     }
     .contant {
-      padding-top: 100px;
+      // padding-top: 100px;
       align-items: center;
       margin: 0;
       .title {
@@ -172,7 +177,8 @@
     bottom: 0;
     height: 450px;
     .img{
-      height: 155px;
+      height: 305px;
+      width: 100%;
     }
     .contant {
       align-items: center;
@@ -188,32 +194,41 @@
         text-align: center;
         width: 100%;
         // margin: 12px 40px;
+        margin: 24px 0 8px;
       }
       .description {
         font-size: 16px;
         margin: 0 10px;
-        height: 176px;
+        // height: 176px;
         text-align: center;
         font-weight: 200;
         font-size: 24px;
         line-height: 30px;
         margin-bottom: 20px;
+        height: 175px;
+        overflow-wrap: anywhere;
       }
       .icon-wrapper {
-        flex-direction: column-reverse;
-        gap: 10px;
-        align-items: center;
-        justify-content: center;
-        bottom: 5px;
-        position: absolute;
+        // flex-direction: column-reverse;
+        // gap: 10px;
+        // align-items: center;
+        // justify-content: center;
+        // bottom: 5px;
+        // position: absolute;
         text-align: center;
+        gap: 5px;
+        // height: 70px;
       }
       .type-array {
         display: flex;
         justify-content: center;
         align-items: center;
-       
+      //  height: 70px;
+      .type{
+        height: 32px;
       }
+      }
+
     }
   }
   .price {
@@ -224,10 +239,18 @@
   .slick-slider .slick-slide {
     padding: 0 24px 0 0;
     gap: 24px;
-    height: 450px;
+    // height: 650px;
     div {
-      width: 300px;
+      // width: 300px;
+      height: fit-content;
       // min-height: 380px;
     }
   }
+//   .slick-slider .slick-slide div {
+//     width: 300px;
+//     height: 650px;
+// }
+//   .slick-slider .slick-list {
+// overflow: auto;
+//   }
 }

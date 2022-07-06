@@ -39,7 +39,7 @@ const CardComp: React.FC<CardCompProps> = ({
             }
             </div>
             <div >
-            <p className="price" style={{'textAlign':'center', 'display':'flex', 'flexDirection':'row'}}><TbCurrencyShekel style={{'textAlign':'center', 'display':'flex','justifyContent':'center', 'flexDirection':'row'}}/>{price}</p>
+            <p className="price" ><TbCurrencyShekel/>{price}</p>
             </div>
           </div>
         )}

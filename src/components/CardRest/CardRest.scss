@@ -1,0 +1,81 @@
+@import "../../assets/styles/setup/variables";
+
+.card-rest-body {
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  display: flex;
+  justify-content: start;
+  background: $app-color-card-bg;
+  height: fit-content;
+  
+  .img {
+    width: 100%;
+    height: 150px;
+
+  }
+  .contant {
+    display: flex;
+    flex-direction: column;
+    margin: 16px 8px 0 16px;
+    .title {
+      text-align: left;
+      font-family: "Helvetica Neue";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 15px;
+      letter-spacing: 2.67px;
+      color: $app-color-black;
+      flex: none;
+      order: 0;
+      flex-grow: 0;
+    }
+    .description {
+      font-family: "Helvetica Neue";
+      font-style: normal;
+      font-weight: 200;
+      font-size: 16px;
+      line-height: 20px;
+      text-align: left;
+      letter-spacing: $app-letter-spacing-nurmal;
+      color: $app-color-black;
+      flex: none;
+      flex-grow: 0;
+    }
+    
+  }
+  // position: relative;
+}
+
+
+
+@media screen and (min-width: 1024px) {
+  .card-rest-body {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 380px;
+    
+    .img {
+      height: 240px;
+      width: 380px;
+    }
+    .contant {
+      // padding-top: 100px;
+      align-items: center;
+      margin: 0;
+      .title {
+        font-weight: 400;
+        font-size: 40px;
+        padding: 18px;
+      }
+      .description {
+        font-weight: 200;
+        font-size: 24px;
+        line-height: 30px;
+      }
+    }
+  }
+}

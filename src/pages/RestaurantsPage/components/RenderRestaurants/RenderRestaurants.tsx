@@ -1,6 +1,7 @@
 import { SingleDish } from "../../../../assets/interfaces/SingleDish";
 import { SingleRestaurant } from "../../../../assets/interfaces/SingleRestaurant";
 import Card, { CardType } from "../../../../components/Card/Card";
+import CardRest from "../../../../components/CardRest/CardRest";
 
 export interface RenderRestaurantsProps {
   restaurants: SingleRestaurant[];
@@ -20,12 +21,11 @@ const RenderRestaurants: React.FC<RenderRestaurantsProps> = ({
           className="restauarant-item"
           onClick={() => onClickFunc(resturant)}
         >
-          <Card
+          <CardRest
             img={resturant.image}
             title={resturant.name}
             description={resturant.chef.name}
             key={index}
-            cardType={CardType.Small}
           />
         </div>
       ))}

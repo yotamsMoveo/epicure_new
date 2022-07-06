@@ -16,11 +16,13 @@ const WelcomeCardComp = () => {
   return (
     <div className="welcome-comp-body">
       <div className="card">
-        <div className="contant">
+        <div className="contant-wrapper">
+          <div className="contant">
           <h1 className="title">
             Epicure works with the top chef restaurants in Tel Aviv
           </h1>
           <SearchInput/>
+        </div>
         </div>
       </div>
     </div>

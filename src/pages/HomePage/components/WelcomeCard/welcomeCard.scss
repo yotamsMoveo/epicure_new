@@ -5,12 +5,12 @@
   background-size: 100%;
   object-fit: cover;
   display: flex;
-  height: 273px;
+   height: 273px;
   justify-content: center;
   .card {
-    max-height: 144px;
-    width: 335px;
-    
+    // max-height: 144px;
+    // width: 335px;
+    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;

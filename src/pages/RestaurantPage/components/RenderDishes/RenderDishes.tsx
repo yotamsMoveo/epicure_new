@@ -1,5 +1,6 @@
 import { SingleDish } from "../../../../assets/interfaces/SingleDish";
 import Card, { CardType } from "../../../../components/Card/Card";
+import CardDish from "../../../../components/CardDish/CardDish";
 
 export interface RenderDishesProps {
   dishes: SingleDish[];
@@ -12,14 +13,14 @@ const RenderDishes: React.FC<RenderDishesProps> = ({ dishes,onClickFunc }) => {
     <div className="dishes">
       {dishes.map((dish: SingleDish,index) => (
         <div className="dish-item" key={index} onClick={()=>onClickFunc(dish)}>
-          <Card
+          <CardDish
             img={dish.image}
             title={dish.name}
             description={dish.description}
             types={dish.type}
             price={dish.price}
             key={index}
-            cardType={CardType.Big}
+            //cardType={CardType.Big}
           />
         </div>
       ))}
