@@ -26,19 +26,27 @@ const RestaurantsPage = () => {
   let newRestaurants: SingleRestaurant[] = [];
   let popularRestaurants: SingleRestaurant[] = [];
   let openRestaurants: SingleRestaurant[] = [];
-  newRestaurants = setNewRestaurants(allRestaurants, newRestaurants);
-  popularRestaurants = setPopularRestaurants(
-    allRestaurants,
-    popularRestaurants
-  );
-  openRestaurants = setOpenRestaurants(allRestaurants, openRestaurants);
+  // newRestaurants = setNewRestaurants(allRestaurants, newRestaurants);
+  // popularRestaurants = setPopularRestaurants(
+  //   allRestaurants,
+  //   popularRestaurants
+  // );
+  // openRestaurants = setOpenRestaurants(allRestaurants, openRestaurants);
 
   ////////////////////api call
   const data: SingleRestaurant[] = [];
   const [restaurants, setRestaurants] = useState(data);
+  const [base,setBase]=useState(data)
   useEffect(() => {
     getResturantsData().then((res) => {
       setRestaurants(res.data);
+      setBase(restaurants);
+      newRestaurants = setNewRestaurants(restaurants, newRestaurants);
+      popularRestaurants = setPopularRestaurants(
+        restaurants,
+        popularRestaurants
+      );
+      openRestaurants = setOpenRestaurants(restaurants, openRestaurants);
     });
   }, []);
 
@@ -48,23 +56,23 @@ const RestaurantsPage = () => {
   const setRestaurantsByFilter = (filter: string) => {
     switch (filter) {
       case "All": {
-        setDataToShow(allRestaurants);
+        setRestaurants(base);
         break;
       }
       case "New": {
-        setDataToShow(newRestaurants);
+        setRestaurants(newRestaurants);
         break;
       }
       case "Most Popular": {
-        setDataToShow(popularRestaurants);
+        setRestaurants(popularRestaurants);
         break;
       }
       case "Open Now": {
-        setDataToShow(openRestaurants);
+        setRestaurants(openRestaurants);
         break;
       }
       case "Map View": {
-        setDataToShow(openRestaurants);
+        setRestaurants(openRestaurants);
         break;
       }
     }

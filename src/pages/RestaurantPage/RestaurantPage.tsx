@@ -20,6 +20,7 @@ import {
 import { SingleRestaurant } from "../../assets/interfaces/SingleRestaurant";
 import { useNavigate } from "react-router-dom";
 import { Chef } from "../../assets/interfaces/Chef";
+import Card, { CardType } from "../../components/Card/Card";
 
 const RestaurantPage = () => {
   ///////////////////////data
@@ -139,9 +140,21 @@ const RestaurantPage = () => {
           classNameStyleLI="list-item"
         />
       </nav>
-      {baseDishes.length && (
-        <RenderDishes dishes={dishes} onClickFunc={openOrderPage} />
-      )}
+      <div className="dishes">
+      {baseDishes.map((dish: SingleDish,index) => (
+        <div className="dish-item" key={index} onClick={()=>openOrderPage(dish)}>
+          <Card
+            img={dish.image}
+            title={dish.name}
+            description={dish.description}
+            types={dish.type}
+            price={dish.price}
+            key={index}
+            cardType={CardType.Big}
+          />
+        </div>
+      ))}
+    </div>
       {orderModalOpen && (
         <ModalOrder selectedDish={selectedDish} closeModal={closeModal} />
       )}
