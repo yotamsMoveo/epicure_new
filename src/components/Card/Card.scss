@@ -170,10 +170,14 @@
     width: 379px;
     bottom: 0;
     height: 450px;
+    .img{
+      height: 155px;
+    }
     .contant {
       align-items: center;
       height: 100%;
       margin: 0;
+     
 
       .title {
         font-weight: 400;
