@@ -73,11 +73,15 @@ const RestaurantsPage = () => {
     const currentUrl = window.location.pathname;
     navigate(currentUrl + "/" + restauarant._id);
   };
+  const goBack=()=>{
+    navigate('/')
+  }
 
   /////////////////component
   return (
     <div className="restaurant-page-body">
       <div className="page-title">restaurants</div>
+      <h5 onClick={goBack}>{'<< back'}</h5>
       <nav className="menu">
         <FilterNav
           labels={["All", "New", "Most Popular", "Open Now", "Map View"]}
