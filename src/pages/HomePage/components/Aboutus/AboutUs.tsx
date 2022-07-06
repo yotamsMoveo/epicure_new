@@ -5,6 +5,12 @@ import googlePng from "../../../../assets/images/google.png";
 import "./AboutUs.scss";
 
 const AboutUsComp = () => {
+  const moveToAppStore=()=>{
+    window.location.href='https://www.apple.com/app-store/';
+  }
+  const moveToGoogleStore=()=>{
+    window.location.href='https://play.google.com/store/games?gl=IL&utm_source=emea_Med&utm_medium=hasem&utm_content=Oct2020&utm_campaign=Evergreen&pcampaignid=MKT-EDR-emea-il-1001280-Med-hasem-py-Evergreen-Oct2020-Text_Search_BKWS%7CONSEM_kwid_43700006963179949&gclid=EAIaIQobChMI25-poqDk-AIVRPlRCh2a2wB-EAAYASAAEgIqXvD_BwE&gclsrc=aw.ds';
+  }
   return (
     <div className="about-us">
       <div className="body">
@@ -13,14 +19,14 @@ const AboutUsComp = () => {
         </div>
         <div className="wrapper">
           <div className="store-media-buttons-mobile">
-            <button className="store-buttons">
-              <img src={applePng} alt="apple store"></img>
+            <button className="store-buttons"  onClick={moveToAppStore}>
+              <img src={applePng} alt="apple store"  ></img>
               <div>
-                <div className="store-buttons-upper-text">Download on the</div>
+                <div className="store-buttons-upper-text" >Download on the</div>
                 <div className="store-buttons-lower-text">App Store</div>
               </div>
             </button>
-            <button className="store-buttons google-btn">
+            <button className="store-buttons google-btn"  onClick={moveToGoogleStore}>
               <img src={googlePng} alt="google play"></img>
               <div>
                 <div className="store-buttons-upper-text">Get in on</div>
@@ -40,7 +46,7 @@ const AboutUsComp = () => {
             sodales porta. Vivamus elit urna, dignissim a vestibulum.
           </p>
           <div className="store-media-buttons-desktop">
-            <button className="store-buttons-desktop">
+            <button className="store-buttons-desktop" onClick={moveToAppStore}>
               <img src={applePng} alt="apple store"></img>
               <div>
                 <div className="store-buttons-upper-text-desktop">
@@ -51,7 +57,7 @@ const AboutUsComp = () => {
                 </div>
               </div>
             </button>
-            <button className="store-buttons-desktop google-btn">
+            <button className="store-buttons-desktop google-btn" onClick={moveToGoogleStore}>
               <img src={googlePng} alt="google play"></img>
               <div>
                 <div className="store-buttons-upper-text-desktop">
