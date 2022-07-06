@@ -1,13 +1,21 @@
+import { Chef } from "../../assets/interfaces/Chef";
 import { Dishes } from "../../assets/interfaces/dishes";
 import { SingleDish } from "../../assets/interfaces/SingleDish";
 import { SingleRestaurant } from "../../assets/interfaces/SingleRestaurant";
 import setRestaurantOpen from '../RestaurantPage/RestaurantPage';
 
 /////////////////////interface
+let tempChef:Chef={
+  image: "string",
+  name: "string",
+  description: "string",
+  active:false,
+ _id: ""
+}
 let currentRestaurant: SingleRestaurant = {
   image: "",
   name: "",
-  chef_name: "",
+  chef: tempChef,
   chef_id: "",
   _id: "",
   open_date: "",

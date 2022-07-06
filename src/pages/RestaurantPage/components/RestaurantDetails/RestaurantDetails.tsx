@@ -12,7 +12,7 @@ return(
         <div className="text-wrapper">
           <p className="card-title">{currentRestaurant.name}</p>
           <p className="card-description">
-            {currentRestaurant.chef_name}
+            {currentRestaurant.chef.name}
           </p>
           {isOpen && <IsOpen />}
         </div>

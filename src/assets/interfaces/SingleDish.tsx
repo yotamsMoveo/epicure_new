@@ -2,7 +2,7 @@ export interface SingleDish {
   image: string ;
   name: string ;
   description: string ;
-  type: string ;
+  type: [string] ;
   price: number;
   restaurant_id: string ;
   dish_id: number;

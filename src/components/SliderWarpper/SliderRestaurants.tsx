@@ -10,16 +10,16 @@ export interface SliderRestaurantsProps {
     onClickAction?: Function;
     array:SingleRestaurant[];
   }
-const SliderRestaurants:React.FC<SliderRestaurantsProps> = ({onClickAction,array}) => { 
+const SliderRestaurants:React.FC<SliderRestaurantsProps> = ({onClickAction,array}) => {
   return (
     <div className="slider-wrapper">
     {array.length && <Slider {...settings}>
-      {array.map((resturant) => (
+      {array.map((resturant,index) => (
         <Card
           img={resturant.image}
           title={resturant.name}
-          description={resturant.chef_name}
-          key={resturant.name}
+          description={resturant.chef?.name}
+          key={index}
           cardType={CardType.Small}
         />
       ))}

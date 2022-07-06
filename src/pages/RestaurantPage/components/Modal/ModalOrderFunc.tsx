@@ -5,7 +5,7 @@ let currentDish: SingleDish = {
     image: "",
     name: "",
     description: "",
-    type: "",
+    type: [""],
     price: 0,
     restaurant_id: "",
     dish_id: 0,

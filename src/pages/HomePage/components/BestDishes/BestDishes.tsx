@@ -21,7 +21,7 @@ const BestdishesComp = () => {
   return (
     <div className="best-dishes-comp-body">
       <h1 className="body-title ">Signature Dish Of:</h1>
-      <SliderDishes array={bestDishesMock}></SliderDishes>
+      <SliderDishes array={bestDishes}></SliderDishes>
       <br />
       <div className="button-wrapper ">
         <GoTo text="All Restaurants >>" where="/restaurants" />

@@ -15,6 +15,7 @@ let newRestaurants: Restaurants = {
     chef_id: ''
   };
 export function setNewRestaurants(allRestaurants:SingleRestaurant[],currentNewRestaurant:SingleRestaurant[]){
+  
     currentNewRestaurant.splice(0,currentNewRestaurant.length-1);
     newRestaurants.resturants=currentNewRestaurant;
     const oldDate = new Date("01/01/2021");

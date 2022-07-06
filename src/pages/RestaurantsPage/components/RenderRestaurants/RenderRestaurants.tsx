@@ -14,21 +14,22 @@ const RenderRestaurants: React.FC<RenderRestaurantsProps> = ({
 }) => {
   return (
     <div className="restaurants">
-        {restaurants.map((resturant: SingleRestaurant, index: any) => (
-          <div
-            className="restauarant-item"
-            onClick={() => onClickFunc(resturant)}
-          >
-            <Card
-              img={resturant.image}
-              title={resturant.name}
-              description={resturant.chef_name}
-              key={index}
-              cardType={CardType.Small}
-            />
-          </div>
-        ))}
-      </div>
+      {restaurants.map((resturant: SingleRestaurant, index) => (
+        <div
+          key={index}
+          className="restauarant-item"
+          onClick={() => onClickFunc(resturant)}
+        >
+          <Card
+            img={resturant.image}
+            title={resturant.name}
+            description={resturant.chef.name}
+            key={index}
+            cardType={CardType.Small}
+          />
+        </div>
+      ))}
+    </div>
   );
 };
 

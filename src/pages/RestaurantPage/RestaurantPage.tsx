@@ -16,6 +16,7 @@ import RenderDishes from "./components/RenderDishes/RenderDishes";
 import { getDishesByChefId, getRestaurantsById } from "../../services/api_service";
 import { SingleRestaurant } from "../../assets/interfaces/SingleRestaurant";
 import { useNavigate } from "react-router-dom";
+import { Chef } from "../../assets/interfaces/Chef";
 
 const RestaurantPage = () => {
   ///////////////////////data
@@ -39,11 +40,18 @@ const RestaurantPage = () => {
 
   /////////////////////////////////api-call
   let navigate=useNavigate();
+  let tempChef:Chef={
+    image: "string",
+    name: "string",
+    description: "string",
+    active:false,
+   _id: ""
+  }
   const data:SingleDish[]=[];
   const restData:SingleRestaurant={
     image: "string",
     name: "string",
-    chef_name: "string",
+    chef: tempChef,
     chef_id: "string",
     open_date: "string",
     rating: 7,
@@ -54,7 +62,7 @@ const RestaurantPage = () => {
     image: "string" ,
     name: "string" ,
     description: "string", 
-    type: "string" ,
+    type: ["string"] ,
     price: 9,
     restaurant_id: "string" ,
     dish_id: 7,
@@ -130,7 +138,7 @@ const RestaurantPage = () => {
           classNameStyleLI="list-item"
         />
       </nav>
-      {baseDishes.length && <RenderDishes dishes={baseDishes} onClickFunc={openOrderPage} />}
+      {baseDishes.length && <RenderDishes dishes={dishes} onClickFunc={openOrderPage} />}
       {orderModalOpen && (
         <ModalOrder
           selectedDish={selectedDish}

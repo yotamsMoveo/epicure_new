@@ -12,13 +12,13 @@ export interface SliderDishesProps {
 const SliderDishes:React.FC<SliderDishesProps> = ({onClickAction,array}) => { 
   return (
     <div className="slider-wrapper">
-      <Slider {...settings}>
+      <Slider {...settings} >
         {array.map((dish, index) => (
           <Card
             img={dish.image}
             title={dish.name}
             description={dish.description}
-            type={dish.type}
+            types={dish.type}
             price={dish.price}
             key={index}
             cardType={CardType.Big}
