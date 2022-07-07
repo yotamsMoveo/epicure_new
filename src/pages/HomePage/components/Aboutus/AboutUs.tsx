@@ -35,7 +35,7 @@ const AboutUsComp = () => {
             </button>
           </div>
           <h1 className="title">ABOUT US:</h1>
-          <p className="parograph" data-aos="zoom-in" data-aos-duration="1500">
+          <p className="parograph">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a lacus
             vel justo fermentum bibendum non eu ipsum. Cras porta malesuada
             eros, eget blandit turpis suscipit at. Vestibulum sed massa in magna
