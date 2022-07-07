@@ -70,16 +70,6 @@ const CatalogMagic = ({
       height={height}
       {...props}
     >
-      {/* {heading && (
-        <rect
-          x={padding}
-          y={padding}
-          rx={0}
-          ry={0}
-          width={heading.width}
-          height={heading.height}
-        />
-      )} */}
       {list}
     </ContentLoader>
   )
