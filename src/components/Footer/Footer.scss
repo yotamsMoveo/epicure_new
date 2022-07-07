@@ -7,7 +7,7 @@
   display: flex;
   flex-direction: column;
   background: #ffffff;
-  // padding-left: 3vh;
+  
   margin: 28px 19px 20px;
   .href {
     height: 22px;
@@ -24,7 +24,7 @@
   }
 }
 
-@include for-desktop-layout {
+@media screen and (min-width: 1024px){
   .footer-page-footer {
     flex-direction: row;
     align-items: center;
@@ -32,6 +32,7 @@
     gap: 40px;
     width: inherit;
     margin: 31px 510.5px;
+  
     .href {
       flex: none;
     }

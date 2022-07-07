@@ -1,15 +1,13 @@
 import { Checkbox } from "@material-ui/core";
 import "./ModalOrder.scss";
-import { SingleOrder } from "../../../../assets/interfaces/SingleOrder";
 import { useState } from "react";
-import { SingleDish } from "../../../../assets/interfaces/SingleDish";
 import { Orders } from "../../../../assets/interfaces/Orders";
 import { useSelector } from "react-redux";
-import {setBeforeUrl, setCurrentDish, setOrderDish} from './ModalOrderFunc'
+import { setBeforeUrl, setCurrentDish, setOrderDish } from "./ModalOrderFunc";
 
 const ModalOrder = (props: any) => {
   ////////////////data
-  const {allDishes}=useSelector((store:any)=>store.dishesData);
+  const { allDishes } = useSelector((store: any) => store.dishesData);
   const [quantity, setQuantity] = useState(0);
   const [white_bread, setWhite_bread] = useState(false);
   const [sticky_rice, setSticky_rice] = useState(false);
@@ -18,16 +16,15 @@ const ModalOrder = (props: any) => {
   const currentUrl = window.location.pathname;
   const temp = currentUrl.split("/");
   let currentDishId = temp[temp.length - 1];
-  const beforeUrl=setBeforeUrl(temp);
-  const currentDish=setCurrentDish(allDishes,currentDishId);
-  const order_dish=setOrderDish();
-
+  const beforeUrl = setBeforeUrl(temp);
+  const currentDish = setCurrentDish(allDishes, currentDishId);
+  const order_dish = setOrderDish();
 
   ///////////////////function to do
   let orders_to_show: Orders = {
     orders_to_show: [],
   };
- 
+
   const handleChange = (setBool: number) => {
     if (setBool == 1) {
       setWhite_bread(!white_bread);
@@ -68,17 +65,29 @@ const ModalOrder = (props: any) => {
   return (
     <div className="modal">
       <section className="modal-main">
-        <button type="button" onClick={(()=>props.closeModal())}>Close</button>
-          <div className="orders-body">
+        <div className="modal-headers">
+          <div className="closeBtn">
+            <p
+              onClick={() => props.closeModal()}
+            >X</p>
+          </div>
+          {/* <button type="button" className="close-button" onClick={() => props.closeModal()}>
+            Close
+          </button> */}
           <img src={props.selectedDish.image} />
+        </div>
+        <div className="orders-body">
           <div className="content">
             <p className="content-title">{props.selectedDish.name}</p>
-            <p className="content-description">{props.selectedDish.description}</p>
+            <p className="content-description">
+              {props.selectedDish.description}
+            </p>
           </div>
           <div className="adding">
             <p className="adding-title">Choose a side</p>
             <div className="checkbox-warpper">
               <Checkbox
+                color="primary"
                 checked={white_bread}
                 onChange={() => handleChange(1)}
                 inputProps={{ "aria-label": "controlled" }}
@@ -87,6 +96,7 @@ const ModalOrder = (props: any) => {
             </div>
             <div className="checkbox-warpper">
               <Checkbox
+                color="primary"
                 checked={sticky_rice}
                 onChange={() => handleChange(2)}
                 inputProps={{ "aria-label": "controlled" }}
@@ -96,6 +106,7 @@ const ModalOrder = (props: any) => {
             <p className="adding-title">Changes</p>
             <div className="checkbox-warpper">
               <Checkbox
+                color="primary"
                 checked={whithout_peanuts}
                 onChange={() => handleChange(3)}
                 inputProps={{ "aria-label": "controlled" }}
@@ -104,6 +115,7 @@ const ModalOrder = (props: any) => {
             </div>
             <div className="checkbox-warpper">
               <Checkbox
+                color="primary"
                 checked={sticky_less_spicy}
                 onChange={() => handleChange(4)}
                 inputProps={{ "aria-label": "controlled" }}
@@ -124,7 +136,7 @@ const ModalOrder = (props: any) => {
               </p>
             </div>
           </div>
-          <button className="add-to-bag" onClick={addToBag}>
+          <button className="add-to-bag" onClick={() => props.closeModal()}>
             add to bag
           </button>
         </div>
