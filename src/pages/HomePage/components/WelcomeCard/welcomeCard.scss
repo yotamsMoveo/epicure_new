@@ -1,13 +1,15 @@
 @import "../../../../assets/styles/setup/variables";
 .welcome-comp-body {
+ 
   background-image: url(../../../../assets/images/backgroundPic.png);
   background-repeat: no-repeat;
   background-size: 100%;
   object-fit: cover;
   display: flex;
-   height: 273px;
+  // height: 273px;
   justify-content: center;
   .card {
+   
     // max-height: 144px;
     // width: 335px;
     margin: auto;
@@ -17,10 +19,11 @@
     align-items: center;
     gap: 25px;
     align-self: center;
-    background: rgba(255, 255, 255, 0.88);
+    //background: rgba(255, 255, 255, 0.88);
     background-size: 100%;
     .contant {
-      margin: auto;
+      margin: 30px 30px;
+      background: rgba(255, 255, 255, 0.88);
 
       .title {
         width: 100%;
