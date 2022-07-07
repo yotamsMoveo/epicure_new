@@ -14,10 +14,10 @@ const WelcomeCardComp = () => {
 
   /////////////////component
   return (
-    <div className="welcome-comp-body">
+    <div className="welcome-comp-body" >
       <div className="card">
         <div className="contant-wrapper">
-          <div className="contant">
+          <div className="contant" data-aos="fade-up" data-aos-duration="2000">
           <h1 className="title">
             Epicure works with the top chef restaurants in Tel Aviv
           </h1>

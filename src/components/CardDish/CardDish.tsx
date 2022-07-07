@@ -23,7 +23,7 @@ const CardDish: React.FC<CardDishProps> = ({
   price,
 }) => {
   return (
-    <div className="card-rest-body">
+    <div className="card-dish-body">
       <img className="img" src={img}></img>
       <div className="contant">
         <p className="title">{title}</p>

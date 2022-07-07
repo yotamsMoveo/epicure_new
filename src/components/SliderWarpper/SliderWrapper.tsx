@@ -11,7 +11,7 @@ export interface SliderDishesProps {
   }
 const SliderDishes:React.FC<SliderDishesProps> = ({onClickAction,array}) => { 
   return (
-    <div className="slider-wrapper">
+    <div className="slider-wrapper" data-aos="flip-up" data-aos-duration="2000">
       <Slider {...settings} >
         {array.map((dish, index) => (
           <Card

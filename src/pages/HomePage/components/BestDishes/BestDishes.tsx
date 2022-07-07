@@ -9,6 +9,9 @@ import {
   getBestDishesData,
 } from "../../../../services/api_service";
 import { SingleDish } from "../../../../assets/interfaces/SingleDish";
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
+import CatalogMagic from "../../../../components/Laoder/Laoder";
 
 const BestdishesComp = () => {
   const data:SingleDish[]=[];
@@ -19,9 +22,11 @@ const BestdishesComp = () => {
     });
   }, []);
   return (
+   
     <div className="best-dishes-comp-body">
       <h1 className="body-title ">Signature Dish Of:</h1>
-      <SliderDishes array={bestDishes}></SliderDishes>
+      
+      {bestDishes.length?<SliderDishes array={bestDishes}></SliderDishes>:<CatalogMagic/>}
       <br />
       <div className="button-wrapper ">
         <GoTo text="All Restaurants >>" where="/restaurants" />

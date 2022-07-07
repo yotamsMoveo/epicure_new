@@ -13,11 +13,11 @@ const AboutUsComp = () => {
   }
   return (
     <div className="about-us">
-      <div className="body">
+      <div className="body" >
         <div className="aboutLogo">
           <img src={aboutLogo} />
         </div>
-        <div className="wrapper">
+        <div className="wrapper" >
           <div className="store-media-buttons-mobile">
             <button className="store-buttons"  onClick={moveToAppStore}>
               <img src={applePng} alt="apple store"  ></img>
@@ -35,7 +35,7 @@ const AboutUsComp = () => {
             </button>
           </div>
           <h1 className="title">ABOUT US:</h1>
-          <p className="parograph">
+          <p className="parograph" data-aos="zoom-in" data-aos-duration="1500">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a lacus
             vel justo fermentum bibendum non eu ipsum. Cras porta malesuada
             eros, eget blandit turpis suscipit at. Vestibulum sed massa in magna

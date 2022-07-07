@@ -12,7 +12,7 @@ export interface SliderRestaurantsProps {
   }
 const SliderRestaurants:React.FC<SliderRestaurantsProps> = ({onClickAction,array}) => {
   return (
-    <div className="slider-wrapper">
+    <div className="slider-wrapper" data-aos="flip-up" data-aos-duration="2000">
     {array.length && <Slider {...settings}>
       {array.map((resturant,index) => (
         <Card

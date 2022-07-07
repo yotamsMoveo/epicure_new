@@ -22,6 +22,7 @@ import { useNavigate } from "react-router-dom";
 import { Chef } from "../../assets/interfaces/Chef";
 import Card, { CardType } from "../../components/Card/Card";
 import CardDish from "../../components/CardDish/CardDish";
+import CatalogMagic from "../../components/Laoder/Laoder";
 
 const RestaurantPage = () => {
   ///////////////////////data
@@ -142,19 +143,23 @@ const RestaurantPage = () => {
         />
       </nav>
       <div className="dishes">
-      {baseDishes.map((dish: SingleDish,index) => (
-        <div className="dish-item" key={index} onClick={()=>openOrderPage(dish)}>
-          <CardDish
-            img={dish.image}
-            title={dish.name}
-            description={dish.description}
-            types={dish.type}
-            price={dish.price}
+        {baseDishes.map((dish: SingleDish, index) => (
+          <div
+            className="dish-item"
             key={index}
-          />
-        </div>
-      ))}
-    </div>
+            onClick={() => openOrderPage(dish)}
+          >
+            <CardDish
+              img={dish.image}
+              title={dish.name}
+              description={dish.description}
+              types={dish.type}
+              price={dish.price}
+              key={index}
+            />
+          </div>
+        ))}
+      </div>
       {orderModalOpen && (
         <ModalOrder selectedDish={selectedDish} closeModal={closeModal} />
       )}

@@ -15,6 +15,7 @@ import FilterNav from "../../components/FilterNav/FilterNav";
 import RenderRestaurants from "./components/RenderRestaurants/RenderRestaurants";
 import { getResturantsData } from "../../services/api_service";
 import { useNavigate } from "react-router-dom";
+import CatalogMagic from "../../components/Laoder/Laoder";
 
 const RestaurantsPage = () => {
   ////////////data
@@ -36,7 +37,7 @@ const RestaurantsPage = () => {
   ////////////////////api call
   const data: SingleRestaurant[] = [];
   const [restaurants, setRestaurants] = useState(data);
-  const [base,setBase]=useState(data)
+  const [base, setBase] = useState(data);
   useEffect(() => {
     getResturantsData().then((res) => {
       setRestaurants(res.data);
@@ -81,15 +82,15 @@ const RestaurantsPage = () => {
     const currentUrl = window.location.pathname;
     navigate(currentUrl + "/" + restauarant._id);
   };
-  const goBack=()=>{
-    navigate('/')
-  }
+  const goBack = () => {
+    navigate("/");
+  };
 
   /////////////////component
   return (
     <div className="restaurant-page-body">
       <div className="page-title">restaurants</div>
-      <h5 onClick={goBack}>{'<< back'}</h5>
+      <h5 onClick={goBack}>{"<< back"}</h5>
       <nav className="menu">
         <FilterNav
           labels={["All", "New", "Most Popular", "Open Now", "Map View"]}
@@ -106,11 +107,14 @@ const RestaurantsPage = () => {
           onClickAction={dodo}
         />
       </nav>
-      {restaurants.length && (
+      {restaurants.length ? (
         <RenderRestaurants
           restaurants={restaurants}
           onClickFunc={openRestaurantPage}
+          
         />
+      ) : (
+        <CatalogMagic />
       )}
     </div>
   );

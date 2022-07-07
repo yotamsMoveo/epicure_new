@@ -14,7 +14,7 @@ const RenderRestaurants: React.FC<RenderRestaurantsProps> = ({
   onClickFunc,
 }) => {
   return (
-    <div className="restaurants">
+    <div className="restaurants" data-aos="fade-up" data-aos-duration="3000">
       {restaurants.map((resturant: SingleRestaurant, index) => (
         <div
           key={index}
