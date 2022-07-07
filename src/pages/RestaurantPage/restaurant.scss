@@ -2,6 +2,9 @@
 .restaurant-body {
   display: flex;
   flex-direction: column;
+  .card-img{
+    height: 272;
+  }
   .go-back {
     height: 35px;
     font-family: "Helvetica Neue";
@@ -32,7 +35,7 @@
       flex-direction: column;
       justify-content: start;
       align-items: flex-start;
-      padding-top: 32px;
+      //padding-top: 32px;
       .card-title {
         font-family: "Helvetica Neue";
         font-style: normal;
@@ -41,6 +44,7 @@
         line-height: 21px;
         letter-spacing: 2.67px;
         color: $app-color-black;
+        
       }
       .card-description {
         font-family: "Helvetica Neue";
@@ -50,6 +54,7 @@
         line-height: 20px;
         letter-spacing: 1.97px;
         color: $app-color-black;
+        padding-top: 16px;
       }
     }
   }
@@ -90,7 +95,11 @@
   .restaurant-body {
     margin: 0 127px;
     height: fit-content;
-
+   
+    .card-img {
+      height: 425px;
+      width: 100%;
+    }
     .go-back {
       display: none;
     }

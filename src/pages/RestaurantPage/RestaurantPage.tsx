@@ -129,11 +129,16 @@ const RestaurantPage = () => {
   ////////////////////////component
   return (
     <div className="restaurant-body">
-      <h5 onClick={goBack}>{"<< back"}</h5>
+      <img
+        src={rest.image}
+        className="card-img"
+        data-aos="fade-up"
+        data-aos-duration="3000"
+      ></img>
       {rest._id != "string" && (
         <RestaurantsDetails currentRestaurant={rest} isOpen={isOpen} />
       )}
-
+      <h5 onClick={goBack}>{"<< back"}</h5>
       <nav className="menu">
         <FilterNav
           labels={["Breakfast", "Lanch", "Dinner"]}
