@@ -1,5 +1,4 @@
 import "./bestDishes.scss";
-import bestDishesMock from "../../../../assets/mock-data/mock-dishes.json";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import GoTo from "../../../../components/GoTo/GoTo";
@@ -9,9 +8,9 @@ import {
   getBestDishesData,
 } from "../../../../services/api_service";
 import { SingleDish } from "../../../../assets/interfaces/SingleDish";
-import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 import CatalogMagic from "../../../../components/Laoder/Laoder";
+import { BsChevronDoubleRight } from 'react-icons/bs';
 
 const BestdishesComp = () => {
   const data:SingleDish[]=[];
@@ -29,7 +28,7 @@ const BestdishesComp = () => {
       {bestDishes.length?<SliderDishes array={bestDishes}></SliderDishes>:<CatalogMagic/>}
       <br />
       <div className="button-wrapper ">
-        <GoTo text="All Restaurants >>" where="/restaurants" />
+        <GoTo text="All Restaurants" where="/restaurants" ></GoTo>
       </div>
     </div>
   );

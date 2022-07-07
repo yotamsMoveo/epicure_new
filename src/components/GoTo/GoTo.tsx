@@ -1,3 +1,4 @@
+import { BsChevronDoubleRight } from "react-icons/bs";
 import { NavLink } from "react-router-dom";
 
 import '../GoTo/goTo.scss';
@@ -9,7 +10,7 @@ export interface GoToProps {
 const GoTo: React.FC<GoToProps> = ({ text,where }) => {
   return (
     <NavLink to={where} className="go-to">
-      {text}
+      {text}<BsChevronDoubleRight/>
     </NavLink>
   );
 };

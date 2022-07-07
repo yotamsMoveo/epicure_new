@@ -1,6 +1,5 @@
 @import "../../../../assets/styles/setup/variables";
 .welcome-comp-body {
- 
   background-image: url(../../../../assets/images/backgroundPic.png);
   background-repeat: no-repeat;
   background-size: 100%;
@@ -9,9 +8,11 @@
   // height: 273px;
   justify-content: center;
   .card {
-   
     // max-height: 144px;
-    // width: 335px;
+    // background-image: url(../../../../assets/images/backgroundPic.png);
+    // background-repeat: no-repeat;
+    // background-size: 100%;
+    // object-fit: cover;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -22,6 +23,8 @@
     //background: rgba(255, 255, 255, 0.88);
     background-size: 100%;
     .contant {
+      height: 144px;
+      width: 335px;
       margin: 30px 30px;
       background: rgba(255, 255, 255, 0.88);
 
@@ -87,20 +90,30 @@
     height: 500px;
     justify-content: center;
     .card {
-      height: 221px;
+      height: 100%;
       width: 776px;
-      .contant {
-        gap:27.5px;
-        .title { 
-          margin: auto;
-          width: 50%;
-        }
-        .search-field {
-          width: 60%;
-          margin: auto;
-          .search-input {
-            border-radius: 2px;
-           
+     
+      .contant-wrapper {
+        height: 221px;
+        margin: auto;
+        .contant {
+          // display: flex;
+          // flex-direction: column;
+          width: 776px;
+          height: 100%;
+          .title {
+            padding-top: 37.5px;
+            margin: auto;
+            width: 50%;
+            padding-bottom: 75px;
+          }
+          .search-field {
+            width: 60%;
+            margin: auto;
+           height: fit-content;
+            .search-input {
+              border-radius: 2px;
+            }
           }
         }
       }

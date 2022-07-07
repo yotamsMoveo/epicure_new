@@ -32,7 +32,7 @@ const BestRestaurantsComp = () => {
         )}
         <br />
         <div className="button-wrapper">
-          <GoTo text="All Restaurants >>" where="/restaurants" />
+          <GoTo text="All Restaurants" where="/restaurants" />
         </div>
       </div>
     );

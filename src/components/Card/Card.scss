@@ -7,7 +7,7 @@
   display: flex;
   justify-content: start;
   background: $app-color-card-bg;
-  height: 300px;
+  height: 230px;
   
   .img {
     width: 245px;
@@ -30,6 +30,7 @@
       flex: none;
       order: 0;
       flex-grow: 0;
+      padding-bottom: 8px;
     }
     .description {
       font-family: "Helvetica Neue";
@@ -64,16 +65,12 @@
   flex-direction: column;
   justify-content: start;
   align-items: flex-start;
-  // width: 100%;
   background: $app-color-card-bg;
   position: relative;
-  height: 350px;
+  height: 388px;
   width: 245px;
   .img {
     width: 245px;
-    // flex: none;
-    // order: 0;
-    // flex-grow: 0;
     height: 150px;
   }
   .contant {
@@ -89,9 +86,7 @@
       line-height: 15px;
       letter-spacing: 2.67px;
       color: $app-color-black;
-      // flex: none;
-      // order: 0;
-      // flex-grow: 0;
+      padding-bottom: 8px;
     }
     .description {
       font-family: "Helvetica Neue";
@@ -101,32 +96,25 @@
       line-height: 20px;
       text-align: left;
       letter-spacing: $app-letter-spacing-nurmal;
-      // color: $app-color-black;
-      // flex: none;
-      // flex-grow: 0;
+      padding-bottom: 16px;
     }
     .icon-wrapper {
       display: flex;
-      flex-direction: column-reverse;
+      flex-direction: column;
       justify-content: center;
       align-items: flex-start;
       position: absolute;
       bottom: 5px;
       .type-array {
         display: flex;
-        // justify-content: center;
-        // position: absolute;
-        // bottom: 0%;
+        padding-bottom: 16px;
         .type {
           height: 26px;
-          // text-align: start;
         }
-  //     // }
-
-  //     .price {
-  //       // margin-left:100px ;
-  //       // position: absolute;
-  //       // bottom: 0;
+      .price {
+        position: absolute;
+        bottom: 0;
+      }
       }
     }
   }
@@ -138,6 +126,7 @@
   // height: 350px;
   div {
     // width: 200px;
+    //height: 0;
   }
 }
 
@@ -147,11 +136,11 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    // height: 420px;
+    height: 405px;
     width: 380px;
     
     .img {
-      height: 240px;
+      height: 236px;
       width: 380px;
     }
     .contant {
@@ -235,22 +224,17 @@
     text-align: center;
     justify-content: center;
   }
-
   .slick-slider .slick-slide {
     padding: 0 24px 0 0;
     gap: 24px;
-    // height: 650px;
+
     div {
-      // width: 300px;
+
       height: fit-content;
-      // min-height: 380px;
+
     }
-  }
-//   .slick-slider .slick-slide div {
-//     width: 300px;
-//     height: 650px;
-// }
-//   .slick-slider .slick-list {
-// overflow: auto;
-//   }
 }
+
+  
+  }
+ 

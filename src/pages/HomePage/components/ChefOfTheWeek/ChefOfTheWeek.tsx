@@ -54,7 +54,7 @@ const ChefOfTheWeek = () => {
           ></img>
           <div className="opacity-div">{chef.name }</div>
         </div>
-        <p className="description" data-aos="zoom-in" data-aos-duration="1500">{chef.description}</p>
+        <p className="description">{chef.description}</p>
       </div>
       <div className="chef-slider-wrapper">
         <h1 className="tilte-wrapper">Yossi’s Restaurants</h1>

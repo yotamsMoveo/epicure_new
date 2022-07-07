@@ -1,4 +1,5 @@
 import searchLogo from "../../assets/images/search.png";
+import './searchInput.scss'
 
 const SearchInput=()=>{
     return(
