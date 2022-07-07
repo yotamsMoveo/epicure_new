@@ -67,7 +67,6 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    height: 100%;
     width: 380px;
     
     .img {
@@ -75,7 +74,6 @@
       width: 380px;
     }
     .contant {
-      // padding-top: 100px;
       align-items: center;
       margin: 16px 8px 0 16px;
       .title {
@@ -89,6 +87,8 @@
         line-height: 30px;
         margin: 30px;
         text-align: center;
+        height: 120px;
+        overflow-wrap: anywhere;
       }
       .icon-wrapper {
         display: flex;

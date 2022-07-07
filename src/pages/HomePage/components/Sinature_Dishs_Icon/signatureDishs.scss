@@ -16,13 +16,14 @@
     letter-spacing: $app-letter-spacing-small;
     text-transform: uppercase;
     color: $app-color-black;
+    padding-bottom: 38px;
   }
   .icon-list {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 13px;
+    gap: 60px;
   }
 }
 
@@ -32,9 +33,11 @@
       font-weight: 200;
       font-size: 30px;
     }
-    .icon-list {
+    .icon-list{
       margin-top: 34px;
       flex-direction: row;
+      gap: 30px;
     }
   }
+  
 }

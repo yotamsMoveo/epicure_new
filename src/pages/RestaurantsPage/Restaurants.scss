@@ -34,7 +34,6 @@
   .menu {
     display: flex;
 
-    
     .list {
       display: flex;
       gap: 3vh;
@@ -54,12 +53,12 @@
         order: 1;
         flex-grow: 0;
       }
-      .map{
+      .map {
         display: none;
       }
     }
   }
-  .menu-desktop{
+  .menu-desktop {
     display: none;
   }
   .restaurants {
@@ -76,7 +75,7 @@
 @media screen and (min-width: 1024px) {
   .restaurant-page-body {
     padding: 0;
-    margin: 40px 127px 40px;
+    margin: 0px 127px 0px;
     .page-title {
       display: none;
     }
@@ -92,7 +91,7 @@
           font-weight: 200;
           font-size: 18px;
         }
-        .map{
+        .map {
           display: flex;
           text-decoration: none;
           font-family: "Helvetica Neue";
@@ -108,10 +107,10 @@
         }
       }
     }
-    .menu-desktop{
+    .menu-desktop {
       display: flex;
       justify-content: center;
-      ;
+      //padding: 40px;
       background-color: $app-color-bg-grey;
       .list-desktop {
         display: flex;
@@ -137,9 +136,9 @@
     .restaurants {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      row-gap:40px; 
+      row-gap: 40px;
       margin: 0;
-      column-gap:24px; ; 
+      column-gap: 24px;
       .restauarant-item {
         width: 100%;
       }

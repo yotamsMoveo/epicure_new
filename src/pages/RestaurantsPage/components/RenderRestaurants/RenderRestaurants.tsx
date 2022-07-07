@@ -2,6 +2,7 @@ import { SingleDish } from "../../../../assets/interfaces/SingleDish";
 import { SingleRestaurant } from "../../../../assets/interfaces/SingleRestaurant";
 import Card, { CardType } from "../../../../components/Card/Card";
 import CardRest from "../../../../components/CardRest/CardRest";
+import './RenderRestaurants.scss'
 
 export interface RenderRestaurantsProps {
   restaurants: SingleRestaurant[];
