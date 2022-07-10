@@ -71,7 +71,7 @@ const RestaurantPage = () => {
     price: 9,
     restaurant_id: "string",
     dish_id: 7,
-    dish_time: "",
+    dish_time: [""],
   };
   const [dishes, setDishes] = useState(data);
   const [baseDishes, setBaseDishes] = useState(data);

@@ -6,5 +6,5 @@ export interface SingleDish {
   price: number;
   restaurant_id: string ;
   dish_id: number;
-  dish_time:string;
+  dish_time:string[];
 }

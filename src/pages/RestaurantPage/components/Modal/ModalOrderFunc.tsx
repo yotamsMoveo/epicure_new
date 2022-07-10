@@ -9,7 +9,7 @@ let currentDish: SingleDish = {
     price: 0,
     restaurant_id: "",
     dish_id: 0,
-    dish_time: "",
+    dish_time: [""],
   };
   let order_dish: SingleOrder = {
     dish:currentDish,

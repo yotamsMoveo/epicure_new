@@ -48,10 +48,11 @@ export function setBreakfastDishes(
   currentBDidhes.splice(0, currentBDidhes.length - 1);
   newDishesToShow.dishes = currentBDidhes;
   allDishes.forEach((dish: SingleDish) => {
-    const dishTimeString = dish.dish_time;
-    if (dishTimeString.localeCompare("b") == 0) {
-      newDishesToShow.dishes.push(dish);
-    }
+    dish.dish_time.forEach(element => {
+      if(element=="b"){
+        newDishesToShow.dishes.push(dish);
+      }
+    });
   });
   return newDishesToShow.dishes;
 }
@@ -63,10 +64,11 @@ export function setLaunchDishes(
   currentLDidhes.splice(0, currentLDidhes.length - 1);
   newDishesToShow.dishes = currentLDidhes;
   allDishes.forEach((dish: SingleDish) => {
-    const dishTimeString = dish.dish_time;
-    if (dishTimeString.localeCompare("l") == 0) {
-      newDishesToShow.dishes.push(dish);
-    }
+    dish.dish_time.forEach(element => {
+      if(element=="l"){
+        newDishesToShow.dishes.push(dish);
+      }
+    });
   });
   return newDishesToShow.dishes;
 }
@@ -78,10 +80,11 @@ export function setDinnerDishes(
     currentDDidhes.splice(0, currentDDidhes.length - 1);
     newDishesToShow.dishes = currentDDidhes;
     allDishes.forEach((dish: SingleDish) => {
-      const dishTimeString = dish.dish_time;
-      if (dishTimeString.localeCompare("d") == 0) {
-        newDishesToShow.dishes.push(dish);
-      }
+      dish.dish_time.forEach(element => {
+        if(element=="d"){
+          newDishesToShow.dishes.push(dish);
+        }
+      });
     });
     return newDishesToShow.dishes;
   }
