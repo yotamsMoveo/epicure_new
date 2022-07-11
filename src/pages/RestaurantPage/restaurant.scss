@@ -2,6 +2,8 @@
 .restaurant-body {
   display: flex;
   flex-direction: column;
+  max-width: 500px;
+    margin: auto;
   .card-img{
     height: 272;
   }
@@ -95,6 +97,7 @@
   .restaurant-body {
     margin: 0 127px;
     height: fit-content;
+    max-width: 5000px;
    
     .card-img {
       height: 425px;

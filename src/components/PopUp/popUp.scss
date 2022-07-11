@@ -9,6 +9,9 @@
   min-height: fit-content;
   background: $app-color-bg-grey;
   box-shadow: 2px 4px 10px rgba(175, 175, 175, 0.25);
+  // .ul-none{
+  //   opacity: 0.5;
+  // }
   .ul {
     list-style-type: none;
     margin: 0;
@@ -22,6 +25,15 @@
       padding: 8px 16px;
       text-decoration: none;
       background-color: inherit;
+    }
+    .li-none{
+      display: block;
+      color: $app-color-black;
+      padding: 8px 16px;
+      text-decoration: none;
+      background-color: inherit;
+      opacity: 0.5;
+
     }
     .li a:hover {
       color: burlywood;

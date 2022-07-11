@@ -4,6 +4,8 @@
   display: flex;
   flex-direction: column;
   padding-bottom: 3vh;
+  max-width: 500px;
+  margin: auto;
   .page-title {
     height: 24px;
     align-self: flex-start;
@@ -76,6 +78,8 @@
   .restaurant-page-body {
     padding: 0;
     margin: 0px 127px 0px;
+    max-width: 5000px;
+  
     .page-title {
       display: none;
     }

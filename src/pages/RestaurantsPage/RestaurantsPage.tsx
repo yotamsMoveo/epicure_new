@@ -97,10 +97,10 @@ const RestaurantsPage = () => {
   return (
     <div className="restaurant-page-body">
       <div className="page-title">restaurants</div>
-      <h5 onClick={goBack}>{"<< back"}</h5>
+      {/* <h5 onClick={goBack}>{"<< back"}</h5> */}
       <nav className="menu">
         <FilterNav
-          labels={["All", "New", "Most Popular", "Open Now", "Map View"]}
+          labels={["All", "New", "Most Popular", "Open Now"]}
           onClickAction={setRestaurantsByFilter}
           classNameStyleUL="list"
           classNameStyleLI="item"

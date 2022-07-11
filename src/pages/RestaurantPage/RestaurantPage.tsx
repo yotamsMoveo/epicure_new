@@ -138,7 +138,7 @@ const RestaurantPage = () => {
       {rest._id != "string" && (
         <RestaurantsDetails currentRestaurant={rest} isOpen={isOpen} />
       )}
-      <h5 onClick={goBack}>{"<< back"}</h5>
+      {/* <h5 onClick={goBack}>{"<< back"}</h5> */}
       <nav className="menu">
         <FilterNav
           labels={["Breakfast", "Lanch", "Dinner"]}

@@ -34,6 +34,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     list-style: none;
+    flex-wrap: wrap;
     .item {
       text-decoration: none;
       font-family: "Helvetica Neue";
@@ -43,9 +44,6 @@
       line-height: 22px;
       letter-spacing: 1.92px;
       color: $app-color-black;
-      flex: none;
-      order: 1;
-      flex-grow: 0;
     }
     .map{
       display: none;

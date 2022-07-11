@@ -8,50 +8,61 @@ import conactUsLogo from "../../assets/images/conactUsLogo.png";
 import { HamburgerIcon } from "react-hamburger-icon";
 import PopUpComp, { PopupProps, PopupType } from "../PopUp/PopUp";
 import hamburg from "../../assets/images/hamburg.png";
+import { useNavigate } from "react-router-dom";
+
 export interface NavbarProps {
   onClickAction: Function;
   isOpen?: boolean;
   popup?: string;
-  navigate:Function
+  navigate: Function;
 }
 
 const Navbar: React.FC<NavbarProps> = ({
   onClickAction,
   isOpen,
   popup,
-  navigate
+  navigate,
 }) => {
+  const navigateComponent = useNavigate();
+  const goTo = (nv: string) => {
+    if (nv == "Restaurants") {
+      navigateComponent("/Restaurants");
+    }
+    if (nv == "Menu") {
+      navigateComponent("/");
+    }
+  };
 
   return (
     <div>
       <div className="navbar-conteiner">
         <div className="leftside">
-          {/* <img src={hamburg} onClick={() => onClickAction("menu")} /> */}
-          <img src={hamburg} />
+          <img src={hamburg} onClick={() => onClickAction("menu")} />
         </div>
         <div className="center">
-          <img className="mobile" src={mainlogo}/>
+          <img className="mobile" src={mainlogo} onClick={() => goTo("Menu")} />
           <div className="desktop">
-            <img className="desktop-img" src={desktoplogo} />
+            <img
+              className="desktop-img"
+              src={desktoplogo}
+              onClick={() => goTo("Menu")}
+            />
             <ul className="desktop-ul">
               <li className="li">
-                <a onClick={()=>navigate()} className="a">
+                <a onClick={() => goTo("Restaurants")} className="a">
                   Restaurants
                 </a>
               </li>
-              <li className="li">
+              <li className="li-none">
                 <a className="a">Chefs</a>
               </li>
             </ul>
           </div>
         </div>
         <div className="rightSide">
-          {/* <img src={searchlogo} onClick={() => onClickAction("search")} />
+          <img src={searchlogo} onClick={() => onClickAction("search")} />
           <img src={conactUsLogo} />
-          <img src={bagLogo} onClick={() => onClickAction("bag")} /> */}
-          <img src={searchlogo} />
-          <img src={conactUsLogo} />
-          <img src={bagLogo}  />
+          <img src={bagLogo} onClick={() => onClickAction("bag")} />
         </div>
         {{ isOpen } && (
           <PopUpComp popup={popup} onClickAction={onClickAction} />

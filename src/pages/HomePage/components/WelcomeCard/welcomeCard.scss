@@ -40,9 +40,7 @@
         letter-spacing: $app-letter-spacing-nurmal;
         text-align: center;
         color: $app-color-black;
-        flex: none;
-        order: 0;
-        flex-grow: 0;
+        padding-top: 12px;
       }
 
       .search-field {
