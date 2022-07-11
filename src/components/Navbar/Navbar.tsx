@@ -26,10 +26,11 @@ const Navbar: React.FC<NavbarProps> = ({
     <div>
       <div className="navbar-conteiner">
         <div className="leftside">
-          <img src={hamburg} onClick={() => onClickAction("menu")} />
+          {/* <img src={hamburg} onClick={() => onClickAction("menu")} /> */}
+          <img src={hamburg} />
         </div>
         <div className="center">
-          <img className="mobile" src={mainlogo} />
+          <img className="mobile" src={mainlogo}/>
           <div className="desktop">
             <img className="desktop-img" src={desktoplogo} />
             <ul className="desktop-ul">
@@ -45,9 +46,12 @@ const Navbar: React.FC<NavbarProps> = ({
           </div>
         </div>
         <div className="rightSide">
-          <img src={searchlogo} onClick={() => onClickAction("search")} />
+          {/* <img src={searchlogo} onClick={() => onClickAction("search")} />
           <img src={conactUsLogo} />
-          <img src={bagLogo} onClick={() => onClickAction("bag")} />
+          <img src={bagLogo} onClick={() => onClickAction("bag")} /> */}
+          <img src={searchlogo} />
+          <img src={conactUsLogo} />
+          <img src={bagLogo}  />
         </div>
         {{ isOpen } && (
           <PopUpComp popup={popup} onClickAction={onClickAction} />

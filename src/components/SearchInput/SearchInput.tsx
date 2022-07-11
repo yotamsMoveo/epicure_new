@@ -8,10 +8,8 @@ const SearchInput=()=>{
           <div className="search-input">
             <img src={searchLogo} className="img" />
             <input
-            //   value={searchByItem}
               placeholder=" Search for restaurant cuisine, chef"
               className="input"
-            //   onChange={handleChanges}
             ></input>
           </div>
         </form>

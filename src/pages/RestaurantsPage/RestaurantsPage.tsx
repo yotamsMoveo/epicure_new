@@ -24,9 +24,13 @@ const RestaurantsPage = () => {
     (store: any) => store.restauarantsData
   );
   const [dataToShow, setDataToShow] = useState(allRestaurants);
+  
   let newRestaurants: SingleRestaurant[] = [];
   let popularRestaurants: SingleRestaurant[] = [];
   let openRestaurants: SingleRestaurant[] = [];
+  const [open, setOpen] = useState(openRestaurants);
+  const [newRes, setNew] = useState(newRestaurants);
+  const [popular, setPopular] = useState(popularRestaurants);
   // newRestaurants = setNewRestaurants(allRestaurants, newRestaurants);
   // popularRestaurants = setPopularRestaurants(
   //   allRestaurants,
@@ -42,12 +46,15 @@ const RestaurantsPage = () => {
     getResturantsData().then((res) => {
       setRestaurants(res.data);
       setBase(res.data);
-      newRestaurants = setNewRestaurants(restaurants, newRestaurants);
+      newRestaurants = setNewRestaurants(res.data, newRestaurants);
+      setNew(newRestaurants);
       popularRestaurants = setPopularRestaurants(
-        restaurants,
+        res.data,
         popularRestaurants
       );
-      openRestaurants = setOpenRestaurants(restaurants, openRestaurants);
+      setPopular(popularRestaurants);
+      openRestaurants = setOpenRestaurants(res.data, openRestaurants);
+      setOpen(openRestaurants);
     });
   }, []);
 
@@ -61,19 +68,19 @@ const RestaurantsPage = () => {
         break;
       }
       case "New": {
-        setRestaurants(newRestaurants);
+        setRestaurants(newRes);
         break;
       }
       case "Most Popular": {
-        setRestaurants(popularRestaurants);
+        setRestaurants(popular);
         break;
       }
       case "Open Now": {
-        setRestaurants(openRestaurants);
+        setRestaurants(open);
         break;
       }
       case "Map View": {
-        setRestaurants(openRestaurants);
+        setRestaurants(open);
         break;
       }
     }

@@ -3,15 +3,18 @@
   // align-items: center;
   padding: 7px 20px;
   justify-content: center;
+  opacity: 0.5;
 
   .leftside {
     flex: 1;
     margin: auto;
+    opacity: 0.5;
   }
   .mobile {
     // flex: 1;
     margin: auto;
     text-align: center;
+    opacity: 0.5;
   }
 
   .desktop {
@@ -40,6 +43,7 @@
     }
     .desktop {
       display: flex;
+      opacity: 0.5;
       .desktop-img {
         max-width: 114px;
         max-height: 33px;
@@ -70,6 +74,7 @@
       align-items: flex-end;
       justify-content: flex-end;
       margin: auto;
+      opacity: 0.5;
       img:not(:last-of-type) {
         padding-right: 20px;
       }
