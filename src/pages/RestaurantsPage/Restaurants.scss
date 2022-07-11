@@ -134,6 +134,7 @@
       }
     }
     .restaurants {
+      max-width: 1400px;
       display: grid;
       grid-template-columns: repeat(auto-fill, 380px);
       row-gap: 40px;
