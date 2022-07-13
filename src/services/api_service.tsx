@@ -11,7 +11,8 @@ export async function getBestDishesData(): Promise<any> {
 }
 
 export async function getResturantsData(): Promise<any> {
-  const url = "http://3.85.131.215/api/Restaurants";
+   const url = "http://3.85.131.215/api/Restaurants";
+  //const url = "http://localhost:4000/api/Restaurants";
   const response = await fetch(url);
   const data = await response.json();
   return data ;

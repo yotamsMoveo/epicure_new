@@ -86,8 +86,7 @@ const RestaurantsPage = () => {
     }
   };
   const openRestaurantPage = (restauarant: SingleRestaurant) => {
-    const currentUrl = window.location.pathname;
-    navigate(currentUrl + "/" + restauarant._id);
+    navigate(restauarant._id);
   };
   const goBack = () => {
     navigate("/");

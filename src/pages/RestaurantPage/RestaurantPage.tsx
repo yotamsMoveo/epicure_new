@@ -29,7 +29,8 @@ const RestaurantPage = () => {
   const { allRestaurants } = useSelector(
     (store: any) => store.restauarantsData
   );
-  const currentUrl = window.location.pathname;
+  
+  const currentUrl = window.location.hash;
   const temp = currentUrl.split("/");
   let currentRlestaurantId = temp[temp.length - 1];
   const currentRestaurant = setCurrentRestaurant(

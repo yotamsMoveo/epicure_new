@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes,HashRouter } from "react-router-dom";
 import FooterPage from "./components/Footer/Foter";
 import HomePage from "./pages/HomePage/HomePage";
 import Restaurants from "./pages/RestaurantsPage/RestaurantsPage";
@@ -36,7 +36,7 @@ function App() {
 
   return (
     <div className="app">
-      <Router>
+      <HashRouter>
         <Navbar
           onClickAction={handlePopUpOpen}
           isOpen={isOpen}
@@ -48,7 +48,7 @@ function App() {
           <Route path="restaurants" element={<Restaurants />} />
           <Route path="restaurants/:id" element={<Restaurant />} />
         </Routes>
-      </Router>
+      </HashRouter>
       <FooterPage />
     </div>
   );
