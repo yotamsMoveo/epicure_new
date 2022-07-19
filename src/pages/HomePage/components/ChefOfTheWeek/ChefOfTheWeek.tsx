@@ -9,6 +9,7 @@ import { getChefRestaurants } from "../../../../state/reducers/ChefSlice";
 import { useDispatch } from "react-redux";
 import { getChefOfTheWeekData, getRestaurantsByChefId } from "../../../../services/api_service";
 import { Chef } from "../../../../assets/interfaces/Chef";
+import CatalogMagic from "../../../../components/Laoder/Laoder";
 
 const ChefOfTheWeek = () => {
   ////////////////data
@@ -58,7 +59,12 @@ const ChefOfTheWeek = () => {
       </div>
       <div className="chef-slider-wrapper">
         <h1 className="tilte-wrapper">Yossi’s Restaurants</h1>
-        {chefRests.length&&<SliderRestaurants array={chefRests} />}
+        {chefRests.length ? (
+          <SliderRestaurants array={chefRests} ></SliderRestaurants>
+        ) : (
+          <CatalogMagic />
+        )}
+        {/* {chefRests.length&&<SliderRestaurants array={chefRests} />} */}
       </div>
     </div>
   );

@@ -78,7 +78,8 @@
   .restaurant-page-body {
     padding: 0;
     margin: 0px 127px 0px;
-    max-width: 5000px;
+    //margin: auto;
+    max-width: 1500px;
   
     .page-title {
       display: none;
@@ -140,13 +141,20 @@
     .restaurants {
       max-width: 1600px;
       display: grid;
-      grid-template-columns: repeat(auto-fill, 380px);
+      grid-template-columns: repeat(auto-fill, 350px);
       row-gap: 40px;
       margin: 0;
-      column-gap: 24px;
+      column-gap: 16px;
       .restauarant-item {
         width: 100%;
       }
     }
   }
+}
+@media screen and (min-width: 1450px) {
+  .restaurant-page-body{
+    max-width: 1455px;
+    margin: auto;
+  }
+
 }
