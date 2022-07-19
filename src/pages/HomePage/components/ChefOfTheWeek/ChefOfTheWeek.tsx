@@ -7,9 +7,14 @@ import { useEffect, useState } from "react";
 import SliderRestaurants from "../../../../components/SliderWarpper/SliderRestaurants";
 import { getChefRestaurants } from "../../../../state/reducers/ChefSlice";
 import { useDispatch } from "react-redux";
-import { getChefOfTheWeekData, getRestaurantsByChefId } from "../../../../services/api_service";
+import {
+  getChefOfTheWeekData,
+  getRestaurantsByChefId,
+} from "../../../../services/api_service";
 import { Chef } from "../../../../assets/interfaces/Chef";
 import CatalogMagic from "../../../../components/Laoder/Laoder";
+import CardRest from "../../../../components/CardRest/CardRest";
+import CardRestChef from "../../../../components/CardRestChef/CardRestChef";
 
 const ChefOfTheWeek = () => {
   ////////////////data
@@ -18,16 +23,18 @@ const ChefOfTheWeek = () => {
   const dispach = useDispatch();
   dispach(getChefRestaurants());
   ///////////api call
-  const chefDataInitelize:Chef={
-    image:"",
-    name:"",
-    description:"",
-    active:true,
-    _id:""
-  }
-  const chefRestaurants:SingleRestaurant[]=[];
+  const chefDataInitelize: Chef = {
+    image: "",
+    name: "",
+    description: "",
+    active: true,
+    _id: "",
+  };
+  const chefRestaurants: SingleRestaurant[] = [];
+  const chefRestaurants1: SingleRestaurant[] = [];
   const [chefId, setChefId] = useState("");
   const [chefRests, setChefRests] = useState(chefRestaurants);
+  const [Rests, setRests] = useState(chefRestaurants1);
   const [chef, setChef] = useState(chefDataInitelize);
   useEffect(() => {
     getChefOfTheWeekData().then((res) => {
@@ -36,11 +43,15 @@ const ChefOfTheWeek = () => {
     });
   }, []);
 
-  useEffect(()=>{
-    getRestaurantsByChefId(chef._id).then((res1)=>{
+  useEffect(() => {
+    getRestaurantsByChefId(chef._id).then((res1) => {
       setChefRests(res1.data);
-    })
-  },[chef])
+      for (let i = 0; i < 3; i++) {
+        chefRestaurants1.push(res1.data[i]);
+      }
+      setRests(chefRestaurants1);
+    });
+  }, [chef]);
 
   ///////////////component
   return (
@@ -53,17 +64,32 @@ const ChefOfTheWeek = () => {
             alt="chef of the month"
             className="half-fade-image"
           ></img>
-          <div className="opacity-div">{chef.name }</div>
+          <div className="opacity-div">{chef.name}</div>
         </div>
         <p className="description">{chef.description}</p>
       </div>
       <div className="chef-slider-wrapper">
         <h1 className="tilte-wrapper">Yossi’s Restaurants</h1>
-        {chefRests.length ? (
-          <SliderRestaurants array={chefRests} ></SliderRestaurants>
-        ) : (
-          <CatalogMagic />
-        )}
+        <div className="slider-mobile">
+          {chefRests.length ? (
+            <SliderRestaurants array={chefRests}></SliderRestaurants>
+          ) : (
+            <CatalogMagic />
+          )}
+        </div>
+        <div className="slider-desktop">
+          {Rests.map((resturant: SingleRestaurant, index) => (
+            <div key={index} className="restauarant-item">
+              <CardRestChef
+                img={resturant.image}
+                title={resturant.name}
+                description={resturant.chef.name}
+                key={index}
+              />
+            </div>
+          ))}
+        </div>
+
         {/* {chefRests.length&&<SliderRestaurants array={chefRests} />} */}
       </div>
     </div>

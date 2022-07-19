@@ -1,5 +1,6 @@
 import "../CardDish/CardDish.scss";
 import { TbCurrencyShekel } from "react-icons/tb";
+import line from "../../assets/images/Line.svg";
 
 export interface CardDishProps {
   //   cardType: CardType;
@@ -34,12 +35,14 @@ const CardDish: React.FC<CardDishProps> = ({
               <img className="type" src={type} key={index}></img>
             ))}
           </div>
-          <div>
-            <p className="price">
-              <TbCurrencyShekel />
-              {price}
-            </p>
-          </div>
+          <div className="prise-warpper">
+              <img src={line} />
+              <p className="price">
+                <TbCurrencyShekel />
+                {price}
+              </p>
+              <img src={line} />
+            </div>
         </div>
       </div>
     </div>

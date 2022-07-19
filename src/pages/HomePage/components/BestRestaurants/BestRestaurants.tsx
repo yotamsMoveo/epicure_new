@@ -12,24 +12,49 @@ import {
   getResturantsData,
 } from "../../../../services/api_service";
 import CatalogMagic from "../../../../components/Laoder/Laoder";
+import CardRest from "../../../../components/CardRest/CardRest";
+
 
 const BestRestaurantsComp = () => {
   const data: SingleRestaurant[] = [];
+  const data1: SingleRestaurant[] = [];
   const [bestRestaurants, setBestRestaurants] = useState(data);
+  const [restaurants, setRestaurants] = useState(data1);
   useEffect(() => {
     getResturantsData().then((res) => {
       setBestRestaurants(res.data);
+      for(let i=0;i<3;i++){
+        data1.push(res.data[i]);
+      }
+      setRestaurants(data1);
     });
   }, []);
   if (bestRestaurants) {
     return (
       <div className="best-resturants-comp-body">
         <h1 className="body-title">popular restaurant in epicure:</h1>
-        {bestRestaurants.length ? (
-          <SliderRestaurants array={bestRestaurants} ></SliderRestaurants>
-        ) : (
-          <CatalogMagic />
-        )}
+        <div className="slider-mobile">
+          {bestRestaurants.length ? (
+            <SliderRestaurants array={bestRestaurants}></SliderRestaurants>
+          ) : (
+            <CatalogMagic />
+          )}
+        </div>
+        <div className="slider-desktop">
+        {restaurants.map((resturant: SingleRestaurant, index) => (
+        <div
+          key={index}
+          className="restauarant-item"
+        >
+          <CardRest
+            img={resturant.image}
+            title={resturant.name}
+            description={resturant.chef.name}
+            key={index}
+          />
+        </div>
+      ))}
+        </div>
         <br />
         <div className="button-wrapper">
           <GoTo text="All Restaurants" where="/restaurants" />

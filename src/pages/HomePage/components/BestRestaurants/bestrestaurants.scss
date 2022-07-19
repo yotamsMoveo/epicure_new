@@ -20,6 +20,9 @@
 
     color: $app-color-black;
   }
+  .slider-desktop{
+    display: none;
+  }
   .slider-wrapper {
     margin: 0 0;
   }
@@ -50,6 +53,15 @@
       line-height: 35px;
       padding-bottom: 40px;
       padding-top: 40px;
+    }
+    .slider-desktop{
+      display: flex;
+      flex-direction: row;
+      margin: 0 127px;
+      gap: 24px;
+    }
+    .slider-mobile{
+      display: none;
     }
     .slider-wrapper {
       margin: 0 127px;

@@ -56,6 +56,9 @@
   }
   .chef-slider-wrapper {
     //margin-left: 16px;
+    .slider-desktop{
+      display: none;
+    }
     .tilte-wrapper {
       padding-bottom: 16px;
       height: 35px;
@@ -113,6 +116,14 @@
         font-size: 30px;
         line-height: 35px;
         text-transform:none;
+      }
+      .slider-desktop{
+        display: flex;
+        gap: 16px;
+        //margin: auto;
+      }
+      .slider-mobile{
+        display: none;
       }
       .slider-wrapper{
        // margin: 0 127px;
